@@ -1,0 +1,164 @@
+fmls: And(u!4 == 0,
+    u!5 == n,
+    n > 0,
+    n > 3*t,
+    u!6 <= t,
+    Not(n + 3*t + 1 == 2*(n - t)))
+star_defs: [(u!4, If(f!0!2 > UNIVERALSET!1!3, 1, 0)), (u!5, UNIVERALSET!1!3), (u!6, f!0!2)]
+star_fmls: [f!0!2 >= 0, UNIVERALSET!1!3 >= 0]
+6
+
+Looking for a solution vector with the following constraints:
+
+[u!4 >= 0,
+ u!5 >= 0,
+ u!6 >= 0,
+ t >= 0,
+ n >= 0,
+ And(u!4 == 0,
+     u!5 == n,
+     n > 0,
+     n > 3*t,
+     u!6 <= t,
+     Not(n + 3*t + 1 == 2*(n - t))),
+ Exists(mu__0,
+        And(mu__0 >= 0,
+            u!4 - (mu__0*0 + 0) == 0,
+            u!5 - (mu__0*0 + 0) == 0,
+            u!6 - (mu__0*0 + 0) == 0))]
+
+Looking for a solution vector with the following constraints:
+
+[u!4 >= 0,
+ u!5 >= 0,
+ u!6 >= 0,
+ t >= 0,
+ n >= 0,
+ And(u!4 == 0,
+     u!5 == n,
+     n > 0,
+     n > 3*t,
+     u!6 <= t,
+     Not(n + 3*t + 1 == 2*(n - t))),
+ Exists([mu__0, mu__1],
+        And(mu__0 >= 0,
+            mu__1 >= 0,
+            u!4 - (mu__0*0 + 0) - (mu__1*1 + 0) == 0,
+            u!5 - (mu__0*0 + 0) - (mu__1*1 + 0) == 0,
+            u!6 - (mu__0*0 + 0) - (mu__1*2 + 0) == 0))]
+
+Inductive clauses: []
+
+SLS: [[[0, 0, 0, 0, 0], []], [[1, 1, 2, 2, 1], []], [[1, 2, 3, 3, 2], []]]
+
+Looking for a solution vector with the following constraints:
+
+[u!4 >= 0,
+ u!5 >= 0,
+ u!6 >= 0,
+ t >= 0,
+ n >= 0,
+ And(u!4 == 0,
+     u!5 == n,
+     n > 0,
+     n > 3*t,
+     u!6 <= t,
+     Not(n + 3*t + 1 == 2*(n - t))),
+ Exists([mu__0, mu__1, mu__2],
+        And(mu__0 >= 0,
+            mu__1 >= 0,
+            mu__2 >= 0,
+            u!4 -
+            (mu__0*0 + 0) -
+            (mu__1*1 + 0) -
+            (mu__2*1 + 0) ==
+            0,
+            u!5 -
+            (mu__0*0 + 0) -
+            (mu__1*1 + 0) -
+            (mu__2*2 + 0) ==
+            0,
+            u!6 -
+            (mu__0*0 + 0) -
+            (mu__1*2 + 0) -
+            (mu__2*3 + 0) ==
+            0))]
+
+Inductive clauses: []
+
+SLS: [[[0, 0, 0, 0, 0], []], [[1, 0, 1, 1, 0], [[0, 1, 1, 1, 1]]], [[1, 0, 2, 2, 0], []]]
+
+Looking for a solution vector with the following constraints:
+
+[u!4 >= 0,
+ u!5 >= 0,
+ u!6 >= 0,
+ t >= 0,
+ n >= 0,
+ And(u!4 == 0,
+     u!5 == n,
+     n > 0,
+     n > 3*t,
+     u!6 <= t,
+     Not(n + 3*t + 1 == 2*(n - t))),
+ Exists([mu__0, l1__0, mu__1, mu__2],
+        And(mu__0 >= 0,
+            l1__0 >= 0,
+            mu__1 >= 0,
+            Implies(mu__1 == 0, And(l1__0 == 0)),
+            mu__2 >= 0,
+            u!4 -
+            (mu__0*0 + 0) -
+            (mu__1*1 + l1__0*0) -
+            (mu__2*1 + 0) ==
+            0,
+            u!5 -
+            (mu__0*0 + 0) -
+            (mu__1*0 + l1__0*1) -
+            (mu__2*0 + 0) ==
+            0,
+            u!6 -
+            (mu__0*0 + 0) -
+            (mu__1*1 + l1__0*1) -
+            (mu__2*2 + 0) ==
+            0))]
+
+Inductive clauses: []
+
+SLS: [[[0, 0, 0, 0, 0], []], [[1, 0, 1, 1, 0], [[0, 0, 1, 1, 0], [0, 1, 1, 1, 1]]], [[0, 1, 0, 0, 1], []]]
+
+Looking for a solution vector with the following constraints:
+
+[u!4 >= 0,
+ u!5 >= 0,
+ u!6 >= 0,
+ t >= 0,
+ n >= 0,
+ And(u!4 == 0,
+     u!5 == n,
+     n > 0,
+     n > 3*t,
+     u!6 <= t,
+     Not(n + 3*t + 1 == 2*(n - t))),
+ Exists([mu__0, l1__0, l1__1, mu__1, mu__2],
+        And(mu__0 >= 0,
+            l1__0 >= 0,
+            l1__1 >= 0,
+            mu__1 >= 0,
+            Implies(mu__1 == 0, And(l1__0 == 0, l1__1 == 0)),
+            mu__2 >= 0,
+            u!4 -
+            (mu__0*0 + 0) -
+            (mu__1*1 + l1__0*0 + l1__1*0) -
+            (mu__2*0 + 0) ==
+            0,
+            u!5 -
+            (mu__0*0 + 0) -
+            (mu__1*0 + l1__0*0 + l1__1*1) -
+            (mu__2*1 + 0) ==
+            0,
+            u!6 -
+            (mu__0*0 + 0) -
+            (mu__1*1 + l1__0*1 + l1__1*1) -
+            (mu__2*0 + 0) ==
+            0))]

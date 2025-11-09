@@ -164,14 +164,15 @@ def main():
     args = p.parse_args()
     bapa_file = args.file
     mapa = args.mapa
-    verbose = args.verbose
-    instrument = args.instrument
-    unfold = args.unfold
-    interpolation_on = not args.no_interp
+    verbose = True
+    instrument = True
+    unfold = True
+    interpolation_on = True
 
     # Get assertions for A and B from bapa file
     multiset_fmls = dsl.parse_bapa(bapa_file, mapa)
     fmls, star_defs, star_fmls = dsl.to_lia_star(And(multiset_fmls))
+    print("fmls: {}\nstar_defs: {}\nstar_fmls: {}".format(fmls, star_defs, star_fmls))
     A_assertions = [fmls]
     B_assertions = [a == b for (a, b) in star_defs] + star_fmls
     set_vars = [a for (a, b) in star_defs]
