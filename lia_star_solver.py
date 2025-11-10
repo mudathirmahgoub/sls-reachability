@@ -73,6 +73,8 @@ def getModel(s, X=[]):
 
     # Otherwise return the model
     m = s.model()
+    print(f"model: {m}")
+    print(f"X: {X}")
     return [m.eval(x).as_long() for x in X]
 
 # Print a solution vector and SLS or unsat and exit
@@ -99,7 +101,8 @@ def returnSolution(result, sls):
     # Print unsat if result is unsat
     if result == unsat:
         print(result)
-        exit(0)
+        # exit(0)
+        return result
 
     # Print the satisfying assignments, and the SLS if one is provided
     print("sat\n{}".format("\n".join(["{} = {}".format(k, v) for (k, v) in result if k not in sls.set_vars])))
@@ -107,7 +110,8 @@ def returnSolution(result, sls):
         print("SLS = {}".format(sls.getSLS()))
 
     # Quit after the solution is printed
-    exit(0)
+    # exit(0)
+    return result
 
 # Check if I => (not A)
 def checkUnsatWithInterpolant(inductive_clauses, A):
@@ -131,7 +135,7 @@ def findSolution(A, sls):
     s.add(sls.star())
 
     # Check satisfiability
-    printV("\nLooking for a solution vector with the following constraints:\n\n{}".format(s))
+    print("\nLooking for a solution vector with the following constraints:\n\n{}".format(s))
     m = getModel(s, A.args)
     end = time.time()
     statistics.solution_time += end - start
@@ -147,7 +151,7 @@ def main():
     # Initialize arg parser
     prog_desc = 'Translates a set/multiset problem given by a BAPA benchmark into LIA* and solves it'
     p = argparse.ArgumentParser(description=prog_desc)
-    p.add_argument('file', metavar='FILEPATH', type=str,
+    p.add_argument('-file', metavar='--FILEPATH', type=str, default="my_mapa_file.smt2",
                    help='smt-lib BAPA file describing a set/multiset problem')
     p.add_argument('-m', '--mapa', action='store_true',
                    help='treat the BAPA benchmark as a MAPA problem (interpret the variables as multisets, not sets)')
