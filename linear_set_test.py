@@ -17,12 +17,15 @@ class TestLinearSet(unittest.TestCase):
         sls = semilinear.SLS(B, set_vars, len(B.args))
         sls.reduce()
         while sls.augment():
+            sls.reduce()
             print(sls.getSLS())
             continue
         
         X = findSolution(A, sls)
         print(f"solution: {X}")
-        if X: returnSolution(list(zip(A.args, X)), sls)
+        if X: 
+            result = returnSolution(list(zip(A.args, X)), sls)
+            print(f"result: {result}")
 
 
 if __name__ == "__main__":
