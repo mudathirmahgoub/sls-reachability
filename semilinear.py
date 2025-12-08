@@ -53,7 +53,7 @@ class LS:
 
     # If possible without losing info, decreases the offset of a linear set
     def shiftDown(self):
-
+        print("shiftdown .....")
         # Each b in B must be less than a to be considered
         a, B = self.a, self.B
         for b in B:
@@ -80,7 +80,7 @@ class LS:
 
     # If possible without losing info, decreases a basis vector in a linear set
     def offsetDown(self):
-
+        print("offsetdown .....")
         # Compare two b's in B, look for b2 <= b1
         a, B = self.a, self.B
         r = range(len(B))
@@ -143,6 +143,7 @@ class SLS:
 
     # Merges two compatible linear sets into one
     def _merge(self, i, j):
+        print("merge .....")
         if i == j:
             return False
 
