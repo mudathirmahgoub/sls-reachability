@@ -66,6 +66,9 @@ def toMacro(fmls):
 def getModel(s, X=[]):
 
     # Return None if unsat
+    print("------------------------------------------------------------------")
+    print(s.sexpr())
+    print("------------------------------------------------------------------")
     res = s.check()
     statistics.z3_calls += 1
     if res != sat:

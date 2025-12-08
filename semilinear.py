@@ -164,6 +164,7 @@ class SLS:
 
         # Check sat
         s.add(non_negativity + [Not(self.phi(input))])
+        print(f's: {s}')
         if None != lia_star_solver.getModel(s):
            return False
 
@@ -227,7 +228,9 @@ class SLS:
 
         # Quantify an unquantified star
         vars, fmls = self.starU(X)
-        return Exists(vars, And(fmls))
+        exists = Exists(vars, And(fmls))
+        print(f'star: {exists}')
+        return exists
 
     # Attempt to apply merge, shiftDown, and offsetDown to reduce the size of the SLS
     def reduce(self):
