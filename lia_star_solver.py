@@ -67,8 +67,9 @@ def getModel(s, X=[]):
 
     # Return None if unsat
     print("------------------------------------------------------------------")
+    print("SMT-Lib")
     print(s.sexpr())
-    print("------------------------------------------------------------------")
+    
     res = s.check()
     statistics.z3_calls += 1
     if res != sat:

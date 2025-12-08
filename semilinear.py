@@ -229,11 +229,13 @@ class SLS:
         # Quantify an unquantified star
         vars, fmls = self.starU(X)
         exists = Exists(vars, And(fmls))
-        print(f'star: {exists}')
+        # print(f'star: {exists}')
         return exists
 
     # Attempt to apply merge, shiftDown, and offsetDown to reduce the size of the SLS
     def reduce(self):
+        print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        print("Reducing")
         start = time.time()
 
         # Look for pairs of sets we can merge together
@@ -258,6 +260,8 @@ class SLS:
     # Add a new vector to the semi-linear set and return True
     # or return False if a vector cannot be added
     def augment(self):
+        print("#######################################################################")
+        print("Augmenting")
         start = time.time()
 
         # Find non-negative X that satisfies phi and isn't reached by the current underapproximation
@@ -266,7 +270,7 @@ class SLS:
         s.add([x >= 0 for x in X])
         s.add(self.phi(X))
         s.add(Not(self.star(X)))
-
+        
         # Get model and add new linear set to sls
         new_vec = lia_star_solver.getModel(s, X)
         end = time.time()
