@@ -93,6 +93,7 @@ class LS:
                 # Basis to compare to
                 B_new = list(B)
                 B_new[i] = vecSub(b1, b2)
+                if all(v == 0 for v in B_new[i]): del B_new[i]
                 new_set = LS(a, B_new, self.phi)
 
                 # Solver and quantifiers
@@ -136,7 +137,7 @@ class SLS:
     # 'phi' is the original LIA formula, a function that returns a Z3 expression
     # 'dim' is the number of args to phi
     def __init__(self, phi, set_vars, dimension):
-        self.sets = [LS([0]*dimension, [], phi)]
+        self.sets = []
         self.dim = dimension
         self.phi = phi
         self.set_vars = set_vars
@@ -226,8 +227,11 @@ class SLS:
     def star(self, X=None):
 
         # Quantify an unquantified star
-        vars, fmls = self.starU(X)
-        return Exists(vars, And(fmls))
+        if self.sets == []:
+            return False
+        else:
+            vars, fmls = self.starU(X)
+            return Exists(vars, And(fmls))
 
     # Attempt to apply merge, shiftDown, and offsetDown to reduce the size of the SLS
     def reduce(self):
