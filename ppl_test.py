@@ -40,9 +40,11 @@ class TestPPL(unittest.TestCase):
 
         cs.insert(y + 2 * x >= 17)
         cs.insert(6*x - y <= 47)
-
+        
         # Create polyhedron
         ph = NNC_Polyhedron(cs)
+
+        print(f'is_bounded: {ph.is_bounded()}')
 
         print("Polyhedron:", ph)
 
@@ -53,6 +55,13 @@ class TestPPL(unittest.TestCase):
 
 
     def test_f2(self): 
+        x = Variable(0)
+        y = Variable(1)
+
+        # Build constraint system: y >= 5 - x and x <= 5 + y
+        cs = Constraint_System()
+        cs.insert(x >= 0)
+        cs.insert(y >= 0)
         cs.insert(5*x + 2*y >= 17)
         cs.insert(3*x - y <= 8)
         cs.insert(2*x + 3*y <= 20)
@@ -61,6 +70,7 @@ class TestPPL(unittest.TestCase):
         ph = NNC_Polyhedron(cs)
 
         print("Polyhedron:", ph)
+        print(f'is_bounded: {ph.is_bounded()}')
 
         # Inspect generators (vertices and rays)
         gens = ph.minimized_generators()
@@ -107,11 +117,11 @@ class TestPPL(unittest.TestCase):
         x = Variable(0)
         y = Variable(1)
         cs = Constraint_System()
-        cs.insert(2*x >= 1)
-        cs.insert(2 *y >= 1)
+        cs.insert(4*x >= 1)
+        cs.insert(4 *y >= 1)
           
-        # cs.insert(2 * x <= 1)  
-        # cs.insert(2 * y <= 1)        
+        cs.insert(2 * x <= 1)  
+        cs.insert(2 * y <= 1)        
 
         # Create polyhedron
         ph = C_Polyhedron(cs)
