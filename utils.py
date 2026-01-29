@@ -19,4 +19,8 @@ c47 = 47
 x = Int("x")
 y = Int("y")
 z = Int("z")
+m = Int("m")
+L = Int("L")
+s = Int("s")
+
 
