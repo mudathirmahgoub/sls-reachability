@@ -23,4 +23,9 @@ m = Int("m")
 L = Int("L")
 s = Int("s")
 
+x1 = Int("x1")
+z1 = Int("z1")
+z2 = Int("z2")
+
+
 
