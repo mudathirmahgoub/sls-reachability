@@ -1,164 +1,151 @@
-fmls: And(u!4 == 0,
-    u!5 == n,
-    n > 0,
-    n > 3*t,
-    u!6 <= t,
-    Not(n + 3*t + 1 == 2*(n - t)))
-star_defs: [(u!4, If(f!0!2 > UNIVERALSET!1!3, 1, 0)), (u!5, UNIVERALSET!1!3), (u!6, f!0!2)]
-star_fmls: [f!0!2 >= 0, UNIVERALSET!1!3 >= 0]
-6
+fmls: And(u!2 == n, n > 0)
+star_defs: [(u!2, A!0!1)]
+star_fmls: [A!0!1 >= 0]
+3
 
 Looking for a solution vector with the following constraints:
 
-[u!4 >= 0,
- u!5 >= 0,
- u!6 >= 0,
- t >= 0,
- n >= 0,
- And(u!4 == 0,
-     u!5 == n,
-     n > 0,
-     n > 3*t,
-     u!6 <= t,
-     Not(n + 3*t + 1 == 2*(n - t))),
- Exists(mu__0,
-        And(mu__0 >= 0,
-            u!4 - (mu__0*0 + 0) == 0,
-            u!5 - (mu__0*0 + 0) == 0,
-            u!6 - (mu__0*0 + 0) == 0))]
+[u!2 >= 0, n >= 0, And(u!2 == n, n > 0), False]
+------------------------------------------------------------------
+SMT-Lib
+(declare-fun u!2 () Int)
+(declare-fun n () Int)
+(assert (>= u!2 0))
+(assert (>= n 0))
+(assert (and (= u!2 n) (> n 0)))
+(assert false)
+
+#######################################################################
+Augmenting
+------------------------------------------------------------------
+SMT-Lib
+(declare-fun x__0 () Int)
+(declare-fun x__1 () Int)
+(assert (>= x__0 0))
+(assert (>= x__1 0))
+(assert (and (= x__0 x__1) (>= x__1 0)))
+(assert (not false))
+
+model: [x__1 = 0, x__0 = 0]
+X: [x__0, x__1]
 
 Looking for a solution vector with the following constraints:
 
-[u!4 >= 0,
- u!5 >= 0,
- u!6 >= 0,
- t >= 0,
+[u!2 >= 0,
  n >= 0,
- And(u!4 == 0,
-     u!5 == n,
-     n > 0,
-     n > 3*t,
-     u!6 <= t,
-     Not(n + 3*t + 1 == 2*(n - t))),
+ And(u!2 == n, n > 0),
+ Exists(mu__0, And(mu__0 >= 0, u!2 - (mu__0*0 + 0) == 0))]
+------------------------------------------------------------------
+SMT-Lib
+(declare-fun u!2 () Int)
+(declare-fun n () Int)
+(assert (>= u!2 0))
+(assert (>= n 0))
+(assert (and (= u!2 n) (> n 0)))
+(assert (exists ((mu__0 Int))
+  (let ((a!1 (= (- u!2 (+ (* mu__0 0) 0)) 0)))
+    (and (>= mu__0 0) a!1))))
+
+
+Inductive clauses: []
+
+------------------------------------------------------------------
+SMT-Lib
+(assert (forall ((u!2 Int) (n Int))
+  (=> (and (>= u!2 0) (>= n 0)) (not (and (= u!2 n) (> n 0))))))
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Reducing
+merge .....
+shiftdown .....
+offsetdown .....
+#######################################################################
+Augmenting
+------------------------------------------------------------------
+SMT-Lib
+(declare-fun x__0 () Int)
+(declare-fun x__1 () Int)
+(assert (>= x__0 0))
+(assert (>= x__1 0))
+(assert (and (= x__0 x__1) (>= x__1 0)))
+(assert (not (exists ((mu__0 Int))
+       (let ((a!1 (= (- x__0 (+ (* mu__0 0) 0)) 0))
+             (a!2 (= (- x__1 (+ (* mu__0 0) 0)) 0)))
+         (and (>= mu__0 0) a!1 a!2)))))
+
+model: [x__1 = 1, x__0 = 1]
+X: [x__0, x__1]
+SLS: [[[0, 0], []], [[1, 1], []]]
+
+Looking for a solution vector with the following constraints:
+
+[u!2 >= 0,
+ n >= 0,
+ And(u!2 == n, n > 0),
  Exists([mu__0, mu__1],
         And(mu__0 >= 0,
             mu__1 >= 0,
-            u!4 - (mu__0*0 + 0) - (mu__1*1 + 0) == 0,
-            u!5 - (mu__0*0 + 0) - (mu__1*1 + 0) == 0,
-            u!6 - (mu__0*0 + 0) - (mu__1*2 + 0) == 0))]
+            u!2 - (mu__0*0 + 0) - (mu__1*1 + 0) == 0))]
+------------------------------------------------------------------
+SMT-Lib
+(declare-fun u!2 () Int)
+(declare-fun n () Int)
+(assert (>= u!2 0))
+(assert (>= n 0))
+(assert (and (= u!2 n) (> n 0)))
+(assert (exists ((mu__0 Int) (mu__1 Int))
+  (let ((a!1 (- (- u!2 (+ (* mu__0 0) 0)) (+ (* mu__1 1) 0))))
+    (and (>= mu__0 0) (>= mu__1 0) (= a!1 0)))))
+
+model: [n = 1, u!2 = 1]
+X: [u!2, n]
+{'sat': 1, 'problem_size': 3, 'sls_size': 2, 'z3_calls': 8, 'interpolants_generated': 0, 'merges': 0, 'shiftdowns': 0, 'offsets': 0, 'reduction_time': 2.1696090698242188e-05, 'augment_time': 0.020687341690063477, 'interpolation_time': 0.020083904266357422, 'solution_time': 0.023488998413085938}
+sat
+n = 1
+SLS = [[[0, 0], []], [[1, 1], []]]
 
 Inductive clauses: []
 
-SLS: [[[0, 0, 0, 0, 0], []], [[1, 1, 2, 2, 1], []], [[1, 2, 3, 3, 2], []]]
+------------------------------------------------------------------
+SMT-Lib
+(assert (forall ((u!2 Int) (n Int))
+  (=> (and (>= u!2 0) (>= n 0)) (not (and (= u!2 n) (> n 0))))))
 
-Looking for a solution vector with the following constraints:
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Reducing
+merge .....
+merge .....
+merge .....
+s: [l3 >= 0, Not(And(0 + l3*1 == 0 + l3*1, 0 + l3*1 >= 0))]
+------------------------------------------------------------------
+SMT-Lib
+(declare-fun l3 () Int)
+(assert (>= l3 0))
+(assert (let ((a!1 (and (= (+ 0 (* l3 1)) (+ 0 (* l3 1))) (>= (+ 0 (* l3 1)) 0))))
+  (not a!1)))
 
-[u!4 >= 0,
- u!5 >= 0,
- u!6 >= 0,
- t >= 0,
- n >= 0,
- And(u!4 == 0,
-     u!5 == n,
-     n > 0,
-     n > 3*t,
-     u!6 <= t,
-     Not(n + 3*t + 1 == 2*(n - t))),
- Exists([mu__0, mu__1, mu__2],
-        And(mu__0 >= 0,
-            mu__1 >= 0,
-            mu__2 >= 0,
-            u!4 -
-            (mu__0*0 + 0) -
-            (mu__1*1 + 0) -
-            (mu__2*1 + 0) ==
-            0,
-            u!5 -
-            (mu__0*0 + 0) -
-            (mu__1*1 + 0) -
-            (mu__2*2 + 0) ==
-            0,
-            u!6 -
-            (mu__0*0 + 0) -
-            (mu__1*2 + 0) -
-            (mu__2*3 + 0) ==
-            0))]
+merge .....
+shiftdown .....
+offsetdown .....
+#######################################################################
+Augmenting
+------------------------------------------------------------------
+SMT-Lib
+(declare-fun x__0 () Int)
+(declare-fun x__1 () Int)
+(assert (>= x__0 0))
+(assert (>= x__1 0))
+(assert (and (= x__0 x__1) (>= x__1 0)))
+(assert (let ((a!1 (exists ((l0__0 Int) (mu__0 Int))
+             (let ((a!1 (= (- x__0 (+ (* mu__0 0) (* l0__0 1))) 0))
+                   (a!2 (= (- x__1 (+ (* mu__0 0) (* l0__0 1))) 0)))
+               (and (>= l0__0 0)
+                    (>= mu__0 0)
+                    (=> (= mu__0 0) (and (= l0__0 0)))
+                    a!1
+                    a!2)))))
+  (not a!1)))
 
-Inductive clauses: []
-
-SLS: [[[0, 0, 0, 0, 0], []], [[1, 0, 1, 1, 0], [[0, 1, 1, 1, 1]]], [[1, 0, 2, 2, 0], []]]
-
-Looking for a solution vector with the following constraints:
-
-[u!4 >= 0,
- u!5 >= 0,
- u!6 >= 0,
- t >= 0,
- n >= 0,
- And(u!4 == 0,
-     u!5 == n,
-     n > 0,
-     n > 3*t,
-     u!6 <= t,
-     Not(n + 3*t + 1 == 2*(n - t))),
- Exists([mu__0, l1__0, mu__1, mu__2],
-        And(mu__0 >= 0,
-            l1__0 >= 0,
-            mu__1 >= 0,
-            Implies(mu__1 == 0, And(l1__0 == 0)),
-            mu__2 >= 0,
-            u!4 -
-            (mu__0*0 + 0) -
-            (mu__1*1 + l1__0*0) -
-            (mu__2*1 + 0) ==
-            0,
-            u!5 -
-            (mu__0*0 + 0) -
-            (mu__1*0 + l1__0*1) -
-            (mu__2*0 + 0) ==
-            0,
-            u!6 -
-            (mu__0*0 + 0) -
-            (mu__1*1 + l1__0*1) -
-            (mu__2*2 + 0) ==
-            0))]
-
-Inductive clauses: []
-
-SLS: [[[0, 0, 0, 0, 0], []], [[1, 0, 1, 1, 0], [[0, 0, 1, 1, 0], [0, 1, 1, 1, 1]]], [[0, 1, 0, 0, 1], []]]
-
-Looking for a solution vector with the following constraints:
-
-[u!4 >= 0,
- u!5 >= 0,
- u!6 >= 0,
- t >= 0,
- n >= 0,
- And(u!4 == 0,
-     u!5 == n,
-     n > 0,
-     n > 3*t,
-     u!6 <= t,
-     Not(n + 3*t + 1 == 2*(n - t))),
- Exists([mu__0, l1__0, l1__1, mu__1, mu__2],
-        And(mu__0 >= 0,
-            l1__0 >= 0,
-            l1__1 >= 0,
-            mu__1 >= 0,
-            Implies(mu__1 == 0, And(l1__0 == 0, l1__1 == 0)),
-            mu__2 >= 0,
-            u!4 -
-            (mu__0*0 + 0) -
-            (mu__1*1 + l1__0*0 + l1__1*0) -
-            (mu__2*0 + 0) ==
-            0,
-            u!5 -
-            (mu__0*0 + 0) -
-            (mu__1*0 + l1__0*0 + l1__1*1) -
-            (mu__2*1 + 0) ==
-            0,
-            u!6 -
-            (mu__0*0 + 0) -
-            (mu__1*1 + l1__0*1 + l1__1*1) -
-            (mu__2*0 + 0) ==
-            0))]
+SLS: [[[0, 0], [[1, 1]]]]
+{'sat': 0, 'problem_size': 3, 'sls_size': 2, 'z3_calls': 13, 'interpolants_generated': 0, 'merges': 1, 'shiftdowns': 0, 'offsets': 0, 'reduction_time': 0.006697654724121094, 'augment_time': 0.02751016616821289, 'interpolation_time': 0.04532003402709961, 'solution_time': 0.023488998413085938}
+unsat
