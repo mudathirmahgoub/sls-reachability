@@ -66,6 +66,10 @@ def toMacro(fmls):
 def getModel(s, X=[]):
 
     # Return None if unsat
+    print("------------------------------------------------------------------")
+    print("SMT-Lib")
+    print(s.sexpr())
+    
     res = s.check()
     statistics.z3_calls += 1
     if res != sat:
@@ -73,6 +77,8 @@ def getModel(s, X=[]):
 
     # Otherwise return the model
     m = s.model()
+    print(f"model: {m}")
+    print(f"X: {X}")
     return [m.eval(x).as_long() for x in X]
 
 # Print a solution vector and SLS or unsat and exit
@@ -99,7 +105,8 @@ def returnSolution(result, sls):
     # Print unsat if result is unsat
     if result == unsat:
         print(result)
-        exit(0)
+        # exit(0)
+        return result
 
     # Print the satisfying assignments, and the SLS if one is provided
     print("sat\n{}".format("\n".join(["{} = {}".format(k, v) for (k, v) in result if k not in sls.set_vars])))
@@ -107,7 +114,8 @@ def returnSolution(result, sls):
         print("SLS = {}".format(sls.getSLS()))
 
     # Quit after the solution is printed
-    exit(0)
+    # exit(0)
+    return result
 
 # Check if I => (not A)
 def checkUnsatWithInterpolant(inductive_clauses, A):
@@ -131,7 +139,7 @@ def findSolution(A, sls):
     s.add(sls.star())
 
     # Check satisfiability
-    printV("\nLooking for a solution vector with the following constraints:\n\n{}".format(s))
+    print("\nLooking for a solution vector with the following constraints:\n\n{}".format(s))
     m = getModel(s, A.args)
     end = time.time()
     statistics.solution_time += end - start
@@ -147,7 +155,7 @@ def main():
     # Initialize arg parser
     prog_desc = 'Translates a set/multiset problem given by a BAPA benchmark into LIA* and solves it'
     p = argparse.ArgumentParser(description=prog_desc)
-    p.add_argument('file', metavar='FILEPATH', type=str,
+    p.add_argument('-file', metavar='--FILEPATH', type=str, default="my_mapa_file.smt2",
                    help='smt-lib BAPA file describing a set/multiset problem')
     p.add_argument('-m', '--mapa', action='store_true',
                    help='treat the BAPA benchmark as a MAPA problem (interpret the variables as multisets, not sets)')
@@ -164,14 +172,15 @@ def main():
     args = p.parse_args()
     bapa_file = args.file
     mapa = args.mapa
-    verbose = args.verbose
-    instrument = args.instrument
-    unfold = args.unfold
-    interpolation_on = not args.no_interp
+    verbose = True
+    instrument = True
+    unfold = True
+    interpolation_on = True
 
     # Get assertions for A and B from bapa file
     multiset_fmls = dsl.parse_bapa(bapa_file, mapa)
     fmls, star_defs, star_fmls = dsl.to_lia_star(And(multiset_fmls))
+    print("fmls: {}\nstar_defs: {}\nstar_fmls: {}".format(fmls, star_defs, star_fmls))
     A_assertions = [fmls]
     B_assertions = [a == b for (a, b) in star_defs] + star_fmls
     set_vars = [a for (a, b) in star_defs]
@@ -189,9 +198,6 @@ def main():
     
     input = """
 (set-logic ALL)
-(set-option :produces-models true)
-(set-option :dag-thresh 0)
-(set-option :trace liastar-ext)
 """
 
     for arg in B.args:
@@ -209,22 +215,28 @@ def main():
         input += x.sexpr() + "\n"
     input += "))\n"
     
-    input += "(assert (int.star-contains ("
+    input += """(assert 
+  (int.star-contains 
+    ("""
     for arg in B.args:
         input += f"({arg} Int)"
-    input += ") (and "
+    input += """) 
+    (and 
+      """
     for x in B.fmls:
-        input += x.sexpr() + "\n"
-    input += ") (tuple "
+        input += x.sexpr() + """
+      """
+    input += """) 
+    (tuple """
     for arg in B.args:
         input += f"{arg} "
     input += ")))\n"
     input += "(check-sat)"
-    print(f"input: {input}")
-
-    with open("star.smt2", "w", encoding="utf-8") as f:
+    print(f"input: {input}") 
+    filename = os.path.basename(bapa_file)   
+    with open(f"benchmarks/bapa/arith/cvc5/{filename}", "w", encoding="utf-8") as f:
         f.write(input)
-
+    exit(0)
     # input = "(int.star-contains ((u!6 Int)) true (tuple u!6))"
     # input = "(exists ((u!6 Int)) true)"
     # parser.setStringInput(cvc5.InputLanguage.SMT_LIB_2_6, input, "")
