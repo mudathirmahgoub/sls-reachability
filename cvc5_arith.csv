@@ -1,4 +1,4 @@
-filename,result
+filename,result,duration
 benchmarks/bapa/arith/cvc5/fol_0000001.smt2,sat,0.00538325309753418
 benchmarks/bapa/arith/cvc5/fol_0000002.smt2,sat,0.005254507064819336
 benchmarks/bapa/arith/cvc5/fol_0000003.smt2,sat,0.005170106887817383

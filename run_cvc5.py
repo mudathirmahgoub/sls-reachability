@@ -8,7 +8,7 @@ output_csv = "cvc5_arith.csv"
 
 with open(output_csv, "w", newline="", encoding="utf-8") as csvfile:
     writer = csv.writer(csvfile)
-    writer.writerow(["filename", "result"])
+    writer.writerow(["filename", "result","duration"])
     for dir in dirs:
         files = sorted(os.listdir(dir))
         for filename in files:
