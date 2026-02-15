@@ -237,8 +237,9 @@ def main():
     input += ")))\n"
     input += "(check-sat)"
     print(f"input: {input}") 
-    filename = os.path.basename(bapa_file)   
-    with open(f"benchmarks/bapa/arith/cvc5/{filename}", "w", encoding="utf-8") as f:
+    filename = os.path.basename(bapa_file)
+    dir = os.path.dirname(bapa_file)
+    with open(f"{dir}/cvc5/{filename}", "w", encoding="utf-8") as f:
         f.write(input)
     exit(0)
     # input = "(int.star-contains ((u!6 Int)) true (tuple u!6))"
