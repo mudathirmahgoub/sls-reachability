@@ -199,13 +199,14 @@ def main():
     input = """
 (set-logic ALL)
 """
-
+    map = {}
     for arg in B.args:
         input+= f"(declare-const {arg} Int)\n"
+        map[str(arg)] = f"{arg}_"
     
     for arg in A.args:
         if arg not in B.args:
-            input+= f"(declare-const {arg} Int)\n"
+            input+= f"(declare-const {arg} Int)\n"            
 
     for arg in B.args:
         input+= f"(assert (>= {arg} 0))\n"
@@ -214,17 +215,20 @@ def main():
     for x in A.fmls:
         input += x.sexpr() + "\n"
     input += "))\n"
-    
+    print(f"map: {map}")
     input += """(assert 
   (int.star-contains 
     ("""
     for arg in B.args:
-        input += f"({arg} Int)"
+        input += f"({map[str(arg)]} Int)"
     input += """) 
     (and 
       """
     for x in B.fmls:
-        input += x.sexpr() + """
+        conjunct = x.sexpr() 
+        for old, new in map.items():
+            conjunct = conjunct.replace(old, new)
+        input += conjunct + """
       """
     input += """) 
     (tuple """
