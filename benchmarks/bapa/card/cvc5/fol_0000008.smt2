@@ -1,5 +1,5 @@
 
-(set-logic ALL)
+(set-logic HO_ALL)
 (declare-const u!4 Int)
 (declare-const u!5 Int)
 (declare-const u!6 Int)
@@ -18,13 +18,13 @@
 ))
 (assert 
   (int.star-contains 
-    ((u!4_ Int)(u!5_ Int)(u!6_ Int)(f!0!2_ Int)(UNIVERALSET!1!3_ Int)) 
-    (and 
-      (= u!4_ (ite (> f!0!2_ UNIVERALSET!1!3_) 1 0))
-      (= u!5_ UNIVERALSET!1!3_)
-      (= u!6_ f!0!2_)
-      (>= f!0!2_ 0)
-      (>= UNIVERALSET!1!3_ 0)
-      ) 
-    (tuple u!4 u!5 u!6 f!0!2 UNIVERALSET!1!3 )))
+    (lambda ((u!4 Int)(u!5 Int)(u!6 Int)(f!0!2 Int)(UNIVERALSET!1!3 Int)) 
+      (and 
+        (= u!4 (ite (> f!0!2 UNIVERALSET!1!3) 1 0))
+        (= u!5 UNIVERALSET!1!3)
+        (= u!6 f!0!2)
+        (>= f!0!2 0)
+        (>= UNIVERALSET!1!3 0)
+        ))
+    u!4 u!5 u!6 f!0!2 UNIVERALSET!1!3 ))
 (check-sat)

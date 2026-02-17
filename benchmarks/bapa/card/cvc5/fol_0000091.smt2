@@ -1,5 +1,5 @@
 
-(set-logic ALL)
+(set-logic HO_ALL)
 (declare-const u!5 Int)
 (declare-const u!6 Int)
 (declare-const u!7 Int)
@@ -30,16 +30,16 @@
 ))
 (assert 
   (int.star-contains 
-    ((u!5_ Int)(u!6_ Int)(u!7_ Int)(u!9_ Int)(u!10_ Int)(UNIVERALSET!1!4_ Int)(c_dx!2!8_ Int)(f!0!3_ Int)) 
-    (and 
-      (= u!5_ (ite (> f!0!3_ UNIVERALSET!1!4_) 1 0))
-      (= u!6_ UNIVERALSET!1!4_)
-      (= u!7_ f!0!3_)
-      (= u!9_ (ite (> c_dx!2!8_ UNIVERALSET!1!4_) 1 0))
-      (= u!10_ c_dx!2!8_)
-      (>= f!0!3_ 0)
-      (>= UNIVERALSET!1!4_ 0)
-      (>= c_dx!2!8_ 0)
-      ) 
-    (tuple u!5 u!6 u!7 u!9 u!10 UNIVERALSET!1!4 c_dx!2!8 f!0!3 )))
+    (lambda ((u!5 Int)(u!6 Int)(u!7 Int)(u!9 Int)(u!10 Int)(UNIVERALSET!1!4 Int)(c_dx!2!8 Int)(f!0!3 Int)) 
+      (and 
+        (= u!5 (ite (> f!0!3 UNIVERALSET!1!4) 1 0))
+        (= u!6 UNIVERALSET!1!4)
+        (= u!7 f!0!3)
+        (= u!9 (ite (> c_dx!2!8 UNIVERALSET!1!4) 1 0))
+        (= u!10 c_dx!2!8)
+        (>= f!0!3 0)
+        (>= UNIVERALSET!1!4 0)
+        (>= c_dx!2!8 0)
+        ))
+    u!5 u!6 u!7 u!9 u!10 UNIVERALSET!1!4 c_dx!2!8 f!0!3 ))
 (check-sat)

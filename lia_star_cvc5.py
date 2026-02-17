@@ -197,12 +197,10 @@ def main():
     B.args = set_vars + [b for b in B.args if b not in set_vars]
     
     input = """
-(set-logic ALL)
-"""
-    map = {}
+(set-logic HO_ALL)
+"""    
     for arg in B.args:
-        input+= f"(declare-const {arg} Int)\n"
-        map[str(arg)] = f"{arg}_"
+        input+= f"(declare-const {arg} Int)\n"        
     
     for arg in A.args:
         if arg not in B.args:
@@ -214,27 +212,24 @@ def main():
     input += f"(assert (and "    
     for x in A.fmls:
         input += x.sexpr() + "\n"
-    input += "))\n"
-    print(f"map: {map}")
+    input += "))\n"    
     input += """(assert 
   (int.star-contains 
-    ("""
+    (lambda ("""
     for arg in B.args:
-        input += f"({map[str(arg)]} Int)"
+        input += f"({arg} Int)"
     input += """) 
-    (and 
-      """
+      (and 
+        """
     for x in B.fmls:
-        conjunct = x.sexpr() 
-        for old, new in map.items():
-            conjunct = conjunct.replace(old, new)
+        conjunct = x.sexpr()         
         input += conjunct + """
-      """
-    input += """) 
-    (tuple """
+        """
+    input += """))
+    """
     for arg in B.args:
         input += f"{arg} "
-    input += ")))\n"
+    input += "))\n"
     input += "(check-sat)"
     print(f"input: {input}") 
     filename = os.path.basename(bapa_file)

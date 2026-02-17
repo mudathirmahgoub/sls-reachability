@@ -1,241 +1,241 @@
-filename,cvc5 result,cvc5 duration,sls,sls result,sls duration,is match
-benchmarks/bapa/arith/cvc5/fol_0000001.smt2,sat,0.005383253,bapa/arith/fol_0000001.smt2,sat,0.371880531,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000002.smt2,sat,0.005254507,bapa/arith/fol_0000002.smt2,sat,0.455236912,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000003.smt2,sat,0.005170107,bapa/arith/fol_0000003.smt2,sat,0.362852812,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000004.smt2,sat,0.006005049,bapa/arith/fol_0000004.smt2,sat,0.36774826,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000005.smt2,sat,0.005217791,bapa/arith/fol_0000005.smt2,sat,0.339421749,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000006.smt2,sat,0.005501509,bapa/arith/fol_0000006.smt2,sat,0.348348618,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000007.smt2,sat,0.004971981,bapa/arith/fol_0000007.smt2,sat,0.355773211,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000008.smt2,sat,0.005774975,bapa/arith/fol_0000008.smt2,sat,0.347364187,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000009.smt2,sat,0.00494504,bapa/arith/fol_0000009.smt2,sat,0.472581387,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000010.smt2,sat,0.005201578,bapa/arith/fol_0000010.smt2,sat,0.353116035,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000011.smt2,sat,0.006103277,bapa/arith/fol_0000011.smt2,sat,0.453573465,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000012.smt2,sat,0.004872322,bapa/arith/fol_0000012.smt2,sat,0.352227688,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000013.smt2,sat,0.005964518,bapa/arith/fol_0000013.smt2,sat,0.352357864,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000014.smt2,sat,0.00515914,bapa/arith/fol_0000014.smt2,sat,0.350680351,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000015.smt2,sat,0.005471706,bapa/arith/fol_0000015.smt2,sat,0.470790863,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000016.smt2,sat,0.006391764,bapa/arith/fol_0000016.smt2,sat,0.368768692,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000017.smt2,sat,0.005528688,bapa/arith/fol_0000017.smt2,sat,1.262539148,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000018.smt2,sat,0.004801989,bapa/arith/fol_0000018.smt2,sat,0.345381021,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000019.smt2,sat,0.006213427,bapa/arith/fol_0000019.smt2,sat,0.47560358,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000020.smt2,sat,0.005210876,bapa/arith/fol_0000020.smt2,sat,0.362033367,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000021.smt2,unsat,0.004637003,bapa/arith/fol_0000021.smt2,  unsat,0.171948671,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000022.smt2,sat,0.004839182,bapa/arith/fol_0000022.smt2,sat,0.475059986,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000023.smt2,unsat,0.005361319,bapa/arith/fol_0000023.smt2,  unsat,0.175730705,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000024.smt2,sat,0.006868124,bapa/arith/fol_0000024.smt2,timeout,50.79019427,FALSE
-benchmarks/bapa/arith/cvc5/fol_0000025.smt2,sat,0.005030394,bapa/arith/fol_0000025.smt2,sat,0.35530591,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000026.smt2,sat,0.006331682,bapa/arith/fol_0000026.smt2,sat,0.454766989,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000027.smt2,sat,0.006205559,bapa/arith/fol_0000027.smt2,sat,0.374289513,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000028.smt2,unsat,0.009845257,bapa/arith/fol_0000028.smt2,  unsat,0.228597403,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000029.smt2,sat,0.008486986,bapa/arith/fol_0000029.smt2,sat,0.4016819,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000030.smt2,unsat,0.004914999,bapa/arith/fol_0000030.smt2,  unsat,0.166530609,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000031.smt2,sat,0.007620335,bapa/arith/fol_0000031.smt2,sat,0.380920887,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000032.smt2,unsat,0.005449533,bapa/arith/fol_0000032.smt2,  unsat,0.171218634,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000033.smt2,sat,0.005671501,bapa/arith/fol_0000033.smt2,sat,0.363563061,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000034.smt2,unsat,0.006171227,bapa/arith/fol_0000034.smt2,  unsat,0.17405057,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000035.smt2,sat,0.005036354,bapa/arith/fol_0000035.smt2,sat,0.37942028,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000036.smt2,sat,0.005413771,bapa/arith/fol_0000036.smt2,sat,0.336054564,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000037.smt2,sat,0.006690979,bapa/arith/fol_0000037.smt2,sat,0.35112977,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000038.smt2,unsat,0.004981756,bapa/arith/fol_0000038.smt2,  unsat,0.178973198,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000039.smt2,sat,0.006469727,bapa/arith/fol_0000039.smt2,sat,0.347396135,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000040.smt2,unsat,0.004995823,bapa/arith/fol_0000040.smt2,  unsat,0.175446987,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000041.smt2,sat,0.005013227,bapa/arith/fol_0000041.smt2,sat,0.374747992,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000042.smt2,sat,0.005403996,bapa/arith/fol_0000042.smt2,sat,0.342611551,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000043.smt2,sat,0.00557375,bapa/arith/fol_0000043.smt2,sat,0.284318686,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000044.smt2,sat,0.004848719,bapa/arith/fol_0000044.smt2,sat,0.358763456,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000045.smt2,unsat,0.009018421,bapa/arith/fol_0000045.smt2,  unsat,0.247600794,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000046.smt2,sat,0.006201506,bapa/arith/fol_0000046.smt2,sat,0.305989504,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000047.smt2,unsat,0.008484125,bapa/arith/fol_0000047.smt2,  unsat,0.25509429,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000048.smt2,sat,0.006332636,bapa/arith/fol_0000048.smt2,sat,0.44806838,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000049.smt2,sat,0.007041216,bapa/arith/fol_0000049.smt2,sat,0.237226009,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000050.smt2,sat,0.005838156,bapa/arith/fol_0000050.smt2,sat,0.147892475,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000051.smt2,sat,0.005214214,bapa/arith/fol_0000051.smt2,sat,0.53693819,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000052.smt2,sat,0.006765842,bapa/arith/fol_0000052.smt2,sat,0.44276166,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000053.smt2,sat,0.006486654,bapa/arith/fol_0000053.smt2,sat,0.451504707,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000054.smt2,sat,0.006732464,bapa/arith/fol_0000054.smt2,sat,0.558354378,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000055.smt2,unsat,0.005188942,bapa/arith/fol_0000055.smt2,  unsat,0.19108367,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000056.smt2,sat,0.005337715,bapa/arith/fol_0000056.smt2,sat,0.510382414,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000057.smt2,sat,0.006251574,bapa/arith/fol_0000057.smt2,sat,0.434769869,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000058.smt2,unsat,0.00848484,bapa/arith/fol_0000058.smt2,  unsat,0.238897324,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000059.smt2,unsat,0.004862785,bapa/arith/fol_0000059.smt2,  unsat,0.182754755,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000060.smt2,unsat,0.009310722,bapa/arith/fol_0000060.smt2,  unsat,0.256486654,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000061.smt2,unsat,0.009215593,bapa/arith/fol_0000061.smt2,  unsat,0.273725986,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000062.smt2,sat,0.006413221,bapa/arith/fol_0000062.smt2,sat,0.428608418,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000063.smt2,unsat,0.008435726,bapa/arith/fol_0000063.smt2,  unsat,1.031116009,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000064.smt2,unsat,0.004891634,bapa/arith/fol_0000064.smt2,  unsat,0.17288208,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000065.smt2,unsat,0.007757664,bapa/arith/fol_0000065.smt2,  unsat,0.251242161,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000066.smt2,unsat,0.008681297,bapa/arith/fol_0000066.smt2,  unsat,0.254142046,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000067.smt2,unsat,0.007618427,bapa/arith/fol_0000067.smt2,  unsat,0.275184155,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000068.smt2,unsat,0.007925749,bapa/arith/fol_0000068.smt2,  unsat,0.261825085,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000069.smt2,sat,0.005679131,bapa/arith/fol_0000069.smt2,sat,0.41223073,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000070.smt2,unsat,0.008744478,bapa/arith/fol_0000070.smt2,  unsat,0.245085955,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000071.smt2,sat,0.005518675,bapa/arith/fol_0000071.smt2,sat,0.219529152,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000072.smt2,sat,0.005944729,bapa/arith/fol_0000072.smt2,sat,0.225695133,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000073.smt2,sat,0.006023884,bapa/arith/fol_0000073.smt2,sat,0.148993731,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000074.smt2,sat,0.006092787,bapa/arith/fol_0000074.smt2,sat,0.223978996,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000075.smt2,sat,0.006448746,bapa/arith/fol_0000075.smt2,sat,0.213077307,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000076.smt2,sat,0.006463051,bapa/arith/fol_0000076.smt2,sat,0.533790827,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000077.smt2,sat,0.005935669,bapa/arith/fol_0000077.smt2,sat,0.529243946,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000078.smt2,unsat,0.005870581,bapa/arith/fol_0000078.smt2,  unsat,0.183238983,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000079.smt2,sat,0.005876303,bapa/arith/fol_0000079.smt2,sat,0.507038832,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000080.smt2,sat,0.005513668,bapa/arith/fol_0000080.smt2,sat,0.483575821,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000081.smt2,unsat,0.005373001,bapa/arith/fol_0000081.smt2,  unsat,0.171390295,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000082.smt2,sat,0.005485296,bapa/arith/fol_0000082.smt2,sat,0.473784924,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000083.smt2,unsat,0.005238533,bapa/arith/fol_0000083.smt2,  unsat,0.168394327,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000084.smt2,sat,0.005814075,bapa/arith/fol_0000084.smt2,sat,0.519649506,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000085.smt2,unsat,0.008678913,bapa/arith/fol_0000085.smt2,  unsat,0.266604662,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000086.smt2,unsat,0.008761644,bapa/arith/fol_0000086.smt2,  unsat,0.26908946,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000087.smt2,unsat,0.004682064,bapa/arith/fol_0000087.smt2,  unsat,0.174173594,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000088.smt2,unsat,0.008483648,bapa/arith/fol_0000088.smt2,  unsat,0.242271423,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000089.smt2,unsat,0.008188963,bapa/arith/fol_0000089.smt2,  unsat,0.250668764,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000090.smt2,sat,0.005882502,bapa/arith/fol_0000090.smt2,sat,0.354595184,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000091.smt2,unsat,0.005002499,bapa/arith/fol_0000091.smt2,  unsat,0.172189951,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000092.smt2,unsat,0.004235983,bapa/arith/fol_0000092.smt2,  unsat,0.176059961,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000093.smt2,unsat,0.005452871,bapa/arith/fol_0000093.smt2,  unsat,0.179952621,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000094.smt2,unsat,0.008636951,bapa/arith/fol_0000094.smt2,  unsat,0.267311811,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000095.smt2,unsat,0.007951021,bapa/arith/fol_0000095.smt2,  unsat,0.250749588,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000096.smt2,sat,0.005708456,bapa/arith/fol_0000096.smt2,sat,0.501622915,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000097.smt2,unsat,0.008439541,bapa/arith/fol_0000097.smt2,  unsat,0.24771142,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000098.smt2,unsat,0.008109331,bapa/arith/fol_0000098.smt2,  unsat,0.245840788,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000099.smt2,sat,0.005289793,bapa/arith/fol_0000099.smt2,sat,0.218187332,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000100.smt2,sat,0.006925821,bapa/arith/fol_0000100.smt2,sat,0.537797451,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000101.smt2,sat,0.005554199,bapa/arith/fol_0000101.smt2,sat,0.141969204,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000102.smt2,sat,0.006035805,bapa/arith/fol_0000102.smt2,sat,0.539416552,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000103.smt2,sat,0.006319046,bapa/arith/fol_0000103.smt2,sat,0.51676321,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000104.smt2,sat,0.006383181,bapa/arith/fol_0000104.smt2,sat,0.4132061,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000105.smt2,sat,0.008072376,bapa/arith/fol_0000105.smt2,sat,0.218720913,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000106.smt2,sat,0.006089687,bapa/arith/fol_0000106.smt2,sat,0.424641132,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000107.smt2,unsat,0.005462646,bapa/arith/fol_0000107.smt2,  unsat,0.177054644,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000108.smt2,sat,0.00590992,bapa/arith/fol_0000108.smt2,sat,0.386983633,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000109.smt2,sat,0.005759478,bapa/arith/fol_0000109.smt2,sat,0.514557838,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000110.smt2,unsat,0.008835077,bapa/arith/fol_0000110.smt2,  unsat,0.238288641,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000111.smt2,unsat,0.004633427,bapa/arith/fol_0000111.smt2,  unsat,0.171274424,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000112.smt2,unsat,0.008687258,bapa/arith/fol_0000112.smt2,  unsat,0.24489522,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000113.smt2,sat,0.005111456,bapa/arith/fol_0000113.smt2,sat,0.374901772,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000114.smt2,unsat,0.004435539,bapa/arith/fol_0000114.smt2,  unsat,0.174555302,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000115.smt2,unsat,0.005340099,bapa/arith/fol_0000115.smt2,  unsat,0.167971373,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000116.smt2,unsat,0.004541636,bapa/arith/fol_0000116.smt2,  unsat,0.176509857,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000117.smt2,sat,0.004554987,bapa/arith/fol_0000117.smt2,sat,0.367304564,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000118.smt2,sat,0.005702019,bapa/arith/fol_0000118.smt2,sat,0.386999607,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000119.smt2,unsat,0.007790804,bapa/arith/fol_0000119.smt2,  unsat,0.247147322,TRUE
-benchmarks/bapa/arith/cvc5/fol_0000120.smt2,unsat,0.004276752,bapa/arith/fol_0000120.smt2,  unsat,0.169645548,TRUE
-benchmarks/bapa/card/cvc5/fol_0000001.smt2,sat,0.006249905,bapa/card/fol_0000001.smt2 ,sat,0.348153591,TRUE
-benchmarks/bapa/card/cvc5/fol_0000002.smt2,sat,0.0045228,bapa/card/fol_0000002.smt2 ,sat,0.442762852,TRUE
-benchmarks/bapa/card/cvc5/fol_0000003.smt2,sat,0.00447464,bapa/card/fol_0000003.smt2 ,sat,0.363489866,TRUE
-benchmarks/bapa/card/cvc5/fol_0000004.smt2,sat,0.006122351,bapa/card/fol_0000004.smt2 ,sat,0.354475737,TRUE
-benchmarks/bapa/card/cvc5/fol_0000005.smt2,sat,0.004783154,bapa/card/fol_0000005.smt2 ,sat,0.346847057,TRUE
-benchmarks/bapa/card/cvc5/fol_0000006.smt2,sat,0.004796028,bapa/card/fol_0000006.smt2 ,sat,0.349636316,TRUE
-benchmarks/bapa/card/cvc5/fol_0000007.smt2,sat,0.00541997,bapa/card/fol_0000007.smt2 ,sat,0.356083393,TRUE
-benchmarks/bapa/card/cvc5/fol_0000008.smt2,sat,0.004813671,bapa/card/fol_0000008.smt2 ,sat,0.353154898,TRUE
-benchmarks/bapa/card/cvc5/fol_0000009.smt2,sat,0.004662275,bapa/card/fol_0000009.smt2 ,sat,0.471537352,TRUE
-benchmarks/bapa/card/cvc5/fol_0000010.smt2,sat,0.004787445,bapa/card/fol_0000010.smt2 ,sat,0.350089073,TRUE
-benchmarks/bapa/card/cvc5/fol_0000011.smt2,sat,0.005187511,bapa/card/fol_0000011.smt2 ,sat,0.454253435,TRUE
-benchmarks/bapa/card/cvc5/fol_0000012.smt2,sat,0.004832983,bapa/card/fol_0000012.smt2 ,sat,0.354323626,TRUE
-benchmarks/bapa/card/cvc5/fol_0000013.smt2,sat,0.00516963,bapa/card/fol_0000013.smt2 ,sat,0.358525515,TRUE
-benchmarks/bapa/card/cvc5/fol_0000014.smt2,sat,0.005165339,bapa/card/fol_0000014.smt2 ,sat,0.349612713,TRUE
-benchmarks/bapa/card/cvc5/fol_0000015.smt2,sat,0.004537821,bapa/card/fol_0000015.smt2 ,sat,0.46444869,TRUE
-benchmarks/bapa/card/cvc5/fol_0000016.smt2,sat,0.004854918,bapa/card/fol_0000016.smt2 ,sat,0.365087748,TRUE
-benchmarks/bapa/card/cvc5/fol_0000017.smt2,sat,0.005213976,bapa/card/fol_0000017.smt2 ,sat,0.477689028,TRUE
-benchmarks/bapa/card/cvc5/fol_0000018.smt2,sat,0.004706144,bapa/card/fol_0000018.smt2 ,sat,0.351101875,TRUE
-benchmarks/bapa/card/cvc5/fol_0000019.smt2,sat,0.004796505,bapa/card/fol_0000019.smt2 ,sat,0.481669188,TRUE
-benchmarks/bapa/card/cvc5/fol_0000020.smt2,sat,0.005398989,bapa/card/fol_0000020.smt2 ,sat,0.355344296,TRUE
-benchmarks/bapa/card/cvc5/fol_0000021.smt2,unsat,0.005200863,bapa/card/fol_0000021.smt2 ,  unsat,0.171499968,TRUE
-benchmarks/bapa/card/cvc5/fol_0000022.smt2,sat,0.005833387,bapa/card/fol_0000022.smt2 ,sat,0.481844187,TRUE
-benchmarks/bapa/card/cvc5/fol_0000023.smt2,unsat,0.005295277,bapa/card/fol_0000023.smt2 ,  unsat,0.173066378,TRUE
-benchmarks/bapa/card/cvc5/fol_0000024.smt2,sat,0.005613565,bapa/card/fol_0000024.smt2 ,timeout,51.62414455,FALSE
-benchmarks/bapa/card/cvc5/fol_0000025.smt2,sat,0.004417419,bapa/card/fol_0000025.smt2 ,sat,0.341430902,TRUE
-benchmarks/bapa/card/cvc5/fol_0000026.smt2,sat,0.005647898,bapa/card/fol_0000026.smt2 ,sat,0.448576927,TRUE
-benchmarks/bapa/card/cvc5/fol_0000027.smt2,sat,0.005754948,bapa/card/fol_0000027.smt2 ,sat,0.36128664,TRUE
-benchmarks/bapa/card/cvc5/fol_0000028.smt2,unsat,0.012165308,bapa/card/fol_0000028.smt2 ,  unsat,0.222877026,TRUE
-benchmarks/bapa/card/cvc5/fol_0000029.smt2,sat,0.007460594,bapa/card/fol_0000029.smt2 ,sat,0.400098085,TRUE
-benchmarks/bapa/card/cvc5/fol_0000030.smt2,unsat,0.006214619,bapa/card/fol_0000030.smt2 ,  unsat,0.164866686,TRUE
-benchmarks/bapa/card/cvc5/fol_0000031.smt2,sat,0.006472826,bapa/card/fol_0000031.smt2 ,sat,0.353502274,TRUE
-benchmarks/bapa/card/cvc5/fol_0000032.smt2,unsat,0.005518436,bapa/card/fol_0000032.smt2 ,  unsat,0.16689229,TRUE
-benchmarks/bapa/card/cvc5/fol_0000033.smt2,sat,0.005910397,bapa/card/fol_0000033.smt2 ,sat,0.353208303,TRUE
-benchmarks/bapa/card/cvc5/fol_0000034.smt2,unsat,0.004433632,bapa/card/fol_0000034.smt2 ,  unsat,0.164858818,TRUE
-benchmarks/bapa/card/cvc5/fol_0000035.smt2,sat,0.005497217,bapa/card/fol_0000035.smt2 ,sat,0.370762348,TRUE
-benchmarks/bapa/card/cvc5/fol_0000036.smt2,sat,0.004891634,bapa/card/fol_0000036.smt2 ,sat,0.346759081,TRUE
-benchmarks/bapa/card/cvc5/fol_0000037.smt2,sat,0.004559278,bapa/card/fol_0000037.smt2 ,sat,0.342145681,TRUE
-benchmarks/bapa/card/cvc5/fol_0000038.smt2,unsat,0.004096985,bapa/card/fol_0000038.smt2 ,  unsat,0.16918087,TRUE
-benchmarks/bapa/card/cvc5/fol_0000039.smt2,sat,0.005470991,bapa/card/fol_0000039.smt2 ,sat,0.335247993,TRUE
-benchmarks/bapa/card/cvc5/fol_0000040.smt2,unsat,0.004611969,bapa/card/fol_0000040.smt2 ,  unsat,0.170845985,TRUE
-benchmarks/bapa/card/cvc5/fol_0000041.smt2,sat,0.004546404,bapa/card/fol_0000041.smt2 ,sat,0.359589577,TRUE
-benchmarks/bapa/card/cvc5/fol_0000042.smt2,sat,0.005326748,bapa/card/fol_0000042.smt2 ,sat,0.350086212,TRUE
-benchmarks/bapa/card/cvc5/fol_0000043.smt2,sat,0.005906582,bapa/card/fol_0000043.smt2 ,sat,0.287399769,TRUE
-benchmarks/bapa/card/cvc5/fol_0000044.smt2,sat,0.004601955,bapa/card/fol_0000044.smt2 ,sat,0.354703903,TRUE
-benchmarks/bapa/card/cvc5/fol_0000045.smt2,unsat,0.025070667,bapa/card/fol_0000045.smt2 ,  unsat,0.493671656,TRUE
-benchmarks/bapa/card/cvc5/fol_0000046.smt2,unsat,0.084270716,bapa/card/fol_0000046.smt2 ,timeout,51.59514523,FALSE
-benchmarks/bapa/card/cvc5/fol_0000047.smt2,unsat,0.092596292,bapa/card/fol_0000047.smt2 ,  unsat,14.99300385,TRUE
-benchmarks/bapa/card/cvc5/fol_0000048.smt2,sat,1.220105886,bapa/card/fol_0000048.smt2 ,timeout,51.52426195,FALSE
-benchmarks/bapa/card/cvc5/fol_0000049.smt2,sat,1.001331091,bapa/card/fol_0000049.smt2 ,sat,11.22989631,TRUE
-benchmarks/bapa/card/cvc5/fol_0000050.smt2,sat,0.006444454,bapa/card/fol_0000050.smt2 ,timeout,51.51998472,FALSE
-benchmarks/bapa/card/cvc5/fol_0000051.smt2,sat,0.005815506,bapa/card/fol_0000051.smt2 ,timeout,50.81062841,FALSE
-benchmarks/bapa/card/cvc5/fol_0000052.smt2,sat,0.090563774,bapa/card/fol_0000052.smt2 ,sat,6.225986481,TRUE
-benchmarks/bapa/card/cvc5/fol_0000053.smt2,sat,0.006675959,bapa/card/fol_0000053.smt2 ,timeout,51.60951042,FALSE
-benchmarks/bapa/card/cvc5/fol_0000054.smt2,sat,0.098593712,bapa/card/fol_0000054.smt2 ,timeout,50.77802992,FALSE
-benchmarks/bapa/card/cvc5/fol_0000055.smt2,unsat,0.246818542,bapa/card/fol_0000055.smt2 ,  unsat,19.80055356,TRUE
-benchmarks/bapa/card/cvc5/fol_0000056.smt2,sat,0.006139755,bapa/card/fol_0000056.smt2 ,sat,1.606430054,TRUE
-benchmarks/bapa/card/cvc5/fol_0000057.smt2,sat,0.025443316,bapa/card/fol_0000057.smt2 ,sat,3.550425291,TRUE
-benchmarks/bapa/card/cvc5/fol_0000058.smt2,unsat,0.007434368,bapa/card/fol_0000058.smt2 ,  unsat,0.230741739,TRUE
-benchmarks/bapa/card/cvc5/fol_0000059.smt2,unsat,0.004053593,bapa/card/fol_0000059.smt2 ,  unsat,0.186239243,TRUE
-benchmarks/bapa/card/cvc5/fol_0000060.smt2,unsat,0.02328229,bapa/card/fol_0000060.smt2 ,  unsat,0.497185946,TRUE
-benchmarks/bapa/card/cvc5/fol_0000061.smt2,unsat,0.022655487,bapa/card/fol_0000061.smt2 ,  unsat,0.283760548,TRUE
-benchmarks/bapa/card/cvc5/fol_0000062.smt2,sat,0.025073528,bapa/card/fol_0000062.smt2 ,sat,2.766501665,TRUE
-benchmarks/bapa/card/cvc5/fol_0000063.smt2,unsat,0.007644176,bapa/card/fol_0000063.smt2 ,  unsat,0.246244669,TRUE
-benchmarks/bapa/card/cvc5/fol_0000064.smt2,unsat,0.00373888,bapa/card/fol_0000064.smt2 ,  unsat,0.17814374,TRUE
-benchmarks/bapa/card/cvc5/fol_0000065.smt2,unsat,0.02298665,bapa/card/fol_0000065.smt2 ,  unsat,0.497411966,TRUE
-benchmarks/bapa/card/cvc5/fol_0000066.smt2,unsat,0.023655415,bapa/card/fol_0000066.smt2 ,  unsat,0.517511845,TRUE
-benchmarks/bapa/card/cvc5/fol_0000067.smt2,unsat,0.02332592,bapa/card/fol_0000067.smt2 ,  unsat,0.277233124,TRUE
-benchmarks/bapa/card/cvc5/fol_0000068.smt2,unsat,0.023203135,bapa/card/fol_0000068.smt2 ,  unsat,0.31587553,TRUE
-benchmarks/bapa/card/cvc5/fol_0000069.smt2,unsat,0.08503294,bapa/card/fol_0000069.smt2 ,timeout,51.55177188,FALSE
-benchmarks/bapa/card/cvc5/fol_0000070.smt2,unsat,0.086429119,bapa/card/fol_0000070.smt2 ,  unsat,0.633586884,TRUE
-benchmarks/bapa/card/cvc5/fol_0000071.smt2,sat,0.752831697,bapa/card/fol_0000071.smt2 ,timeout,50.7955029,FALSE
-benchmarks/bapa/card/cvc5/fol_0000072.smt2,sat,0.780206442,bapa/card/fol_0000072.smt2 ,timeout,51.59042382,FALSE
-benchmarks/bapa/card/cvc5/fol_0000073.smt2,sat,0.007498264,bapa/card/fol_0000073.smt2 ,timeout,51.64899206,FALSE
-benchmarks/bapa/card/cvc5/fol_0000074.smt2,sat,0.006951094,bapa/card/fol_0000074.smt2 ,timeout,50.83539081,FALSE
-benchmarks/bapa/card/cvc5/fol_0000075.smt2,unsat,0.086025,bapa/card/fol_0000075.smt2 ,timeout,51.58344007,FALSE
-benchmarks/bapa/card/cvc5/fol_0000076.smt2,sat,0.007018805,bapa/card/fol_0000076.smt2 ,sat,2.964776754,TRUE
-benchmarks/bapa/card/cvc5/fol_0000077.smt2,unsat,0.083743334,bapa/card/fol_0000077.smt2 ,timeout,50.81564593,FALSE
-benchmarks/bapa/card/cvc5/fol_0000078.smt2,unsat,0.249389172,bapa/card/fol_0000078.smt2 ,  unsat,1.905253172,TRUE
-benchmarks/bapa/card/cvc5/fol_0000079.smt2,sat,0.006300449,bapa/card/fol_0000079.smt2 ,sat,1.672252655,TRUE
-benchmarks/bapa/card/cvc5/fol_0000080.smt2,sat,0.030497789,bapa/card/fol_0000080.smt2 ,timeout,51.58409834,FALSE
-benchmarks/bapa/card/cvc5/fol_0000081.smt2,unsat,0.00411272,bapa/card/fol_0000081.smt2 ,  unsat,0.179929495,TRUE
-benchmarks/bapa/card/cvc5/fol_0000082.smt2,sat,0.041223526,bapa/card/fol_0000082.smt2 ,timeout,50.78202128,FALSE
-benchmarks/bapa/card/cvc5/fol_0000083.smt2,unsat,0.031295538,bapa/card/fol_0000083.smt2 ,  unsat,1.140745878,TRUE
-benchmarks/bapa/card/cvc5/fol_0000084.smt2,unsat,0.084449291,bapa/card/fol_0000084.smt2 ,timeout,50.59154963,FALSE
-benchmarks/bapa/card/cvc5/fol_0000085.smt2,unsat,0.022401333,bapa/card/fol_0000085.smt2 ,  unsat,0.265553951,TRUE
-benchmarks/bapa/card/cvc5/fol_0000086.smt2,unsat,0.023529768,bapa/card/fol_0000086.smt2 ,  unsat,0.277772188,TRUE
-benchmarks/bapa/card/cvc5/fol_0000087.smt2,unsat,0.030108452,bapa/card/fol_0000087.smt2 ,  unsat,1.144392252,TRUE
-benchmarks/bapa/card/cvc5/fol_0000088.smt2,unsat,0.081133842,bapa/card/fol_0000088.smt2 ,  unsat,16.88413501,TRUE
-benchmarks/bapa/card/cvc5/fol_0000089.smt2,unsat,0.088858604,bapa/card/fol_0000089.smt2 ,  unsat,5.688016891,TRUE
-benchmarks/bapa/card/cvc5/fol_0000090.smt2,sat,0.02946949,bapa/card/fol_0000090.smt2 ,timeout,50.55466461,FALSE
-benchmarks/bapa/card/cvc5/fol_0000091.smt2,unsat,0.004711151,bapa/card/fol_0000091.smt2 ,  unsat,0.203582287,TRUE
-benchmarks/bapa/card/cvc5/fol_0000092.smt2,unsat,0.027026176,bapa/card/fol_0000092.smt2 ,  unsat,0.457875967,TRUE
-benchmarks/bapa/card/cvc5/fol_0000093.smt2,unsat,0.030772448,bapa/card/fol_0000093.smt2 ,  unsat,0.542979002,TRUE
-benchmarks/bapa/card/cvc5/fol_0000094.smt2,unsat,0.0230124,bapa/card/fol_0000094.smt2 ,  unsat,0.275872707,TRUE
-benchmarks/bapa/card/cvc5/fol_0000095.smt2,unsat,0.082385302,bapa/card/fol_0000095.smt2 ,timeout,51.25750685,FALSE
-benchmarks/bapa/card/cvc5/fol_0000096.smt2,unsat,0.754290819,bapa/card/fol_0000096.smt2 ,timeout,51.20434856,FALSE
-benchmarks/bapa/card/cvc5/fol_0000097.smt2,unsat,0.737480164,bapa/card/fol_0000097.smt2 ,timeout,50.5734396,FALSE
-benchmarks/bapa/card/cvc5/fol_0000098.smt2,unsat,7.99296546,bapa/card/fol_0000098.smt2 ,timeout,51.07065272,FALSE
-benchmarks/bapa/card/cvc5/fol_0000099.smt2,unsat,45.34976435,bapa/card/fol_0000099.smt2 ,timeout,50.66517973,FALSE
-benchmarks/bapa/card/cvc5/fol_0000100.smt2,unsat,39.01196527,bapa/card/fol_0000100.smt2 ,timeout,51.12153864,FALSE
-benchmarks/bapa/card/cvc5/fol_0000101.smt2,sat,0.008656502,bapa/card/fol_0000101.smt2 ,timeout,50.71097565,FALSE
-benchmarks/bapa/card/cvc5/fol_0000102.smt2,sat,7.277018547,bapa/card/fol_0000102.smt2 ,timeout,51.11875367,FALSE
-benchmarks/bapa/card/cvc5/fol_0000103.smt2,sat,0.00705266,bapa/card/fol_0000103.smt2 ,timeout,50.04078627,FALSE
-benchmarks/bapa/card/cvc5/fol_0000104.smt2,unsat,9.192038298,bapa/card/fol_0000104.smt2 ,timeout,50.65212226,FALSE
-benchmarks/bapa/card/cvc5/fol_0000105.smt2,sat,0.010256529,bapa/card/fol_0000105.smt2 ,timeout,50.55034208,FALSE
-benchmarks/bapa/card/cvc5/fol_0000106.smt2,unsat,13.27579999,bapa/card/fol_0000106.smt2 ,timeout,51.05112839,FALSE
-benchmarks/bapa/card/cvc5/fol_0000107.smt2,unsat,9.287682295,bapa/card/fol_0000107.smt2 ,timeout,51.0099926,FALSE
-benchmarks/bapa/card/cvc5/fol_0000108.smt2,sat,0.007317066,bapa/card/fol_0000108.smt2 ,timeout,50.58863187,FALSE
-benchmarks/bapa/card/cvc5/fol_0000109.smt2,unsat,0.087180376,bapa/card/fol_0000109.smt2 ,timeout,51.13211703,FALSE
-benchmarks/bapa/card/cvc5/fol_0000110.smt2,unsat,0.023568869,bapa/card/fol_0000110.smt2 ,  unsat,0.49109292,TRUE
-benchmarks/bapa/card/cvc5/fol_0000111.smt2,unsat,0.029851675,bapa/card/fol_0000111.smt2 ,  unsat,1.152416706,TRUE
-benchmarks/bapa/card/cvc5/fol_0000112.smt2,unsat,0.085380554,bapa/card/fol_0000112.smt2 ,timeout,50.71004534,FALSE
-benchmarks/bapa/card/cvc5/fol_0000113.smt2,sat,0.254229546,bapa/card/fol_0000113.smt2 ,timeout,51.24177456,FALSE
-benchmarks/bapa/card/cvc5/fol_0000114.smt2,unsat,0.033879042,bapa/card/fol_0000114.smt2 ,  unsat,0.483315945,TRUE
-benchmarks/bapa/card/cvc5/fol_0000115.smt2,unsat,0.031643391,bapa/card/fol_0000115.smt2 ,  unsat,0.487026691,TRUE
-benchmarks/bapa/card/cvc5/fol_0000116.smt2,unsat,0.246533871,bapa/card/fol_0000116.smt2 ,  unsat,0.795124292,TRUE
-benchmarks/bapa/card/cvc5/fol_0000117.smt2,sat,0.233179092,bapa/card/fol_0000117.smt2 ,timeout,50.62664938,FALSE
-benchmarks/bapa/card/cvc5/fol_0000118.smt2,unsat,0.729824543,bapa/card/fol_0000118.smt2 ,timeout,51.34542465,FALSE
-benchmarks/bapa/card/cvc5/fol_0000119.smt2,unsat,0.08500123,bapa/card/fol_0000119.smt2 ,  unsat,25.79272079,TRUE
-benchmarks/bapa/card/cvc5/fol_0000120.smt2,unsat,0.231636047,bapa/card/fol_0000120.smt2 ,  unsat,4.37706399,TRUE
+filename,result,duration
+benchmarks/bapa/arith/cvc5/fol_0000001.smt2,sat,0.056572675704956055
+benchmarks/bapa/arith/cvc5/fol_0000002.smt2,sat,0.0054645538330078125
+benchmarks/bapa/arith/cvc5/fol_0000003.smt2,sat,0.004859447479248047
+benchmarks/bapa/arith/cvc5/fol_0000004.smt2,sat,0.006315708160400391
+benchmarks/bapa/arith/cvc5/fol_0000005.smt2,sat,0.005860567092895508
+benchmarks/bapa/arith/cvc5/fol_0000006.smt2,sat,0.005497455596923828
+benchmarks/bapa/arith/cvc5/fol_0000007.smt2,sat,0.006097555160522461
+benchmarks/bapa/arith/cvc5/fol_0000008.smt2,sat,0.004918575286865234
+benchmarks/bapa/arith/cvc5/fol_0000009.smt2,sat,0.005044221878051758
+benchmarks/bapa/arith/cvc5/fol_0000010.smt2,sat,0.00654149055480957
+benchmarks/bapa/arith/cvc5/fol_0000011.smt2,sat,0.0053560733795166016
+benchmarks/bapa/arith/cvc5/fol_0000012.smt2,sat,0.005237102508544922
+benchmarks/bapa/arith/cvc5/fol_0000013.smt2,sat,0.0064487457275390625
+benchmarks/bapa/arith/cvc5/fol_0000014.smt2,sat,0.005294322967529297
+benchmarks/bapa/arith/cvc5/fol_0000015.smt2,sat,0.005651235580444336
+benchmarks/bapa/arith/cvc5/fol_0000016.smt2,sat,0.005857706069946289
+benchmarks/bapa/arith/cvc5/fol_0000017.smt2,sat,0.005097866058349609
+benchmarks/bapa/arith/cvc5/fol_0000018.smt2,sat,0.006024599075317383
+benchmarks/bapa/arith/cvc5/fol_0000019.smt2,sat,0.006034135818481445
+benchmarks/bapa/arith/cvc5/fol_0000020.smt2,sat,0.005552530288696289
+benchmarks/bapa/arith/cvc5/fol_0000021.smt2,unsat,0.004943370819091797
+benchmarks/bapa/arith/cvc5/fol_0000022.smt2,sat,0.005726337432861328
+benchmarks/bapa/arith/cvc5/fol_0000023.smt2,unsat,0.005422353744506836
+benchmarks/bapa/arith/cvc5/fol_0000024.smt2,sat,0.006734132766723633
+benchmarks/bapa/arith/cvc5/fol_0000025.smt2,sat,0.0066640377044677734
+benchmarks/bapa/arith/cvc5/fol_0000026.smt2,sat,0.007632732391357422
+benchmarks/bapa/arith/cvc5/fol_0000027.smt2,sat,0.0057086944580078125
+benchmarks/bapa/arith/cvc5/fol_0000028.smt2,unsat,0.020778656005859375
+benchmarks/bapa/arith/cvc5/fol_0000029.smt2,sat,0.007065773010253906
+benchmarks/bapa/arith/cvc5/fol_0000030.smt2,unsat,0.0051267147064208984
+benchmarks/bapa/arith/cvc5/fol_0000031.smt2,sat,0.007462263107299805
+benchmarks/bapa/arith/cvc5/fol_0000032.smt2,unsat,0.007467985153198242
+benchmarks/bapa/arith/cvc5/fol_0000033.smt2,sat,0.008941888809204102
+benchmarks/bapa/arith/cvc5/fol_0000034.smt2,unsat,0.00632786750793457
+benchmarks/bapa/arith/cvc5/fol_0000035.smt2,sat,0.007768869400024414
+benchmarks/bapa/arith/cvc5/fol_0000036.smt2,sat,0.006824493408203125
+benchmarks/bapa/arith/cvc5/fol_0000037.smt2,sat,0.0069391727447509766
+benchmarks/bapa/arith/cvc5/fol_0000038.smt2,unsat,0.005922079086303711
+benchmarks/bapa/arith/cvc5/fol_0000039.smt2,sat,0.005855560302734375
+benchmarks/bapa/arith/cvc5/fol_0000040.smt2,unsat,0.005972862243652344
+benchmarks/bapa/arith/cvc5/fol_0000041.smt2,sat,0.005419254302978516
+benchmarks/bapa/arith/cvc5/fol_0000042.smt2,sat,0.005901813507080078
+benchmarks/bapa/arith/cvc5/fol_0000043.smt2,sat,0.006163358688354492
+benchmarks/bapa/arith/cvc5/fol_0000044.smt2,sat,0.005471229553222656
+benchmarks/bapa/arith/cvc5/fol_0000045.smt2,unsat,0.009661197662353516
+benchmarks/bapa/arith/cvc5/fol_0000046.smt2,sat,0.006855010986328125
+benchmarks/bapa/arith/cvc5/fol_0000047.smt2,unsat,0.009332656860351562
+benchmarks/bapa/arith/cvc5/fol_0000048.smt2,sat,0.0077588558197021484
+benchmarks/bapa/arith/cvc5/fol_0000049.smt2,sat,0.008160591125488281
+benchmarks/bapa/arith/cvc5/fol_0000050.smt2,sat,0.006438255310058594
+benchmarks/bapa/arith/cvc5/fol_0000051.smt2,sat,0.006653308868408203
+benchmarks/bapa/arith/cvc5/fol_0000052.smt2,sat,0.0071833133697509766
+benchmarks/bapa/arith/cvc5/fol_0000053.smt2,sat,0.008375883102416992
+benchmarks/bapa/arith/cvc5/fol_0000054.smt2,sat,0.006862640380859375
+benchmarks/bapa/arith/cvc5/fol_0000055.smt2,unsat,0.006070375442504883
+benchmarks/bapa/arith/cvc5/fol_0000056.smt2,sat,0.005519390106201172
+benchmarks/bapa/arith/cvc5/fol_0000057.smt2,sat,0.005454301834106445
+benchmarks/bapa/arith/cvc5/fol_0000058.smt2,unsat,0.008967161178588867
+benchmarks/bapa/arith/cvc5/fol_0000059.smt2,unsat,0.004599094390869141
+benchmarks/bapa/arith/cvc5/fol_0000060.smt2,unsat,0.009013891220092773
+benchmarks/bapa/arith/cvc5/fol_0000061.smt2,unsat,0.008288145065307617
+benchmarks/bapa/arith/cvc5/fol_0000062.smt2,sat,0.007075071334838867
+benchmarks/bapa/arith/cvc5/fol_0000063.smt2,unsat,0.00772857666015625
+benchmarks/bapa/arith/cvc5/fol_0000064.smt2,unsat,0.005712032318115234
+benchmarks/bapa/arith/cvc5/fol_0000065.smt2,unsat,0.007959842681884766
+benchmarks/bapa/arith/cvc5/fol_0000066.smt2,unsat,0.009189605712890625
+benchmarks/bapa/arith/cvc5/fol_0000067.smt2,unsat,0.00800943374633789
+benchmarks/bapa/arith/cvc5/fol_0000068.smt2,unsat,0.009653329849243164
+benchmarks/bapa/arith/cvc5/fol_0000069.smt2,sat,0.0055866241455078125
+benchmarks/bapa/arith/cvc5/fol_0000070.smt2,unsat,0.009364604949951172
+benchmarks/bapa/arith/cvc5/fol_0000071.smt2,sat,0.00548553466796875
+benchmarks/bapa/arith/cvc5/fol_0000072.smt2,sat,0.007121562957763672
+benchmarks/bapa/arith/cvc5/fol_0000073.smt2,sat,0.006182193756103516
+benchmarks/bapa/arith/cvc5/fol_0000074.smt2,sat,0.0071485042572021484
+benchmarks/bapa/arith/cvc5/fol_0000075.smt2,sat,0.00629115104675293
+benchmarks/bapa/arith/cvc5/fol_0000076.smt2,sat,0.006547689437866211
+benchmarks/bapa/arith/cvc5/fol_0000077.smt2,sat,0.0074808597564697266
+benchmarks/bapa/arith/cvc5/fol_0000078.smt2,unsat,0.004718780517578125
+benchmarks/bapa/arith/cvc5/fol_0000079.smt2,sat,0.006483316421508789
+benchmarks/bapa/arith/cvc5/fol_0000080.smt2,sat,0.00583338737487793
+benchmarks/bapa/arith/cvc5/fol_0000081.smt2,unsat,0.004279613494873047
+benchmarks/bapa/arith/cvc5/fol_0000082.smt2,sat,0.006094932556152344
+benchmarks/bapa/arith/cvc5/fol_0000083.smt2,unsat,0.004820346832275391
+benchmarks/bapa/arith/cvc5/fol_0000084.smt2,sat,0.005089998245239258
+benchmarks/bapa/arith/cvc5/fol_0000085.smt2,unsat,0.008875846862792969
+benchmarks/bapa/arith/cvc5/fol_0000086.smt2,unsat,0.007867097854614258
+benchmarks/bapa/arith/cvc5/fol_0000087.smt2,unsat,0.005858421325683594
+benchmarks/bapa/arith/cvc5/fol_0000088.smt2,unsat,0.007729291915893555
+benchmarks/bapa/arith/cvc5/fol_0000089.smt2,unsat,0.009102344512939453
+benchmarks/bapa/arith/cvc5/fol_0000090.smt2,sat,0.004906892776489258
+benchmarks/bapa/arith/cvc5/fol_0000091.smt2,unsat,0.004639387130737305
+benchmarks/bapa/arith/cvc5/fol_0000092.smt2,unsat,0.005711078643798828
+benchmarks/bapa/arith/cvc5/fol_0000093.smt2,unsat,0.004602909088134766
+benchmarks/bapa/arith/cvc5/fol_0000094.smt2,unsat,0.008500099182128906
+benchmarks/bapa/arith/cvc5/fol_0000095.smt2,unsat,0.007880449295043945
+benchmarks/bapa/arith/cvc5/fol_0000096.smt2,sat,0.005658388137817383
+benchmarks/bapa/arith/cvc5/fol_0000097.smt2,unsat,0.00859689712524414
+benchmarks/bapa/arith/cvc5/fol_0000098.smt2,unsat,0.008784770965576172
+benchmarks/bapa/arith/cvc5/fol_0000099.smt2,sat,0.005631208419799805
+benchmarks/bapa/arith/cvc5/fol_0000100.smt2,sat,0.00613856315612793
+benchmarks/bapa/arith/cvc5/fol_0000101.smt2,sat,0.0065228939056396484
+benchmarks/bapa/arith/cvc5/fol_0000102.smt2,sat,0.0055561065673828125
+benchmarks/bapa/arith/cvc5/fol_0000103.smt2,sat,0.0064508914947509766
+benchmarks/bapa/arith/cvc5/fol_0000104.smt2,sat,0.006676912307739258
+benchmarks/bapa/arith/cvc5/fol_0000105.smt2,sat,0.006876468658447266
+benchmarks/bapa/arith/cvc5/fol_0000106.smt2,sat,0.007623434066772461
+benchmarks/bapa/arith/cvc5/fol_0000107.smt2,unsat,0.004611492156982422
+benchmarks/bapa/arith/cvc5/fol_0000108.smt2,sat,0.007016181945800781
+benchmarks/bapa/arith/cvc5/fol_0000109.smt2,sat,0.006139516830444336
+benchmarks/bapa/arith/cvc5/fol_0000110.smt2,unsat,0.008804082870483398
+benchmarks/bapa/arith/cvc5/fol_0000111.smt2,unsat,0.005018711090087891
+benchmarks/bapa/arith/cvc5/fol_0000112.smt2,unsat,0.008432865142822266
+benchmarks/bapa/arith/cvc5/fol_0000113.smt2,sat,0.005619525909423828
+benchmarks/bapa/arith/cvc5/fol_0000114.smt2,unsat,0.004445314407348633
+benchmarks/bapa/arith/cvc5/fol_0000115.smt2,unsat,0.00455474853515625
+benchmarks/bapa/arith/cvc5/fol_0000116.smt2,unsat,0.00583338737487793
+benchmarks/bapa/arith/cvc5/fol_0000117.smt2,sat,0.00562739372253418
+benchmarks/bapa/arith/cvc5/fol_0000118.smt2,sat,0.006422996520996094
+benchmarks/bapa/arith/cvc5/fol_0000119.smt2,unsat,0.009271860122680664
+benchmarks/bapa/arith/cvc5/fol_0000120.smt2,unsat,0.006148576736450195
+benchmarks/bapa/card/cvc5/fol_0000001.smt2,sat,0.005509376525878906
+benchmarks/bapa/card/cvc5/fol_0000002.smt2,sat,0.005194664001464844
+benchmarks/bapa/card/cvc5/fol_0000003.smt2,sat,0.0061571598052978516
+benchmarks/bapa/card/cvc5/fol_0000004.smt2,sat,0.00553584098815918
+benchmarks/bapa/card/cvc5/fol_0000005.smt2,sat,0.0051653385162353516
+benchmarks/bapa/card/cvc5/fol_0000006.smt2,sat,0.006383657455444336
+benchmarks/bapa/card/cvc5/fol_0000007.smt2,sat,0.005451202392578125
+benchmarks/bapa/card/cvc5/fol_0000008.smt2,sat,0.006046295166015625
+benchmarks/bapa/card/cvc5/fol_0000009.smt2,sat,0.005895376205444336
+benchmarks/bapa/card/cvc5/fol_0000010.smt2,sat,0.005063056945800781
+benchmarks/bapa/card/cvc5/fol_0000011.smt2,sat,0.0060160160064697266
+benchmarks/bapa/card/cvc5/fol_0000012.smt2,sat,0.005156278610229492
+benchmarks/bapa/card/cvc5/fol_0000013.smt2,sat,0.0047757625579833984
+benchmarks/bapa/card/cvc5/fol_0000014.smt2,sat,0.0055599212646484375
+benchmarks/bapa/card/cvc5/fol_0000015.smt2,sat,0.0051081180572509766
+benchmarks/bapa/card/cvc5/fol_0000016.smt2,sat,0.005691051483154297
+benchmarks/bapa/card/cvc5/fol_0000017.smt2,sat,0.006429433822631836
+benchmarks/bapa/card/cvc5/fol_0000018.smt2,sat,0.0051648616790771484
+benchmarks/bapa/card/cvc5/fol_0000019.smt2,sat,0.005989789962768555
+benchmarks/bapa/card/cvc5/fol_0000020.smt2,sat,0.0058515071868896484
+benchmarks/bapa/card/cvc5/fol_0000021.smt2,unsat,0.004648923873901367
+benchmarks/bapa/card/cvc5/fol_0000022.smt2,sat,0.005694150924682617
+benchmarks/bapa/card/cvc5/fol_0000023.smt2,unsat,0.005318880081176758
+benchmarks/bapa/card/cvc5/fol_0000024.smt2,sat,0.005780696868896484
+benchmarks/bapa/card/cvc5/fol_0000025.smt2,sat,0.006189823150634766
+benchmarks/bapa/card/cvc5/fol_0000026.smt2,sat,0.005145072937011719
+benchmarks/bapa/card/cvc5/fol_0000027.smt2,sat,0.005197286605834961
+benchmarks/bapa/card/cvc5/fol_0000028.smt2,unsat,0.009061813354492188
+benchmarks/bapa/card/cvc5/fol_0000029.smt2,sat,0.006208181381225586
+benchmarks/bapa/card/cvc5/fol_0000030.smt2,unsat,0.005609989166259766
+benchmarks/bapa/card/cvc5/fol_0000031.smt2,sat,0.005561351776123047
+benchmarks/bapa/card/cvc5/fol_0000032.smt2,unsat,0.004553318023681641
+benchmarks/bapa/card/cvc5/fol_0000033.smt2,sat,0.0066699981689453125
+benchmarks/bapa/card/cvc5/fol_0000034.smt2,unsat,0.005180835723876953
+benchmarks/bapa/card/cvc5/fol_0000035.smt2,sat,0.00574493408203125
+benchmarks/bapa/card/cvc5/fol_0000036.smt2,sat,0.00623631477355957
+benchmarks/bapa/card/cvc5/fol_0000037.smt2,sat,0.005185604095458984
+benchmarks/bapa/card/cvc5/fol_0000038.smt2,unsat,0.005782127380371094
+benchmarks/bapa/card/cvc5/fol_0000039.smt2,sat,0.005880594253540039
+benchmarks/bapa/card/cvc5/fol_0000040.smt2,unsat,0.004793882369995117
+benchmarks/bapa/card/cvc5/fol_0000041.smt2,sat,0.005921363830566406
+benchmarks/bapa/card/cvc5/fol_0000042.smt2,sat,0.005178213119506836
+benchmarks/bapa/card/cvc5/fol_0000043.smt2,sat,0.005068778991699219
+benchmarks/bapa/card/cvc5/fol_0000044.smt2,sat,0.005778789520263672
+benchmarks/bapa/card/cvc5/fol_0000045.smt2,unsat,0.023609638214111328
+benchmarks/bapa/card/cvc5/fol_0000046.smt2,unsat,0.08313941955566406
+benchmarks/bapa/card/cvc5/fol_0000047.smt2,unsat,0.0914316177368164
+benchmarks/bapa/card/cvc5/fol_0000048.smt2,sat,1.1944375038146973
+benchmarks/bapa/card/cvc5/fol_0000049.smt2,sat,0.9741075038909912
+benchmarks/bapa/card/cvc5/fol_0000050.smt2,sat,0.008249998092651367
+benchmarks/bapa/card/cvc5/fol_0000051.smt2,sat,0.007117509841918945
+benchmarks/bapa/card/cvc5/fol_0000052.smt2,sat,0.09007120132446289
+benchmarks/bapa/card/cvc5/fol_0000053.smt2,sat,0.00843667984008789
+benchmarks/bapa/card/cvc5/fol_0000054.smt2,sat,0.09701156616210938
+benchmarks/bapa/card/cvc5/fol_0000055.smt2,unsat,0.24292826652526855
+benchmarks/bapa/card/cvc5/fol_0000056.smt2,sat,0.007905960083007812
+benchmarks/bapa/card/cvc5/fol_0000057.smt2,sat,0.024773359298706055
+benchmarks/bapa/card/cvc5/fol_0000058.smt2,unsat,0.009142398834228516
+benchmarks/bapa/card/cvc5/fol_0000059.smt2,unsat,0.003798246383666992
+benchmarks/bapa/card/cvc5/fol_0000060.smt2,unsat,0.025040388107299805
+benchmarks/bapa/card/cvc5/fol_0000061.smt2,unsat,0.023650407791137695
+benchmarks/bapa/card/cvc5/fol_0000062.smt2,sat,0.024841785430908203
+benchmarks/bapa/card/cvc5/fol_0000063.smt2,unsat,0.007819175720214844
+benchmarks/bapa/card/cvc5/fol_0000064.smt2,unsat,0.004091978073120117
+benchmarks/bapa/card/cvc5/fol_0000065.smt2,unsat,0.02276754379272461
+benchmarks/bapa/card/cvc5/fol_0000066.smt2,unsat,0.023509740829467773
+benchmarks/bapa/card/cvc5/fol_0000067.smt2,unsat,0.023430347442626953
+benchmarks/bapa/card/cvc5/fol_0000068.smt2,unsat,0.022415637969970703
+benchmarks/bapa/card/cvc5/fol_0000069.smt2,unsat,0.08578252792358398
+benchmarks/bapa/card/cvc5/fol_0000070.smt2,unsat,0.0871438980102539
+benchmarks/bapa/card/cvc5/fol_0000071.smt2,sat,0.7374458312988281
+benchmarks/bapa/card/cvc5/fol_0000072.smt2,sat,0.7494022846221924
+benchmarks/bapa/card/cvc5/fol_0000073.smt2,sat,0.01016545295715332
+benchmarks/bapa/card/cvc5/fol_0000074.smt2,sat,0.008423089981079102
+benchmarks/bapa/card/cvc5/fol_0000075.smt2,unsat,0.0843055248260498
+benchmarks/bapa/card/cvc5/fol_0000076.smt2,sat,0.009053468704223633
+benchmarks/bapa/card/cvc5/fol_0000077.smt2,unsat,0.08532166481018066
+benchmarks/bapa/card/cvc5/fol_0000078.smt2,unsat,0.2484138011932373
+benchmarks/bapa/card/cvc5/fol_0000079.smt2,sat,0.00654149055480957
+benchmarks/bapa/card/cvc5/fol_0000080.smt2,sat,0.031166553497314453
+benchmarks/bapa/card/cvc5/fol_0000081.smt2,unsat,0.004055500030517578
+benchmarks/bapa/card/cvc5/fol_0000082.smt2,sat,0.04125571250915527
+benchmarks/bapa/card/cvc5/fol_0000083.smt2,unsat,0.031307220458984375
+benchmarks/bapa/card/cvc5/fol_0000084.smt2,unsat,0.08229732513427734
+benchmarks/bapa/card/cvc5/fol_0000085.smt2,unsat,0.025517702102661133
+benchmarks/bapa/card/cvc5/fol_0000086.smt2,unsat,0.026791810989379883
+benchmarks/bapa/card/cvc5/fol_0000087.smt2,unsat,0.0329437255859375
+benchmarks/bapa/card/cvc5/fol_0000088.smt2,unsat,0.08468890190124512
+benchmarks/bapa/card/cvc5/fol_0000089.smt2,unsat,0.08614253997802734
+benchmarks/bapa/card/cvc5/fol_0000090.smt2,sat,0.030864238739013672
+benchmarks/bapa/card/cvc5/fol_0000091.smt2,unsat,0.004818439483642578
+benchmarks/bapa/card/cvc5/fol_0000092.smt2,unsat,0.029266834259033203
+benchmarks/bapa/card/cvc5/fol_0000093.smt2,unsat,0.03140616416931152
+benchmarks/bapa/card/cvc5/fol_0000094.smt2,unsat,0.02343010902404785
+benchmarks/bapa/card/cvc5/fol_0000095.smt2,unsat,0.08154988288879395
+benchmarks/bapa/card/cvc5/fol_0000096.smt2,unsat,0.7198326587677002
+benchmarks/bapa/card/cvc5/fol_0000097.smt2,unsat,0.7194681167602539
+benchmarks/bapa/card/cvc5/fol_0000098.smt2,unsat,7.655201196670532
+benchmarks/bapa/card/cvc5/fol_0000099.smt2,unsat,43.5003981590271
+benchmarks/bapa/card/cvc5/fol_0000100.smt2,unsat,39.22926592826843
+benchmarks/bapa/card/cvc5/fol_0000101.smt2,sat,0.010179996490478516
+benchmarks/bapa/card/cvc5/fol_0000102.smt2,sat,9.135066747665405
+benchmarks/bapa/card/cvc5/fol_0000103.smt2,sat,0.008532285690307617
+benchmarks/bapa/card/cvc5/fol_0000104.smt2,unsat,8.804283380508423
+benchmarks/bapa/card/cvc5/fol_0000105.smt2,sat,0.01134347915649414
+benchmarks/bapa/card/cvc5/fol_0000106.smt2,unsat,11.84843373298645
+benchmarks/bapa/card/cvc5/fol_0000107.smt2,unsat,11.20674204826355
+benchmarks/bapa/card/cvc5/fol_0000108.smt2,sat,0.008568286895751953
+benchmarks/bapa/card/cvc5/fol_0000109.smt2,unsat,0.08335709571838379
+benchmarks/bapa/card/cvc5/fol_0000110.smt2,unsat,0.024115324020385742
+benchmarks/bapa/card/cvc5/fol_0000111.smt2,unsat,0.02843928337097168
+benchmarks/bapa/card/cvc5/fol_0000112.smt2,unsat,0.08321571350097656
+benchmarks/bapa/card/cvc5/fol_0000113.smt2,sat,0.24130749702453613
+benchmarks/bapa/card/cvc5/fol_0000114.smt2,unsat,0.031418561935424805
+benchmarks/bapa/card/cvc5/fol_0000115.smt2,unsat,0.02844548225402832
+benchmarks/bapa/card/cvc5/fol_0000116.smt2,unsat,0.2337346076965332
+benchmarks/bapa/card/cvc5/fol_0000117.smt2,sat,0.22559618949890137
+benchmarks/bapa/card/cvc5/fol_0000118.smt2,unsat,0.7230837345123291
+benchmarks/bapa/card/cvc5/fol_0000119.smt2,unsat,0.08281803131103516
+benchmarks/bapa/card/cvc5/fol_0000120.smt2,unsat,0.22469496726989746
