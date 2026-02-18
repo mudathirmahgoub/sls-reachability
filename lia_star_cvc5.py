@@ -234,7 +234,10 @@ def main():
     print(f"input: {input}") 
     filename = os.path.basename(bapa_file)
     dir = os.path.dirname(bapa_file)
-    with open(f"{dir}/cvc5/{filename}", "w", encoding="utf-8") as f:
+    suffix = "_bapa"
+    if mapa:
+        suffix = "_mapa"        
+    with open(f"{dir}/cvc5{suffix}/{filename}", "w", encoding="utf-8") as f:
         f.write(input)
     exit(0)
     # input = "(int.star-contains ((u!6 Int)) true (tuple u!6))"
