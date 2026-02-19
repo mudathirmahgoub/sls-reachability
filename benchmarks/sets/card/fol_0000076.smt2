@@ -24,6 +24,6 @@
 (assert (>= (* 2 (set.card b_cu)) (+ (+ n (* 3 t)) 1)))
 
 
-(assert (not (>= (* 2 (set.card ((set.inter ((set.inter c_cv b_cu) (set.minus UNIVERALSET f)))) (+ (+ n (* 3 t)) 1))))
+(assert (not (>= (* 2 (set.card (set.inter (set.inter c_cv b_cu) (set.minus UNIVERALSET f)))) (+ (+ n (* 3 t)) 1))))
 
 (check-sat)

@@ -24,6 +24,6 @@
 (assert (>= (set.card a_he) (- n t)))
 
 
-(assert (= (set.card ((set.inter ((set.inter a_hf a_he) (set.minus UNIVERALSET f))) 0))
+(assert (= (set.card (set.inter (set.inter a_hf a_he) (set.minus UNIVERALSET f))) 0))
 
 (check-sat)

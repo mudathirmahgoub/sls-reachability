@@ -24,6 +24,6 @@
 (assert (>= (* 2 (set.card b_gr)) (+ (+ n (* 3 t)) 1)))
 
 
-(assert (= (set.card ((set.inter c_gs b_gr)) 0))
+(assert (= (set.card (set.inter c_gs b_gr)) 0))
 
 (check-sat)

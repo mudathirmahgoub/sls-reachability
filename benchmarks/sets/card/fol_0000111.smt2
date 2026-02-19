@@ -24,6 +24,6 @@
 (assert (>= (set.card a_gk) (- n t)))
 
 
-(assert (not (>= (* 2 (set.card ((set.inter a_gl a_gk))) (+ (- n t) 1))))
+(assert (not (>= (* 2 (set.card (set.inter a_gl a_gk))) (+ (- n t) 1))))
 
 (check-sat)

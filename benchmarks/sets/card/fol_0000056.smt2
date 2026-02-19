@@ -28,6 +28,6 @@
 (assert (>= (set.card a_br) (- n t)))
 
 
-(assert (>= (set.card (set.minus UNIVERALSET ((set.inter ((set.inter b_bt a_bs) a_br))) 1))
+(assert (>= (set.card (set.minus UNIVERALSET (set.inter (set.inter b_bt a_bs) a_br))) 1))
 
 (check-sat)

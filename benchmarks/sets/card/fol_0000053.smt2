@@ -24,6 +24,6 @@
 (assert (>= (set.card a_bk) (- n t)))
 
 
-(assert (not (>= (* 2 (set.card ((set.inter ((set.inter b_bl a_bk) (set.minus UNIVERALSET f)))) (+ (+ n (* 3 t)) 1))))
+(assert (not (>= (* 2 (set.card (set.inter (set.inter b_bl a_bk) (set.minus UNIVERALSET f)))) (+ (+ n (* 3 t)) 1))))
 
 (check-sat)

@@ -36,6 +36,6 @@
 (assert (>= (set.card a_eu) (- n t)))
 
 
-(assert (= (set.card ((set.inter ((set.inter ((set.inter ((set.inter ((set.inter c_ey b_ex) b_ew) a_ev) a_eu) (set.minus UNIVERALSET f))) 0))
+(assert (= (set.card (set.inter (set.inter (set.inter (set.inter (set.inter c_ey b_ex) b_ew) a_ev) a_eu) (set.minus UNIVERALSET f))) 0))
 
 (check-sat)

@@ -20,6 +20,6 @@
 (assert (>= (* 2 (set.card c_cd)) (+ (- n t) 1)))
 
 
-(assert (= (set.card ((set.inter c_cd (set.minus UNIVERALSET f))) 0))
+(assert (= (set.card (set.inter c_cd (set.minus UNIVERALSET f))) 0))
 
 (check-sat)

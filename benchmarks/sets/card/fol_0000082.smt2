@@ -24,6 +24,6 @@
 (assert (>= (* 2 (set.card b_dh)) (+ (+ n (* 3 t)) 1)))
 
 
-(assert (not (>= (* 2 (set.card ((set.inter b_di b_dh))) (+ (- n t) 1))))
+(assert (not (>= (* 2 (set.card (set.inter b_di b_dh))) (+ (- n t) 1))))
 
 (check-sat)

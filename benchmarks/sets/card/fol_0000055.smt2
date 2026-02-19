@@ -28,6 +28,6 @@
 (assert (>= (set.card a_bo) (- n t)))
 
 
-(assert (not (>= (* 2 (set.card ((set.inter ((set.inter b_bq a_bp) a_bo))) (+ (- n t) 1))))
+(assert (not (>= (* 2 (set.card (set.inter (set.inter b_bq a_bp) a_bo))) (+ (- n t) 1))))
 
 (check-sat)

@@ -28,6 +28,6 @@
 (assert (>= (* 2 (set.card b_ci)) (+ (+ n (* 3 t)) 1)))
 
 
-(assert (= (set.card ((set.inter ((set.inter ((set.inter c_ck b_cj) b_ci) (set.minus UNIVERALSET f))) 0))
+(assert (= (set.card (set.inter (set.inter (set.inter c_ck b_cj) b_ci) (set.minus UNIVERALSET f))) 0))
 
 (check-sat)

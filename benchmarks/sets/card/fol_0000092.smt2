@@ -24,6 +24,6 @@
 (assert (>= (set.card a_dy) (- n t)))
 
 
-(assert (= (set.card ((set.inter c_dz a_dy)) 0))
+(assert (= (set.card (set.inter c_dz a_dy)) 0))
 
 (check-sat)
