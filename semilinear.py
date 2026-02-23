@@ -53,7 +53,6 @@ class LS:
 
     # If possible without losing info, decreases the offset of a linear set
     def shiftDown(self):
-        print("shiftdown .....")
         # Each b in B must be less than a to be considered
         a, B = self.a, self.B
         for b in B:
@@ -79,8 +78,7 @@ class LS:
         return False
 
     # If possible without losing info, decreases a basis vector in a linear set
-    def offsetDown(self):
-        print("offsetdown .....")
+    def offsetDown(self):        
         # Compare two b's in B, look for b2 <= b1
         a, B = self.a, self.B
         r = range(len(B))
@@ -143,8 +141,7 @@ class SLS:
         self.set_vars = set_vars
 
     # Merges two compatible linear sets into one
-    def _merge(self, i, j):
-        print("merge .....")
+    def _merge(self, i, j):        
         if i == j:
             return False
 
@@ -165,8 +162,7 @@ class SLS:
         input = [a2i + lc1i + lc2i + L3*(a1i - a2i) for (a1i, a2i, lc1i, lc2i) in list(zip(a1, a2, LC1, LC2))]
 
         # Check sat
-        s.add(non_negativity + [Not(self.phi(input))])
-        print(f's: {s}')
+        s.add(non_negativity + [Not(self.phi(input))])        
         if None != lia_star_solver.getModel(s):
            return False
 
@@ -236,9 +232,7 @@ class SLS:
             return Exists(vars, And(fmls))
 
     # Attempt to apply merge, shiftDown, and offsetDown to reduce the size of the SLS
-    def reduce(self):
-        print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-        print("Reducing")
+    def reduce(self):        
         start = time.time()
 
         # Look for pairs of sets we can merge together
@@ -262,9 +256,7 @@ class SLS:
 
     # Add a new vector to the semi-linear set and return True
     # or return False if a vector cannot be added
-    def augment(self):
-        print("#######################################################################")
-        print("Augmenting")
+    def augment(self):        
         start = time.time()
 
         # Find non-negative X that satisfies phi and isn't reached by the current underapproximation
