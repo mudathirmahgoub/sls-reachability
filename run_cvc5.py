@@ -16,7 +16,7 @@ def run_cvc5(dirs, output_csv):
                     print(f"{path}")
                     start = time.time()
                     result = subprocess.run(
-                        ["/home/mudathir/all/cvc5/liastar/build/bin/cvc5", path],
+                        ["/home/mudathir/all/cvc5/liastar/build/bin/cvc5", path, "--tlimit=50000"],
                         capture_output=True,
                         text=True,
                     )
