@@ -26,9 +26,9 @@ def run_cvc5(dirs, output_csv):
                     print(duration)
                     writer.writerow([path, content, duration])
 
-dirs = ["benchmarks/bapa/arith/cvc5_bapa", "benchmarks/bapa/card/cvc5_bapa"]
-output_csv = "cvc5_arith_papa.csv"
-run_cvc5(dirs, output_csv)
+# dirs = ["benchmarks/bapa/arith/cvc5_bapa", "benchmarks/bapa/card/cvc5_bapa"]
+# output_csv = "cvc5_arith_papa.csv"
+# run_cvc5(dirs, output_csv)
 
 dirs = ["benchmarks/bapa/arith/cvc5_mapa", "benchmarks/bapa/card/cvc5_mapa"]
 output_csv = "cvc5_arith_mapa.csv"
