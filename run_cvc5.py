@@ -16,7 +16,7 @@ def run_cvc5(dirs, output_csv):
                     print(f"{path}")
                     start = time.time()
                     result = subprocess.run(
-                        ["/home/mudathir/all/cvc5/liastar/build/bin/cvc5", path, "--tlimit=50000"],
+                        ["/home/mudathir/all/cvc5/liastar/build/bin/cvc5", path, "--tlimit=100000"],
                         capture_output=True,
                         text=True,
                     )
@@ -26,9 +26,9 @@ def run_cvc5(dirs, output_csv):
                     print(duration)
                     writer.writerow([path, content, duration])
 
-# dirs = ["benchmarks/bapa/arith/cvc5_bapa", "benchmarks/bapa/card/cvc5_bapa"]
-# output_csv = "cvc5_arith_papa.csv"
-# run_cvc5(dirs, output_csv)
+dirs = ["benchmarks/bapa/arith/cvc5_bapa", "benchmarks/bapa/card/cvc5_bapa"]
+output_csv = "cvc5_arith_bapa.csv"
+run_cvc5(dirs, output_csv)
 
 dirs = ["benchmarks/bapa/arith/cvc5_mapa", "benchmarks/bapa/card/cvc5_mapa"]
 output_csv = "cvc5_arith_mapa.csv"
