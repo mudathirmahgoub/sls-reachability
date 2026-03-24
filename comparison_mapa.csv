@@ -1,241 +1,241 @@
-sls filename,sls result,sls duration,cvc5 lia filename,cvc5 lia result,cvc5 lia duration,cvc5 bags filename,cvc5 bags result,duration
-bapa/arith/fol_0000001.smt2,sat,0.371880531,benchmarks/bapa/arith/cvc5/fol_0000001.smt2,sat,0.056572676,benchmarks/bags/arith/fol_0000001.smt2,sat,0.023912191
-bapa/arith/fol_0000002.smt2,sat,0.455236912,benchmarks/bapa/arith/cvc5/fol_0000002.smt2,sat,0.005464554,benchmarks/bags/arith/fol_0000002.smt2,sat,0.013337851
-bapa/arith/fol_0000003.smt2,sat,0.362852812,benchmarks/bapa/arith/cvc5/fol_0000003.smt2,sat,0.004859447,benchmarks/bags/arith/fol_0000003.smt2,sat,0.014259338
-bapa/arith/fol_0000004.smt2,sat,0.36774826,benchmarks/bapa/arith/cvc5/fol_0000004.smt2,sat,0.006315708,benchmarks/bags/arith/fol_0000004.smt2,sat,0.014983416
-bapa/arith/fol_0000005.smt2,sat,0.339421749,benchmarks/bapa/arith/cvc5/fol_0000005.smt2,sat,0.005860567,benchmarks/bags/arith/fol_0000005.smt2,sat,0.014382362
-bapa/arith/fol_0000006.smt2,sat,0.348348618,benchmarks/bapa/arith/cvc5/fol_0000006.smt2,sat,0.005497456,benchmarks/bags/arith/fol_0000006.smt2,sat,0.019693136
-bapa/arith/fol_0000007.smt2,sat,0.355773211,benchmarks/bapa/arith/cvc5/fol_0000007.smt2,sat,0.006097555,benchmarks/bags/arith/fol_0000007.smt2,sat,0.018209457
-bapa/arith/fol_0000008.smt2,sat,0.347364187,benchmarks/bapa/arith/cvc5/fol_0000008.smt2,sat,0.004918575,benchmarks/bags/arith/fol_0000008.smt2,sat,0.017861366
-bapa/arith/fol_0000009.smt2,sat,0.472581387,benchmarks/bapa/arith/cvc5/fol_0000009.smt2,sat,0.005044222,benchmarks/bags/arith/fol_0000009.smt2,sat,0.016896009
-bapa/arith/fol_0000010.smt2,sat,0.353116035,benchmarks/bapa/arith/cvc5/fol_0000010.smt2,sat,0.006541491,benchmarks/bags/arith/fol_0000010.smt2,sat,0.015659332
-bapa/arith/fol_0000011.smt2,sat,0.453573465,benchmarks/bapa/arith/cvc5/fol_0000011.smt2,sat,0.005356073,benchmarks/bags/arith/fol_0000011.smt2,sat,0.014612436
-bapa/arith/fol_0000012.smt2,sat,0.352227688,benchmarks/bapa/arith/cvc5/fol_0000012.smt2,sat,0.005237103,benchmarks/bags/arith/fol_0000012.smt2,sat,0.013891459
-bapa/arith/fol_0000013.smt2,sat,0.352357864,benchmarks/bapa/arith/cvc5/fol_0000013.smt2,sat,0.006448746,benchmarks/bags/arith/fol_0000013.smt2,sat,0.013687372
-bapa/arith/fol_0000014.smt2,sat,0.350680351,benchmarks/bapa/arith/cvc5/fol_0000014.smt2,sat,0.005294323,benchmarks/bags/arith/fol_0000014.smt2,sat,0.014549255
-bapa/arith/fol_0000015.smt2,sat,0.470790863,benchmarks/bapa/arith/cvc5/fol_0000015.smt2,sat,0.005651236,benchmarks/bags/arith/fol_0000015.smt2,sat,0.015658855
-bapa/arith/fol_0000016.smt2,sat,0.368768692,benchmarks/bapa/arith/cvc5/fol_0000016.smt2,sat,0.005857706,benchmarks/bags/arith/fol_0000016.smt2,sat,0.014583349
-bapa/arith/fol_0000017.smt2,sat,1.262539148,benchmarks/bapa/arith/cvc5/fol_0000017.smt2,sat,0.005097866,benchmarks/bags/arith/fol_0000017.smt2,sat,0.016456604
-bapa/arith/fol_0000018.smt2,sat,0.345381021,benchmarks/bapa/arith/cvc5/fol_0000018.smt2,sat,0.006024599,benchmarks/bags/arith/fol_0000018.smt2,sat,0.016318083
-bapa/arith/fol_0000019.smt2,sat,0.47560358,benchmarks/bapa/arith/cvc5/fol_0000019.smt2,sat,0.006034136,benchmarks/bags/arith/fol_0000019.smt2,sat,0.016952276
-bapa/arith/fol_0000020.smt2,sat,0.362033367,benchmarks/bapa/arith/cvc5/fol_0000020.smt2,sat,0.00555253,benchmarks/bags/arith/fol_0000020.smt2,sat,0.015049696
-bapa/arith/fol_0000021.smt2,  unsat,0.171948671,benchmarks/bapa/arith/cvc5/fol_0000021.smt2,unsat,0.004943371,benchmarks/bags/arith/fol_0000021.smt2,unsat,0.006857395
-bapa/arith/fol_0000022.smt2,sat,0.475059986,benchmarks/bapa/arith/cvc5/fol_0000022.smt2,sat,0.005726337,benchmarks/bags/arith/fol_0000022.smt2,sat,0.014395952
-bapa/arith/fol_0000023.smt2,  unsat,0.175730705,benchmarks/bapa/arith/cvc5/fol_0000023.smt2,unsat,0.005422354,benchmarks/bags/arith/fol_0000023.smt2,,51.38710022
-bapa/arith/fol_0000024.smt2,timeout,50.79019427,benchmarks/bapa/arith/cvc5/fol_0000024.smt2,sat,0.006734133,benchmarks/bags/arith/fol_0000024.smt2,sat,0.016724586
-bapa/arith/fol_0000025.smt2,sat,0.35530591,benchmarks/bapa/arith/cvc5/fol_0000025.smt2,sat,0.006664038,benchmarks/bags/arith/fol_0000025.smt2,sat,0.014319658
-bapa/arith/fol_0000026.smt2,sat,0.454766989,benchmarks/bapa/arith/cvc5/fol_0000026.smt2,sat,0.007632732,benchmarks/bags/arith/fol_0000026.smt2,sat,0.014898539
-bapa/arith/fol_0000027.smt2,sat,0.374289513,benchmarks/bapa/arith/cvc5/fol_0000027.smt2,sat,0.005708694,benchmarks/bags/arith/fol_0000027.smt2,sat,0.014606237
-bapa/arith/fol_0000028.smt2,  unsat,0.228597403,benchmarks/bapa/arith/cvc5/fol_0000028.smt2,unsat,0.020778656,benchmarks/bags/arith/fol_0000028.smt2,,55.26698613
-bapa/arith/fol_0000029.smt2,sat,0.4016819,benchmarks/bapa/arith/cvc5/fol_0000029.smt2,sat,0.007065773,benchmarks/bags/arith/fol_0000029.smt2,,54.5866518
-bapa/arith/fol_0000030.smt2,  unsat,0.166530609,benchmarks/bapa/arith/cvc5/fol_0000030.smt2,unsat,0.005126715,benchmarks/bags/arith/fol_0000030.smt2,unsat,0.006186247
-bapa/arith/fol_0000031.smt2,sat,0.380920887,benchmarks/bapa/arith/cvc5/fol_0000031.smt2,sat,0.007462263,benchmarks/bags/arith/fol_0000031.smt2,sat,0.016290665
-bapa/arith/fol_0000032.smt2,  unsat,0.171218634,benchmarks/bapa/arith/cvc5/fol_0000032.smt2,unsat,0.007467985,benchmarks/bags/arith/fol_0000032.smt2,,51.59529543
-bapa/arith/fol_0000033.smt2,sat,0.363563061,benchmarks/bapa/arith/cvc5/fol_0000033.smt2,sat,0.008941889,benchmarks/bags/arith/fol_0000033.smt2,sat,0.016456842
-bapa/arith/fol_0000034.smt2,  unsat,0.17405057,benchmarks/bapa/arith/cvc5/fol_0000034.smt2,unsat,0.006327868,benchmarks/bags/arith/fol_0000034.smt2,unsat,0.006707668
-bapa/arith/fol_0000035.smt2,sat,0.37942028,benchmarks/bapa/arith/cvc5/fol_0000035.smt2,sat,0.007768869,benchmarks/bags/arith/fol_0000035.smt2,sat,0.013952971
-bapa/arith/fol_0000036.smt2,sat,0.336054564,benchmarks/bapa/arith/cvc5/fol_0000036.smt2,sat,0.006824493,benchmarks/bags/arith/fol_0000036.smt2,sat,0.01388216
-bapa/arith/fol_0000037.smt2,sat,0.35112977,benchmarks/bapa/arith/cvc5/fol_0000037.smt2,sat,0.006939173,benchmarks/bags/arith/fol_0000037.smt2,sat,0.014852047
-bapa/arith/fol_0000038.smt2,  unsat,0.178973198,benchmarks/bapa/arith/cvc5/fol_0000038.smt2,unsat,0.005922079,benchmarks/bags/arith/fol_0000038.smt2,,51.58695316
-bapa/arith/fol_0000039.smt2,sat,0.347396135,benchmarks/bapa/arith/cvc5/fol_0000039.smt2,sat,0.00585556,benchmarks/bags/arith/fol_0000039.smt2,sat,0.014809132
-bapa/arith/fol_0000040.smt2,  unsat,0.175446987,benchmarks/bapa/arith/cvc5/fol_0000040.smt2,unsat,0.005972862,benchmarks/bags/arith/fol_0000040.smt2,unsat,0.006154299
-bapa/arith/fol_0000041.smt2,sat,0.374747992,benchmarks/bapa/arith/cvc5/fol_0000041.smt2,sat,0.005419254,benchmarks/bags/arith/fol_0000041.smt2,sat,0.0146451
-bapa/arith/fol_0000042.smt2,sat,0.342611551,benchmarks/bapa/arith/cvc5/fol_0000042.smt2,sat,0.005901814,benchmarks/bags/arith/fol_0000042.smt2,sat,0.014671803
-bapa/arith/fol_0000043.smt2,sat,0.284318686,benchmarks/bapa/arith/cvc5/fol_0000043.smt2,sat,0.006163359,benchmarks/bags/arith/fol_0000043.smt2,,55.68358064
-bapa/arith/fol_0000044.smt2,sat,0.358763456,benchmarks/bapa/arith/cvc5/fol_0000044.smt2,sat,0.00547123,benchmarks/bags/arith/fol_0000044.smt2,sat,0.013938427
-bapa/arith/fol_0000045.smt2,  unsat,0.247600794,benchmarks/bapa/arith/cvc5/fol_0000045.smt2,unsat,0.009661198,benchmarks/bags/arith/fol_0000045.smt2,,51.87460709
-bapa/arith/fol_0000046.smt2,sat,0.305989504,benchmarks/bapa/arith/cvc5/fol_0000046.smt2,sat,0.006855011,benchmarks/bags/arith/fol_0000046.smt2,,54.66093683
-bapa/arith/fol_0000047.smt2,  unsat,0.25509429,benchmarks/bapa/arith/cvc5/fol_0000047.smt2,unsat,0.009332657,benchmarks/bags/arith/fol_0000047.smt2,,55.4510355
-bapa/arith/fol_0000048.smt2,sat,0.44806838,benchmarks/bapa/arith/cvc5/fol_0000048.smt2,sat,0.007758856,benchmarks/bags/arith/fol_0000048.smt2,sat,0.036029577
-bapa/arith/fol_0000049.smt2,sat,0.237226009,benchmarks/bapa/arith/cvc5/fol_0000049.smt2,sat,0.008160591,benchmarks/bags/arith/fol_0000049.smt2,sat,0.041394234
-bapa/arith/fol_0000050.smt2,sat,0.147892475,benchmarks/bapa/arith/cvc5/fol_0000050.smt2,sat,0.006438255,benchmarks/bags/arith/fol_0000050.smt2,sat,0.015821695
-bapa/arith/fol_0000051.smt2,sat,0.53693819,benchmarks/bapa/arith/cvc5/fol_0000051.smt2,sat,0.006653309,benchmarks/bags/arith/fol_0000051.smt2,sat,0.030047894
-bapa/arith/fol_0000052.smt2,sat,0.44276166,benchmarks/bapa/arith/cvc5/fol_0000052.smt2,sat,0.007183313,benchmarks/bags/arith/fol_0000052.smt2,sat,0.035287857
-bapa/arith/fol_0000053.smt2,sat,0.451504707,benchmarks/bapa/arith/cvc5/fol_0000053.smt2,sat,0.008375883,benchmarks/bags/arith/fol_0000053.smt2,sat,0.042010546
-bapa/arith/fol_0000054.smt2,sat,0.558354378,benchmarks/bapa/arith/cvc5/fol_0000054.smt2,sat,0.00686264,benchmarks/bags/arith/fol_0000054.smt2,sat,0.041040659
-bapa/arith/fol_0000055.smt2,  unsat,0.19108367,benchmarks/bapa/arith/cvc5/fol_0000055.smt2,unsat,0.006070375,benchmarks/bags/arith/fol_0000055.smt2,unsat,0.006129742
-bapa/arith/fol_0000056.smt2,sat,0.510382414,benchmarks/bapa/arith/cvc5/fol_0000056.smt2,sat,0.00551939,benchmarks/bags/arith/fol_0000056.smt2,sat,0.014580965
-bapa/arith/fol_0000057.smt2,sat,0.434769869,benchmarks/bapa/arith/cvc5/fol_0000057.smt2,sat,0.005454302,benchmarks/bags/arith/fol_0000057.smt2,,55.479141
-bapa/arith/fol_0000058.smt2,  unsat,0.238897324,benchmarks/bapa/arith/cvc5/fol_0000058.smt2,unsat,0.008967161,benchmarks/bags/arith/fol_0000058.smt2,,55.54920602
-bapa/arith/fol_0000059.smt2,  unsat,0.182754755,benchmarks/bapa/arith/cvc5/fol_0000059.smt2,unsat,0.004599094,benchmarks/bags/arith/fol_0000059.smt2,unsat,0.005579472
-bapa/arith/fol_0000060.smt2,  unsat,0.256486654,benchmarks/bapa/arith/cvc5/fol_0000060.smt2,unsat,0.009013891,benchmarks/bags/arith/fol_0000060.smt2,,53.16476679
-bapa/arith/fol_0000061.smt2,  unsat,0.273725986,benchmarks/bapa/arith/cvc5/fol_0000061.smt2,unsat,0.008288145,benchmarks/bags/arith/fol_0000061.smt2,,54.93233061
-bapa/arith/fol_0000062.smt2,sat,0.428608418,benchmarks/bapa/arith/cvc5/fol_0000062.smt2,sat,0.007075071,benchmarks/bags/arith/fol_0000062.smt2,,54.87767076
-bapa/arith/fol_0000063.smt2,  unsat,1.031116009,benchmarks/bapa/arith/cvc5/fol_0000063.smt2,unsat,0.007728577,benchmarks/bags/arith/fol_0000063.smt2,,54.80989456
-bapa/arith/fol_0000064.smt2,  unsat,0.17288208,benchmarks/bapa/arith/cvc5/fol_0000064.smt2,unsat,0.005712032,benchmarks/bags/arith/fol_0000064.smt2,unsat,0.006796598
-bapa/arith/fol_0000065.smt2,  unsat,0.251242161,benchmarks/bapa/arith/cvc5/fol_0000065.smt2,unsat,0.007959843,benchmarks/bags/arith/fol_0000065.smt2,,53.01436019
-bapa/arith/fol_0000066.smt2,  unsat,0.254142046,benchmarks/bapa/arith/cvc5/fol_0000066.smt2,unsat,0.009189606,benchmarks/bags/arith/fol_0000066.smt2,,54.53464437
-bapa/arith/fol_0000067.smt2,  unsat,0.275184155,benchmarks/bapa/arith/cvc5/fol_0000067.smt2,unsat,0.008009434,benchmarks/bags/arith/fol_0000067.smt2,,55.35783935
-bapa/arith/fol_0000068.smt2,  unsat,0.261825085,benchmarks/bapa/arith/cvc5/fol_0000068.smt2,unsat,0.00965333,benchmarks/bags/arith/fol_0000068.smt2,,55.24263644
-bapa/arith/fol_0000069.smt2,sat,0.41223073,benchmarks/bapa/arith/cvc5/fol_0000069.smt2,sat,0.005586624,benchmarks/bags/arith/fol_0000069.smt2,,55.56643963
-bapa/arith/fol_0000070.smt2,  unsat,0.245085955,benchmarks/bapa/arith/cvc5/fol_0000070.smt2,unsat,0.009364605,benchmarks/bags/arith/fol_0000070.smt2,,55.355021
-bapa/arith/fol_0000071.smt2,sat,0.219529152,benchmarks/bapa/arith/cvc5/fol_0000071.smt2,sat,0.005485535,benchmarks/bags/arith/fol_0000071.smt2,sat,0.030277252
-bapa/arith/fol_0000072.smt2,sat,0.225695133,benchmarks/bapa/arith/cvc5/fol_0000072.smt2,sat,0.007121563,benchmarks/bags/arith/fol_0000072.smt2,sat,0.029023886
-bapa/arith/fol_0000073.smt2,sat,0.148993731,benchmarks/bapa/arith/cvc5/fol_0000073.smt2,sat,0.006182194,benchmarks/bags/arith/fol_0000073.smt2,sat,0.01611352
-bapa/arith/fol_0000074.smt2,sat,0.223978996,benchmarks/bapa/arith/cvc5/fol_0000074.smt2,sat,0.007148504,benchmarks/bags/arith/fol_0000074.smt2,sat,0.037679434
-bapa/arith/fol_0000075.smt2,sat,0.213077307,benchmarks/bapa/arith/cvc5/fol_0000075.smt2,sat,0.006291151,benchmarks/bags/arith/fol_0000075.smt2,sat,0.029445648
-bapa/arith/fol_0000076.smt2,sat,0.533790827,benchmarks/bapa/arith/cvc5/fol_0000076.smt2,sat,0.006547689,benchmarks/bags/arith/fol_0000076.smt2,sat,0.036935568
-bapa/arith/fol_0000077.smt2,sat,0.529243946,benchmarks/bapa/arith/cvc5/fol_0000077.smt2,sat,0.00748086,benchmarks/bags/arith/fol_0000077.smt2,sat,0.036362171
-bapa/arith/fol_0000078.smt2,  unsat,0.183238983,benchmarks/bapa/arith/cvc5/fol_0000078.smt2,unsat,0.004718781,benchmarks/bags/arith/fol_0000078.smt2,unsat,0.005955935
-bapa/arith/fol_0000079.smt2,sat,0.507038832,benchmarks/bapa/arith/cvc5/fol_0000079.smt2,sat,0.006483316,benchmarks/bags/arith/fol_0000079.smt2,sat,0.015881062
-bapa/arith/fol_0000080.smt2,sat,0.483575821,benchmarks/bapa/arith/cvc5/fol_0000080.smt2,sat,0.005833387,benchmarks/bags/arith/fol_0000080.smt2,sat,0.015036821
-bapa/arith/fol_0000081.smt2,  unsat,0.171390295,benchmarks/bapa/arith/cvc5/fol_0000081.smt2,unsat,0.004279613,benchmarks/bags/arith/fol_0000081.smt2,unsat,0.005533457
-bapa/arith/fol_0000082.smt2,sat,0.473784924,benchmarks/bapa/arith/cvc5/fol_0000082.smt2,sat,0.006094933,benchmarks/bags/arith/fol_0000082.smt2,sat,0.015038252
-bapa/arith/fol_0000083.smt2,  unsat,0.168394327,benchmarks/bapa/arith/cvc5/fol_0000083.smt2,unsat,0.004820347,benchmarks/bags/arith/fol_0000083.smt2,,51.34665179
-bapa/arith/fol_0000084.smt2,sat,0.519649506,benchmarks/bapa/arith/cvc5/fol_0000084.smt2,sat,0.005089998,benchmarks/bags/arith/fol_0000084.smt2,,55.46795702
-bapa/arith/fol_0000085.smt2,  unsat,0.266604662,benchmarks/bapa/arith/cvc5/fol_0000085.smt2,unsat,0.008875847,benchmarks/bags/arith/fol_0000085.smt2,,55.60730767
-bapa/arith/fol_0000086.smt2,  unsat,0.26908946,benchmarks/bapa/arith/cvc5/fol_0000086.smt2,unsat,0.007867098,benchmarks/bags/arith/fol_0000086.smt2,,54.92589021
-bapa/arith/fol_0000087.smt2,  unsat,0.174173594,benchmarks/bapa/arith/cvc5/fol_0000087.smt2,unsat,0.005858421,benchmarks/bags/arith/fol_0000087.smt2,unsat,0.006392717
-bapa/arith/fol_0000088.smt2,  unsat,0.242271423,benchmarks/bapa/arith/cvc5/fol_0000088.smt2,unsat,0.007729292,benchmarks/bags/arith/fol_0000088.smt2,,55.6211524
-bapa/arith/fol_0000089.smt2,  unsat,0.250668764,benchmarks/bapa/arith/cvc5/fol_0000089.smt2,unsat,0.009102345,benchmarks/bags/arith/fol_0000089.smt2,,54.82302475
-bapa/arith/fol_0000090.smt2,sat,0.354595184,benchmarks/bapa/arith/cvc5/fol_0000090.smt2,sat,0.004906893,benchmarks/bags/arith/fol_0000090.smt2,sat,0.01501298
-bapa/arith/fol_0000091.smt2,  unsat,0.172189951,benchmarks/bapa/arith/cvc5/fol_0000091.smt2,unsat,0.004639387,benchmarks/bags/arith/fol_0000091.smt2,unsat,0.006351233
-bapa/arith/fol_0000092.smt2,  unsat,0.176059961,benchmarks/bapa/arith/cvc5/fol_0000092.smt2,unsat,0.005711079,benchmarks/bags/arith/fol_0000092.smt2,unsat,0.006243706
-bapa/arith/fol_0000093.smt2,  unsat,0.179952621,benchmarks/bapa/arith/cvc5/fol_0000093.smt2,unsat,0.004602909,benchmarks/bags/arith/fol_0000093.smt2,,51.83171701
-bapa/arith/fol_0000094.smt2,  unsat,0.267311811,benchmarks/bapa/arith/cvc5/fol_0000094.smt2,unsat,0.008500099,benchmarks/bags/arith/fol_0000094.smt2,,55.68130279
-bapa/arith/fol_0000095.smt2,  unsat,0.250749588,benchmarks/bapa/arith/cvc5/fol_0000095.smt2,unsat,0.007880449,benchmarks/bags/arith/fol_0000095.smt2,,55.14714813
-bapa/arith/fol_0000096.smt2,sat,0.501622915,benchmarks/bapa/arith/cvc5/fol_0000096.smt2,sat,0.005658388,benchmarks/bags/arith/fol_0000096.smt2,,55.58281374
-bapa/arith/fol_0000097.smt2,  unsat,0.24771142,benchmarks/bapa/arith/cvc5/fol_0000097.smt2,unsat,0.008596897,benchmarks/bags/arith/fol_0000097.smt2,,55.29566455
-bapa/arith/fol_0000098.smt2,  unsat,0.245840788,benchmarks/bapa/arith/cvc5/fol_0000098.smt2,unsat,0.008784771,benchmarks/bags/arith/fol_0000098.smt2,,55.28207278
-bapa/arith/fol_0000099.smt2,sat,0.218187332,benchmarks/bapa/arith/cvc5/fol_0000099.smt2,sat,0.005631208,benchmarks/bags/arith/fol_0000099.smt2,sat,0.030400753
-bapa/arith/fol_0000100.smt2,sat,0.537797451,benchmarks/bapa/arith/cvc5/fol_0000100.smt2,sat,0.006138563,benchmarks/bags/arith/fol_0000100.smt2,sat,0.030189991
-bapa/arith/fol_0000101.smt2,sat,0.141969204,benchmarks/bapa/arith/cvc5/fol_0000101.smt2,sat,0.006522894,benchmarks/bags/arith/fol_0000101.smt2,sat,0.016304493
-bapa/arith/fol_0000102.smt2,sat,0.539416552,benchmarks/bapa/arith/cvc5/fol_0000102.smt2,sat,0.005556107,benchmarks/bags/arith/fol_0000102.smt2,sat,0.031953812
-bapa/arith/fol_0000103.smt2,sat,0.51676321,benchmarks/bapa/arith/cvc5/fol_0000103.smt2,sat,0.006450891,benchmarks/bags/arith/fol_0000103.smt2,sat,0.035856962
-bapa/arith/fol_0000104.smt2,sat,0.4132061,benchmarks/bapa/arith/cvc5/fol_0000104.smt2,sat,0.006676912,benchmarks/bags/arith/fol_0000104.smt2,sat,0.030388832
-bapa/arith/fol_0000105.smt2,sat,0.218720913,benchmarks/bapa/arith/cvc5/fol_0000105.smt2,sat,0.006876469,benchmarks/bags/arith/fol_0000105.smt2,sat,0.03752017
-bapa/arith/fol_0000106.smt2,sat,0.424641132,benchmarks/bapa/arith/cvc5/fol_0000106.smt2,sat,0.007623434,benchmarks/bags/arith/fol_0000106.smt2,sat,0.037015915
-bapa/arith/fol_0000107.smt2,  unsat,0.177054644,benchmarks/bapa/arith/cvc5/fol_0000107.smt2,unsat,0.004611492,benchmarks/bags/arith/fol_0000107.smt2,unsat,0.006205559
-bapa/arith/fol_0000108.smt2,sat,0.386983633,benchmarks/bapa/arith/cvc5/fol_0000108.smt2,sat,0.007016182,benchmarks/bags/arith/fol_0000108.smt2,sat,0.017301321
-bapa/arith/fol_0000109.smt2,sat,0.514557838,benchmarks/bapa/arith/cvc5/fol_0000109.smt2,sat,0.006139517,benchmarks/bags/arith/fol_0000109.smt2,,54.88176775
-bapa/arith/fol_0000110.smt2,  unsat,0.238288641,benchmarks/bapa/arith/cvc5/fol_0000110.smt2,unsat,0.008804083,benchmarks/bags/arith/fol_0000110.smt2,,54.16353178
-bapa/arith/fol_0000111.smt2,  unsat,0.171274424,benchmarks/bapa/arith/cvc5/fol_0000111.smt2,unsat,0.005018711,benchmarks/bags/arith/fol_0000111.smt2,unsat,0.006248713
-bapa/arith/fol_0000112.smt2,  unsat,0.24489522,benchmarks/bapa/arith/cvc5/fol_0000112.smt2,unsat,0.008432865,benchmarks/bags/arith/fol_0000112.smt2,,55.10501194
-bapa/arith/fol_0000113.smt2,sat,0.374901772,benchmarks/bapa/arith/cvc5/fol_0000113.smt2,sat,0.005619526,benchmarks/bags/arith/fol_0000113.smt2,sat,0.014856339
-bapa/arith/fol_0000114.smt2,  unsat,0.174555302,benchmarks/bapa/arith/cvc5/fol_0000114.smt2,unsat,0.004445314,benchmarks/bags/arith/fol_0000114.smt2,,51.79658604
-bapa/arith/fol_0000115.smt2,  unsat,0.167971373,benchmarks/bapa/arith/cvc5/fol_0000115.smt2,unsat,0.004554749,benchmarks/bags/arith/fol_0000115.smt2,,51.77858949
-bapa/arith/fol_0000116.smt2,  unsat,0.176509857,benchmarks/bapa/arith/cvc5/fol_0000116.smt2,unsat,0.005833387,benchmarks/bags/arith/fol_0000116.smt2,unsat,0.006181479
-bapa/arith/fol_0000117.smt2,sat,0.367304564,benchmarks/bapa/arith/cvc5/fol_0000117.smt2,sat,0.005627394,benchmarks/bags/arith/fol_0000117.smt2,sat,0.0159688
-bapa/arith/fol_0000118.smt2,sat,0.386999607,benchmarks/bapa/arith/cvc5/fol_0000118.smt2,sat,0.006422997,benchmarks/bags/arith/fol_0000118.smt2,,55.83259463
-bapa/arith/fol_0000119.smt2,  unsat,0.247147322,benchmarks/bapa/arith/cvc5/fol_0000119.smt2,unsat,0.00927186,benchmarks/bags/arith/fol_0000119.smt2,,55.634058
-bapa/arith/fol_0000120.smt2,  unsat,0.169645548,benchmarks/bapa/arith/cvc5/fol_0000120.smt2,unsat,0.006148577,benchmarks/bags/arith/fol_0000120.smt2,unsat,0.006086826
-bapa/card/fol_0000001.smt2 ,sat,0.348153591,benchmarks/bapa/card/cvc5/fol_0000001.smt2,sat,0.005509377,benchmarks/bags/card/fol_0000001.smt2,sat,0.013995409
-bapa/card/fol_0000002.smt2 ,sat,0.442762852,benchmarks/bapa/card/cvc5/fol_0000002.smt2,sat,0.005194664,benchmarks/bags/card/fol_0000002.smt2,sat,0.015080452
-bapa/card/fol_0000003.smt2 ,sat,0.363489866,benchmarks/bapa/card/cvc5/fol_0000003.smt2,sat,0.00615716,benchmarks/bags/card/fol_0000003.smt2,sat,0.014762402
-bapa/card/fol_0000004.smt2 ,sat,0.354475737,benchmarks/bapa/card/cvc5/fol_0000004.smt2,sat,0.005535841,benchmarks/bags/card/fol_0000004.smt2,sat,0.015408039
-bapa/card/fol_0000005.smt2 ,sat,0.346847057,benchmarks/bapa/card/cvc5/fol_0000005.smt2,sat,0.005165339,benchmarks/bags/card/fol_0000005.smt2,sat,0.014644861
-bapa/card/fol_0000006.smt2 ,sat,0.349636316,benchmarks/bapa/card/cvc5/fol_0000006.smt2,sat,0.006383657,benchmarks/bags/card/fol_0000006.smt2,sat,0.016052723
-bapa/card/fol_0000007.smt2 ,sat,0.356083393,benchmarks/bapa/card/cvc5/fol_0000007.smt2,sat,0.005451202,benchmarks/bags/card/fol_0000007.smt2,sat,0.015345097
-bapa/card/fol_0000008.smt2 ,sat,0.353154898,benchmarks/bapa/card/cvc5/fol_0000008.smt2,sat,0.006046295,benchmarks/bags/card/fol_0000008.smt2,sat,0.015351057
-bapa/card/fol_0000009.smt2 ,sat,0.471537352,benchmarks/bapa/card/cvc5/fol_0000009.smt2,sat,0.005895376,benchmarks/bags/card/fol_0000009.smt2,sat,0.014728069
-bapa/card/fol_0000010.smt2 ,sat,0.350089073,benchmarks/bapa/card/cvc5/fol_0000010.smt2,sat,0.005063057,benchmarks/bags/card/fol_0000010.smt2,sat,0.014589548
-bapa/card/fol_0000011.smt2 ,sat,0.454253435,benchmarks/bapa/card/cvc5/fol_0000011.smt2,sat,0.006016016,benchmarks/bags/card/fol_0000011.smt2,sat,0.014682293
-bapa/card/fol_0000012.smt2 ,sat,0.354323626,benchmarks/bapa/card/cvc5/fol_0000012.smt2,sat,0.005156279,benchmarks/bags/card/fol_0000012.smt2,sat,0.015098333
-bapa/card/fol_0000013.smt2 ,sat,0.358525515,benchmarks/bapa/card/cvc5/fol_0000013.smt2,sat,0.004775763,benchmarks/bags/card/fol_0000013.smt2,sat,0.015513182
-bapa/card/fol_0000014.smt2 ,sat,0.349612713,benchmarks/bapa/card/cvc5/fol_0000014.smt2,sat,0.005559921,benchmarks/bags/card/fol_0000014.smt2,sat,0.014783382
-bapa/card/fol_0000015.smt2 ,sat,0.46444869,benchmarks/bapa/card/cvc5/fol_0000015.smt2,sat,0.005108118,benchmarks/bags/card/fol_0000015.smt2,sat,0.014964342
-bapa/card/fol_0000016.smt2 ,sat,0.365087748,benchmarks/bapa/card/cvc5/fol_0000016.smt2,sat,0.005691051,benchmarks/bags/card/fol_0000016.smt2,sat,0.015278578
-bapa/card/fol_0000017.smt2 ,sat,0.477689028,benchmarks/bapa/card/cvc5/fol_0000017.smt2,sat,0.006429434,benchmarks/bags/card/fol_0000017.smt2,sat,0.014555454
-bapa/card/fol_0000018.smt2 ,sat,0.351101875,benchmarks/bapa/card/cvc5/fol_0000018.smt2,sat,0.005164862,benchmarks/bags/card/fol_0000018.smt2,sat,0.014440775
-bapa/card/fol_0000019.smt2 ,sat,0.481669188,benchmarks/bapa/card/cvc5/fol_0000019.smt2,sat,0.00598979,benchmarks/bags/card/fol_0000019.smt2,sat,0.016377687
-bapa/card/fol_0000020.smt2 ,sat,0.355344296,benchmarks/bapa/card/cvc5/fol_0000020.smt2,sat,0.005851507,benchmarks/bags/card/fol_0000020.smt2,sat,0.015225649
-bapa/card/fol_0000021.smt2 ,  unsat,0.171499968,benchmarks/bapa/card/cvc5/fol_0000021.smt2,unsat,0.004648924,benchmarks/bags/card/fol_0000021.smt2,unsat,0.00631094
-bapa/card/fol_0000022.smt2 ,sat,0.481844187,benchmarks/bapa/card/cvc5/fol_0000022.smt2,sat,0.005694151,benchmarks/bags/card/fol_0000022.smt2,sat,0.014749289
-bapa/card/fol_0000023.smt2 ,  unsat,0.173066378,benchmarks/bapa/card/cvc5/fol_0000023.smt2,unsat,0.00531888,benchmarks/bags/card/fol_0000023.smt2,,51.53188586
-bapa/card/fol_0000024.smt2 ,timeout,51.62414455,benchmarks/bapa/card/cvc5/fol_0000024.smt2,sat,0.005780697,benchmarks/bags/card/fol_0000024.smt2,sat,0.016943693
-bapa/card/fol_0000025.smt2 ,sat,0.341430902,benchmarks/bapa/card/cvc5/fol_0000025.smt2,sat,0.006189823,benchmarks/bags/card/fol_0000025.smt2,sat,0.013647318
-bapa/card/fol_0000026.smt2 ,sat,0.448576927,benchmarks/bapa/card/cvc5/fol_0000026.smt2,sat,0.005145073,benchmarks/bags/card/fol_0000026.smt2,sat,0.013590813
-bapa/card/fol_0000027.smt2 ,sat,0.36128664,benchmarks/bapa/card/cvc5/fol_0000027.smt2,sat,0.005197287,benchmarks/bags/card/fol_0000027.smt2,sat,0.014146328
-bapa/card/fol_0000028.smt2 ,  unsat,0.222877026,benchmarks/bapa/card/cvc5/fol_0000028.smt2,unsat,0.009061813,benchmarks/bags/card/fol_0000028.smt2,,55.71495891
-bapa/card/fol_0000029.smt2 ,sat,0.400098085,benchmarks/bapa/card/cvc5/fol_0000029.smt2,sat,0.006208181,benchmarks/bags/card/fol_0000029.smt2,,54.90661383
-bapa/card/fol_0000030.smt2 ,  unsat,0.164866686,benchmarks/bapa/card/cvc5/fol_0000030.smt2,unsat,0.005609989,benchmarks/bags/card/fol_0000030.smt2,unsat,0.006151438
-bapa/card/fol_0000031.smt2 ,sat,0.353502274,benchmarks/bapa/card/cvc5/fol_0000031.smt2,sat,0.005561352,benchmarks/bags/card/fol_0000031.smt2,sat,0.014868259
-bapa/card/fol_0000032.smt2 ,  unsat,0.16689229,benchmarks/bapa/card/cvc5/fol_0000032.smt2,unsat,0.004553318,benchmarks/bags/card/fol_0000032.smt2,,51.78358698
-bapa/card/fol_0000033.smt2 ,sat,0.353208303,benchmarks/bapa/card/cvc5/fol_0000033.smt2,sat,0.006669998,benchmarks/bags/card/fol_0000033.smt2,sat,0.016108274
-bapa/card/fol_0000034.smt2 ,  unsat,0.164858818,benchmarks/bapa/card/cvc5/fol_0000034.smt2,unsat,0.005180836,benchmarks/bags/card/fol_0000034.smt2,unsat,0.006402016
-bapa/card/fol_0000035.smt2 ,sat,0.370762348,benchmarks/bapa/card/cvc5/fol_0000035.smt2,sat,0.005744934,benchmarks/bags/card/fol_0000035.smt2,sat,0.013517857
-bapa/card/fol_0000036.smt2 ,sat,0.346759081,benchmarks/bapa/card/cvc5/fol_0000036.smt2,sat,0.006236315,benchmarks/bags/card/fol_0000036.smt2,sat,0.014183521
-bapa/card/fol_0000037.smt2 ,sat,0.342145681,benchmarks/bapa/card/cvc5/fol_0000037.smt2,sat,0.005185604,benchmarks/bags/card/fol_0000037.smt2,sat,0.015235901
-bapa/card/fol_0000038.smt2 ,  unsat,0.16918087,benchmarks/bapa/card/cvc5/fol_0000038.smt2,unsat,0.005782127,benchmarks/bags/card/fol_0000038.smt2,,51.850142
-bapa/card/fol_0000039.smt2 ,sat,0.335247993,benchmarks/bapa/card/cvc5/fol_0000039.smt2,sat,0.005880594,benchmarks/bags/card/fol_0000039.smt2,sat,0.015296936
-bapa/card/fol_0000040.smt2 ,  unsat,0.170845985,benchmarks/bapa/card/cvc5/fol_0000040.smt2,unsat,0.004793882,benchmarks/bags/card/fol_0000040.smt2,unsat,0.005998611
-bapa/card/fol_0000041.smt2 ,sat,0.359589577,benchmarks/bapa/card/cvc5/fol_0000041.smt2,sat,0.005921364,benchmarks/bags/card/fol_0000041.smt2,sat,0.01505065
-bapa/card/fol_0000042.smt2 ,sat,0.350086212,benchmarks/bapa/card/cvc5/fol_0000042.smt2,sat,0.005178213,benchmarks/bags/card/fol_0000042.smt2,sat,0.014104128
-bapa/card/fol_0000043.smt2 ,sat,0.287399769,benchmarks/bapa/card/cvc5/fol_0000043.smt2,sat,0.005068779,benchmarks/bags/card/fol_0000043.smt2,,55.99122906
-bapa/card/fol_0000044.smt2 ,sat,0.354703903,benchmarks/bapa/card/cvc5/fol_0000044.smt2,sat,0.00577879,benchmarks/bags/card/fol_0000044.smt2,sat,0.0166502
-bapa/card/fol_0000045.smt2 ,  unsat,0.493671656,benchmarks/bapa/card/cvc5/fol_0000045.smt2,unsat,0.023609638,benchmarks/bags/card/fol_0000045.smt2,,53.54522085
-bapa/card/fol_0000046.smt2 ,timeout,51.59514523,benchmarks/bapa/card/cvc5/fol_0000046.smt2,unsat,0.08313942,benchmarks/bags/card/fol_0000046.smt2,,52.73297548
-bapa/card/fol_0000047.smt2 ,  unsat,14.99300385,benchmarks/bapa/card/cvc5/fol_0000047.smt2,unsat,0.091431618,benchmarks/bags/card/fol_0000047.smt2,,53.02586412
-bapa/card/fol_0000048.smt2 ,timeout,51.52426195,benchmarks/bapa/card/cvc5/fol_0000048.smt2,sat,1.194437504,benchmarks/bags/card/fol_0000048.smt2,,52.68618965
-bapa/card/fol_0000049.smt2 ,sat,11.22989631,benchmarks/bapa/card/cvc5/fol_0000049.smt2,sat,0.974107504,benchmarks/bags/card/fol_0000049.smt2,,51.45344687
-bapa/card/fol_0000050.smt2 ,timeout,51.51998472,benchmarks/bapa/card/cvc5/fol_0000050.smt2,sat,0.008249998,benchmarks/bags/card/fol_0000050.smt2,sat,0.098322868
-bapa/card/fol_0000051.smt2 ,timeout,50.81062841,benchmarks/bapa/card/cvc5/fol_0000051.smt2,sat,0.00711751,benchmarks/bags/card/fol_0000051.smt2,sat,0.401027918
-bapa/card/fol_0000052.smt2 ,sat,6.225986481,benchmarks/bapa/card/cvc5/fol_0000052.smt2,sat,0.090071201,benchmarks/bags/card/fol_0000052.smt2,,51.60602283
-bapa/card/fol_0000053.smt2 ,timeout,51.60951042,benchmarks/bapa/card/cvc5/fol_0000053.smt2,sat,0.00843668,benchmarks/bags/card/fol_0000053.smt2,sat,0.23285985
-bapa/card/fol_0000054.smt2 ,timeout,50.77802992,benchmarks/bapa/card/cvc5/fol_0000054.smt2,sat,0.097011566,benchmarks/bags/card/fol_0000054.smt2,,52.50986099
-bapa/card/fol_0000055.smt2 ,  unsat,19.80055356,benchmarks/bapa/card/cvc5/fol_0000055.smt2,unsat,0.242928267,benchmarks/bags/card/fol_0000055.smt2,,51.48727918
-bapa/card/fol_0000056.smt2 ,sat,1.606430054,benchmarks/bapa/card/cvc5/fol_0000056.smt2,sat,0.00790596,benchmarks/bags/card/fol_0000056.smt2,sat,0.58304739
-bapa/card/fol_0000057.smt2 ,sat,3.550425291,benchmarks/bapa/card/cvc5/fol_0000057.smt2,sat,0.024773359,benchmarks/bags/card/fol_0000057.smt2,,51.79027343
-bapa/card/fol_0000058.smt2 ,  unsat,0.230741739,benchmarks/bapa/card/cvc5/fol_0000058.smt2,unsat,0.009142399,benchmarks/bags/card/fol_0000058.smt2,,52.14522028
-bapa/card/fol_0000059.smt2 ,  unsat,0.186239243,benchmarks/bapa/card/cvc5/fol_0000059.smt2,unsat,0.003798246,benchmarks/bags/card/fol_0000059.smt2,unsat,0.004430056
-bapa/card/fol_0000060.smt2 ,  unsat,0.497185946,benchmarks/bapa/card/cvc5/fol_0000060.smt2,unsat,0.025040388,benchmarks/bags/card/fol_0000060.smt2,,51.19040751
-bapa/card/fol_0000061.smt2 ,  unsat,0.283760548,benchmarks/bapa/card/cvc5/fol_0000061.smt2,unsat,0.023650408,benchmarks/bags/card/fol_0000061.smt2,,51.24662304
-bapa/card/fol_0000062.smt2 ,sat,2.766501665,benchmarks/bapa/card/cvc5/fol_0000062.smt2,sat,0.024841785,benchmarks/bags/card/fol_0000062.smt2,,51.57647395
-bapa/card/fol_0000063.smt2 ,  unsat,0.246244669,benchmarks/bapa/card/cvc5/fol_0000063.smt2,unsat,0.007819176,benchmarks/bags/card/fol_0000063.smt2,,53.64863586
-bapa/card/fol_0000064.smt2 ,  unsat,0.17814374,benchmarks/bapa/card/cvc5/fol_0000064.smt2,unsat,0.004091978,benchmarks/bags/card/fol_0000064.smt2,unsat,0.004622459
-bapa/card/fol_0000065.smt2 ,  unsat,0.497411966,benchmarks/bapa/card/cvc5/fol_0000065.smt2,unsat,0.022767544,benchmarks/bags/card/fol_0000065.smt2,,51.67710161
-bapa/card/fol_0000066.smt2 ,  unsat,0.517511845,benchmarks/bapa/card/cvc5/fol_0000066.smt2,unsat,0.023509741,benchmarks/bags/card/fol_0000066.smt2,,51.90647411
-bapa/card/fol_0000067.smt2 ,  unsat,0.277233124,benchmarks/bapa/card/cvc5/fol_0000067.smt2,unsat,0.023430347,benchmarks/bags/card/fol_0000067.smt2,,52.05068088
-bapa/card/fol_0000068.smt2 ,  unsat,0.31587553,benchmarks/bapa/card/cvc5/fol_0000068.smt2,unsat,0.022415638,benchmarks/bags/card/fol_0000068.smt2,,52.00867581
-bapa/card/fol_0000069.smt2 ,timeout,51.55177188,benchmarks/bapa/card/cvc5/fol_0000069.smt2,unsat,0.085782528,benchmarks/bags/card/fol_0000069.smt2,,52.07608151
-bapa/card/fol_0000070.smt2 ,  unsat,0.633586884,benchmarks/bapa/card/cvc5/fol_0000070.smt2,unsat,0.087143898,benchmarks/bags/card/fol_0000070.smt2,,50.95891881
-bapa/card/fol_0000071.smt2 ,timeout,50.7955029,benchmarks/bapa/card/cvc5/fol_0000071.smt2,sat,0.737445831,benchmarks/bags/card/fol_0000071.smt2,,51.17452431
-bapa/card/fol_0000072.smt2 ,timeout,51.59042382,benchmarks/bapa/card/cvc5/fol_0000072.smt2,sat,0.749402285,benchmarks/bags/card/fol_0000072.smt2,,51.6188314
-bapa/card/fol_0000073.smt2 ,timeout,51.64899206,benchmarks/bapa/card/cvc5/fol_0000073.smt2,sat,0.010165453,benchmarks/bags/card/fol_0000073.smt2,sat,0.139924288
-bapa/card/fol_0000074.smt2 ,timeout,50.83539081,benchmarks/bapa/card/cvc5/fol_0000074.smt2,sat,0.00842309,benchmarks/bags/card/fol_0000074.smt2,sat,0.161314249
-bapa/card/fol_0000075.smt2 ,timeout,51.58344007,benchmarks/bapa/card/cvc5/fol_0000075.smt2,unsat,0.084305525,benchmarks/bags/card/fol_0000075.smt2,,51.70537257
-bapa/card/fol_0000076.smt2 ,sat,2.964776754,benchmarks/bapa/card/cvc5/fol_0000076.smt2,sat,0.009053469,benchmarks/bags/card/fol_0000076.smt2,sat,0.324884892
-bapa/card/fol_0000077.smt2 ,timeout,50.81564593,benchmarks/bapa/card/cvc5/fol_0000077.smt2,unsat,0.085321665,benchmarks/bags/card/fol_0000077.smt2,,51.42188597
-bapa/card/fol_0000078.smt2 ,  unsat,1.905253172,benchmarks/bapa/card/cvc5/fol_0000078.smt2,unsat,0.248413801,benchmarks/bags/card/fol_0000078.smt2,,51.536443
-bapa/card/fol_0000079.smt2 ,sat,1.672252655,benchmarks/bapa/card/cvc5/fol_0000079.smt2,sat,0.006541491,benchmarks/bags/card/fol_0000079.smt2,sat,0.384788513
-bapa/card/fol_0000080.smt2 ,timeout,51.58409834,benchmarks/bapa/card/cvc5/fol_0000080.smt2,sat,0.031166553,benchmarks/bags/card/fol_0000080.smt2,,51.27987599
-bapa/card/fol_0000081.smt2 ,  unsat,0.179929495,benchmarks/bapa/card/cvc5/fol_0000081.smt2,unsat,0.0040555,benchmarks/bags/card/fol_0000081.smt2,unsat,0.004372358
-bapa/card/fol_0000082.smt2 ,timeout,50.78202128,benchmarks/bapa/card/cvc5/fol_0000082.smt2,sat,0.041255713,benchmarks/bags/card/fol_0000082.smt2,,52.39219904
-bapa/card/fol_0000083.smt2 ,  unsat,1.140745878,benchmarks/bapa/card/cvc5/fol_0000083.smt2,unsat,0.03130722,benchmarks/bags/card/fol_0000083.smt2,,51.6431756
-bapa/card/fol_0000084.smt2 ,timeout,50.59154963,benchmarks/bapa/card/cvc5/fol_0000084.smt2,unsat,0.082297325,benchmarks/bags/card/fol_0000084.smt2,,52.55039477
-bapa/card/fol_0000085.smt2 ,  unsat,0.265553951,benchmarks/bapa/card/cvc5/fol_0000085.smt2,unsat,0.025517702,benchmarks/bags/card/fol_0000085.smt2,,51.6748414
-bapa/card/fol_0000086.smt2 ,  unsat,0.277772188,benchmarks/bapa/card/cvc5/fol_0000086.smt2,unsat,0.026791811,benchmarks/bags/card/fol_0000086.smt2,,52.15062857
-bapa/card/fol_0000087.smt2 ,  unsat,1.144392252,benchmarks/bapa/card/cvc5/fol_0000087.smt2,unsat,0.032943726,benchmarks/bags/card/fol_0000087.smt2,,51.49661064
-bapa/card/fol_0000088.smt2 ,  unsat,16.88413501,benchmarks/bapa/card/cvc5/fol_0000088.smt2,unsat,0.084688902,benchmarks/bags/card/fol_0000088.smt2,,51.30983973
-bapa/card/fol_0000089.smt2 ,  unsat,5.688016891,benchmarks/bapa/card/cvc5/fol_0000089.smt2,unsat,0.08614254,benchmarks/bags/card/fol_0000089.smt2,,51.49510145
-bapa/card/fol_0000090.smt2 ,timeout,50.55466461,benchmarks/bapa/card/cvc5/fol_0000090.smt2,sat,0.030864239,benchmarks/bags/card/fol_0000090.smt2,,51.34978533
-bapa/card/fol_0000091.smt2 ,  unsat,0.203582287,benchmarks/bapa/card/cvc5/fol_0000091.smt2,unsat,0.004818439,benchmarks/bags/card/fol_0000091.smt2,unsat,0.006095409
-bapa/card/fol_0000092.smt2 ,  unsat,0.457875967,benchmarks/bapa/card/cvc5/fol_0000092.smt2,unsat,0.029266834,benchmarks/bags/card/fol_0000092.smt2,,52.18661237
-bapa/card/fol_0000093.smt2 ,  unsat,0.542979002,benchmarks/bapa/card/cvc5/fol_0000093.smt2,unsat,0.031406164,benchmarks/bags/card/fol_0000093.smt2,,51.54763103
-bapa/card/fol_0000094.smt2 ,  unsat,0.275872707,benchmarks/bapa/card/cvc5/fol_0000094.smt2,unsat,0.023430109,benchmarks/bags/card/fol_0000094.smt2,,51.54993963
-bapa/card/fol_0000095.smt2 ,timeout,51.25750685,benchmarks/bapa/card/cvc5/fol_0000095.smt2,unsat,0.081549883,benchmarks/bags/card/fol_0000095.smt2,,51.74823737
-bapa/card/fol_0000096.smt2 ,timeout,51.20434856,benchmarks/bapa/card/cvc5/fol_0000096.smt2,unsat,0.719832659,benchmarks/bags/card/fol_0000096.smt2,,51.87849307
-bapa/card/fol_0000097.smt2 ,timeout,50.5734396,benchmarks/bapa/card/cvc5/fol_0000097.smt2,unsat,0.719468117,benchmarks/bags/card/fol_0000097.smt2,,52.740134
-bapa/card/fol_0000098.smt2 ,timeout,51.07065272,benchmarks/bapa/card/cvc5/fol_0000098.smt2,unsat,7.655201197,benchmarks/bags/card/fol_0000098.smt2,,51.76239657
-bapa/card/fol_0000099.smt2 ,timeout,50.66517973,benchmarks/bapa/card/cvc5/fol_0000099.smt2,unsat,43.50039816,benchmarks/bags/card/fol_0000099.smt2,,51.4003799
-bapa/card/fol_0000100.smt2 ,timeout,51.12153864,benchmarks/bapa/card/cvc5/fol_0000100.smt2,unsat,39.22926593,benchmarks/bags/card/fol_0000100.smt2,,51.54888725
-bapa/card/fol_0000101.smt2 ,timeout,50.71097565,benchmarks/bapa/card/cvc5/fol_0000101.smt2,sat,0.010179996,benchmarks/bags/card/fol_0000101.smt2,sat,0.850548506
-bapa/card/fol_0000102.smt2 ,timeout,51.11875367,benchmarks/bapa/card/cvc5/fol_0000102.smt2,sat,9.135066748,benchmarks/bags/card/fol_0000102.smt2,,52.50789976
-bapa/card/fol_0000103.smt2 ,timeout,50.04078627,benchmarks/bapa/card/cvc5/fol_0000103.smt2,sat,0.008532286,benchmarks/bags/card/fol_0000103.smt2,sat,1.575610161
-bapa/card/fol_0000104.smt2 ,timeout,50.65212226,benchmarks/bapa/card/cvc5/fol_0000104.smt2,unsat,8.804283381,benchmarks/bags/card/fol_0000104.smt2,,52.98585749
-bapa/card/fol_0000105.smt2 ,timeout,50.55034208,benchmarks/bapa/card/cvc5/fol_0000105.smt2,sat,0.011343479,benchmarks/bags/card/fol_0000105.smt2,sat,1.581133604
-bapa/card/fol_0000106.smt2 ,timeout,51.05112839,benchmarks/bapa/card/cvc5/fol_0000106.smt2,unsat,11.84843373,benchmarks/bags/card/fol_0000106.smt2,,51.88004875
-bapa/card/fol_0000107.smt2 ,timeout,51.0099926,benchmarks/bapa/card/cvc5/fol_0000107.smt2,unsat,11.20674205,benchmarks/bags/card/fol_0000107.smt2,,52.29277253
-bapa/card/fol_0000108.smt2 ,timeout,50.58863187,benchmarks/bapa/card/cvc5/fol_0000108.smt2,sat,0.008568287,benchmarks/bags/card/fol_0000108.smt2,sat,1.9715271
-bapa/card/fol_0000109.smt2 ,timeout,51.13211703,benchmarks/bapa/card/cvc5/fol_0000109.smt2,unsat,0.083357096,benchmarks/bags/card/fol_0000109.smt2,,52.4067812
-bapa/card/fol_0000110.smt2 ,  unsat,0.49109292,benchmarks/bapa/card/cvc5/fol_0000110.smt2,unsat,0.024115324,benchmarks/bags/card/fol_0000110.smt2,,51.67960715
-bapa/card/fol_0000111.smt2 ,  unsat,1.152416706,benchmarks/bapa/card/cvc5/fol_0000111.smt2,unsat,0.028439283,benchmarks/bags/card/fol_0000111.smt2,,51.05393076
-bapa/card/fol_0000112.smt2 ,timeout,50.71004534,benchmarks/bapa/card/cvc5/fol_0000112.smt2,unsat,0.083215714,benchmarks/bags/card/fol_0000112.smt2,,51.75580907
-bapa/card/fol_0000113.smt2 ,timeout,51.24177456,benchmarks/bapa/card/cvc5/fol_0000113.smt2,sat,0.241307497,benchmarks/bags/card/fol_0000113.smt2,,51.47512531
-bapa/card/fol_0000114.smt2 ,  unsat,0.483315945,benchmarks/bapa/card/cvc5/fol_0000114.smt2,unsat,0.031418562,benchmarks/bags/card/fol_0000114.smt2,,52.24296427
-bapa/card/fol_0000115.smt2 ,  unsat,0.487026691,benchmarks/bapa/card/cvc5/fol_0000115.smt2,unsat,0.028445482,benchmarks/bags/card/fol_0000115.smt2,,51.37022662
-bapa/card/fol_0000116.smt2 ,  unsat,0.795124292,benchmarks/bapa/card/cvc5/fol_0000116.smt2,unsat,0.233734608,benchmarks/bags/card/fol_0000116.smt2,,51.48006821
-bapa/card/fol_0000117.smt2 ,timeout,50.62664938,benchmarks/bapa/card/cvc5/fol_0000117.smt2,sat,0.225596189,benchmarks/bags/card/fol_0000117.smt2,,51.69218254
-bapa/card/fol_0000118.smt2 ,timeout,51.34542465,benchmarks/bapa/card/cvc5/fol_0000118.smt2,unsat,0.723083735,benchmarks/bags/card/fol_0000118.smt2,,51.7737596
-bapa/card/fol_0000119.smt2 ,  unsat,25.79272079,benchmarks/bapa/card/cvc5/fol_0000119.smt2,unsat,0.082818031,benchmarks/bags/card/fol_0000119.smt2,,51.54826975
-bapa/card/fol_0000120.smt2 ,  unsat,4.37706399,benchmarks/bapa/card/cvc5/fol_0000120.smt2,unsat,0.224694967,benchmarks/bags/card/fol_0000120.smt2,,51.56188583
+﻿sls filename,sls result,sls duration,cvc5 lia filename,cvc5 lia result,cvc5 lia duration,lia normaliz,lia normaliz result,lia normaliz duration
+bapa/arith/fol_0000001.smt2,sat,0.410186529,benchmarks/bapa/arith/cvc5_mapa/fol_0000001.smt2,sat,0.010293007,benchmarks/bapa/arith/cvc5_mapa/fol_0000001.smt2,sat,0.01134491
+bapa/arith/fol_0000002.smt2,sat,0.286105871,benchmarks/bapa/arith/cvc5_mapa/fol_0000002.smt2,sat,0.011740685,benchmarks/bapa/arith/cvc5_mapa/fol_0000002.smt2,sat,0.011458158
+bapa/arith/fol_0000003.smt2,sat,0.307407379,benchmarks/bapa/arith/cvc5_mapa/fol_0000003.smt2,sat,0.012347221,benchmarks/bapa/arith/cvc5_mapa/fol_0000003.smt2,sat,0.010519505
+bapa/arith/fol_0000004.smt2,sat,0.28412962,benchmarks/bapa/arith/cvc5_mapa/fol_0000004.smt2,sat,0.012315035,benchmarks/bapa/arith/cvc5_mapa/fol_0000004.smt2,sat,0.013613224
+bapa/arith/fol_0000005.smt2,sat,0.295028687,benchmarks/bapa/arith/cvc5_mapa/fol_0000005.smt2,sat,0.014012098,benchmarks/bapa/arith/cvc5_mapa/fol_0000005.smt2,sat,0.012242556
+bapa/arith/fol_0000006.smt2,sat,0.297081947,benchmarks/bapa/arith/cvc5_mapa/fol_0000006.smt2,sat,0.013868809,benchmarks/bapa/arith/cvc5_mapa/fol_0000006.smt2,sat,0.01300931
+bapa/arith/fol_0000007.smt2,sat,0.292583466,benchmarks/bapa/arith/cvc5_mapa/fol_0000007.smt2,sat,0.012511015,benchmarks/bapa/arith/cvc5_mapa/fol_0000007.smt2,sat,0.01170826
+bapa/arith/fol_0000008.smt2,sat,0.28817153,benchmarks/bapa/arith/cvc5_mapa/fol_0000008.smt2,sat,0.012430191,benchmarks/bapa/arith/cvc5_mapa/fol_0000008.smt2,sat,0.012104988
+bapa/arith/fol_0000009.smt2,sat,0.301508904,benchmarks/bapa/arith/cvc5_mapa/fol_0000009.smt2,sat,0.011890411,benchmarks/bapa/arith/cvc5_mapa/fol_0000009.smt2,sat,0.011650801
+bapa/arith/fol_0000010.smt2,sat,0.293764591,benchmarks/bapa/arith/cvc5_mapa/fol_0000010.smt2,sat,0.011268854,benchmarks/bapa/arith/cvc5_mapa/fol_0000010.smt2,sat,0.012900352
+bapa/arith/fol_0000011.smt2,sat,0.303085089,benchmarks/bapa/arith/cvc5_mapa/fol_0000011.smt2,sat,0.012326002,benchmarks/bapa/arith/cvc5_mapa/fol_0000011.smt2,sat,0.012928486
+bapa/arith/fol_0000012.smt2,sat,0.304507494,benchmarks/bapa/arith/cvc5_mapa/fol_0000012.smt2,sat,0.011671305,benchmarks/bapa/arith/cvc5_mapa/fol_0000012.smt2,sat,0.013015985
+bapa/arith/fol_0000013.smt2,sat,0.306045055,benchmarks/bapa/arith/cvc5_mapa/fol_0000013.smt2,sat,0.011610031,benchmarks/bapa/arith/cvc5_mapa/fol_0000013.smt2,sat,0.016033173
+bapa/arith/fol_0000014.smt2,sat,0.320058823,benchmarks/bapa/arith/cvc5_mapa/fol_0000014.smt2,sat,0.011347771,benchmarks/bapa/arith/cvc5_mapa/fol_0000014.smt2,sat,0.014628887
+bapa/arith/fol_0000015.smt2,sat,0.303849936,benchmarks/bapa/arith/cvc5_mapa/fol_0000015.smt2,sat,0.012412071,benchmarks/bapa/arith/cvc5_mapa/fol_0000015.smt2,sat,0.01398778
+bapa/arith/fol_0000016.smt2,sat,0.341473579,benchmarks/bapa/arith/cvc5_mapa/fol_0000016.smt2,sat,0.012585878,benchmarks/bapa/arith/cvc5_mapa/fol_0000016.smt2,sat,0.011361361
+bapa/arith/fol_0000017.smt2,sat,0.32170105,benchmarks/bapa/arith/cvc5_mapa/fol_0000017.smt2,sat,0.012321234,benchmarks/bapa/arith/cvc5_mapa/fol_0000017.smt2,sat,0.012937546
+bapa/arith/fol_0000018.smt2,sat,0.2964499,benchmarks/bapa/arith/cvc5_mapa/fol_0000018.smt2,sat,0.01206708,benchmarks/bapa/arith/cvc5_mapa/fol_0000018.smt2,sat,0.012920856
+bapa/arith/fol_0000019.smt2,sat,0.31636405,benchmarks/bapa/arith/cvc5_mapa/fol_0000019.smt2,sat,0.015625477,benchmarks/bapa/arith/cvc5_mapa/fol_0000019.smt2,sat,0.015548944
+bapa/arith/fol_0000020.smt2,sat,0.306529522,benchmarks/bapa/arith/cvc5_mapa/fol_0000020.smt2,sat,0.01298213,benchmarks/bapa/arith/cvc5_mapa/fol_0000020.smt2,sat,0.013236761
+bapa/arith/fol_0000021.smt2,unsat,0.166874647,benchmarks/bapa/arith/cvc5_mapa/fol_0000021.smt2,unsat,0.010868788,benchmarks/bapa/arith/cvc5_mapa/fol_0000021.smt2,unsat,0.010678053
+bapa/arith/fol_0000022.smt2,sat,0.28779006,benchmarks/bapa/arith/cvc5_mapa/fol_0000022.smt2,sat,0.012656212,benchmarks/bapa/arith/cvc5_mapa/fol_0000022.smt2,sat,0.012260199
+bapa/arith/fol_0000023.smt2,unsat,0.158237934,benchmarks/bapa/arith/cvc5_mapa/fol_0000023.smt2,unsat,0.010987282,benchmarks/bapa/arith/cvc5_mapa/fol_0000023.smt2,unsat,0.012336731
+bapa/arith/fol_0000024.smt2,sat,0.317140102,benchmarks/bapa/arith/cvc5_mapa/fol_0000024.smt2,sat,0.01714325,benchmarks/bapa/arith/cvc5_mapa/fol_0000024.smt2,sat,0.018928766
+bapa/arith/fol_0000025.smt2,sat,0.289137602,benchmarks/bapa/arith/cvc5_mapa/fol_0000025.smt2,sat,0.012379646,benchmarks/bapa/arith/cvc5_mapa/fol_0000025.smt2,sat,0.012298822
+bapa/arith/fol_0000026.smt2,sat,0.402628183,benchmarks/bapa/arith/cvc5_mapa/fol_0000026.smt2,sat,0.012441635,benchmarks/bapa/arith/cvc5_mapa/fol_0000026.smt2,sat,0.012018442
+bapa/arith/fol_0000027.smt2,sat,0.29758811,benchmarks/bapa/arith/cvc5_mapa/fol_0000027.smt2,sat,0.01128149,benchmarks/bapa/arith/cvc5_mapa/fol_0000027.smt2,sat,0.012085915
+bapa/arith/fol_0000028.smt2,unsat,0.433839321,benchmarks/bapa/arith/cvc5_mapa/fol_0000028.smt2,unsat,0.03825736,benchmarks/bapa/arith/cvc5_mapa/fol_0000028.smt2,unsat,0.034576416
+bapa/arith/fol_0000029.smt2,sat,0.221711397,benchmarks/bapa/arith/cvc5_mapa/fol_0000029.smt2,sat,0.018465757,benchmarks/bapa/arith/cvc5_mapa/fol_0000029.smt2,sat,0.019520044
+bapa/arith/fol_0000030.smt2,unsat,0.153227568,benchmarks/bapa/arith/cvc5_mapa/fol_0000030.smt2,unsat,0.010426521,benchmarks/bapa/arith/cvc5_mapa/fol_0000030.smt2,unsat,0.010258198
+bapa/arith/fol_0000031.smt2,sat,0.29910326,benchmarks/bapa/arith/cvc5_mapa/fol_0000031.smt2,sat,0.010781527,benchmarks/bapa/arith/cvc5_mapa/fol_0000031.smt2,sat,0.012818336
+bapa/arith/fol_0000032.smt2,unsat,0.156048059,benchmarks/bapa/arith/cvc5_mapa/fol_0000032.smt2,unsat,0.010917425,benchmarks/bapa/arith/cvc5_mapa/fol_0000032.smt2,unsat,0.010745287
+bapa/arith/fol_0000033.smt2,sat,0.295488834,benchmarks/bapa/arith/cvc5_mapa/fol_0000033.smt2,sat,0.013753653,benchmarks/bapa/arith/cvc5_mapa/fol_0000033.smt2,sat,0.012261391
+bapa/arith/fol_0000034.smt2,unsat,0.150892019,benchmarks/bapa/arith/cvc5_mapa/fol_0000034.smt2,unsat,0.010674477,benchmarks/bapa/arith/cvc5_mapa/fol_0000034.smt2,unsat,0.01102376
+bapa/arith/fol_0000035.smt2,sat,0.300153255,benchmarks/bapa/arith/cvc5_mapa/fol_0000035.smt2,sat,0.012748718,benchmarks/bapa/arith/cvc5_mapa/fol_0000035.smt2,sat,0.012033463
+bapa/arith/fol_0000036.smt2,sat,0.285773754,benchmarks/bapa/arith/cvc5_mapa/fol_0000036.smt2,sat,0.011905909,benchmarks/bapa/arith/cvc5_mapa/fol_0000036.smt2,sat,0.01118207
+bapa/arith/fol_0000037.smt2,sat,0.293341637,benchmarks/bapa/arith/cvc5_mapa/fol_0000037.smt2,sat,0.012559175,benchmarks/bapa/arith/cvc5_mapa/fol_0000037.smt2,sat,0.01233077
+bapa/arith/fol_0000038.smt2,unsat,0.168230534,benchmarks/bapa/arith/cvc5_mapa/fol_0000038.smt2,unsat,0.009615898,benchmarks/bapa/arith/cvc5_mapa/fol_0000038.smt2,unsat,0.0109272
+bapa/arith/fol_0000039.smt2,sat,0.287956715,benchmarks/bapa/arith/cvc5_mapa/fol_0000039.smt2,sat,0.012709141,benchmarks/bapa/arith/cvc5_mapa/fol_0000039.smt2,sat,0.012046099
+bapa/arith/fol_0000040.smt2,unsat,0.155636787,benchmarks/bapa/arith/cvc5_mapa/fol_0000040.smt2,unsat,0.011268854,benchmarks/bapa/arith/cvc5_mapa/fol_0000040.smt2,unsat,0.010897875
+bapa/arith/fol_0000041.smt2,sat,0.294837236,benchmarks/bapa/arith/cvc5_mapa/fol_0000041.smt2,sat,0.012781382,benchmarks/bapa/arith/cvc5_mapa/fol_0000041.smt2,sat,0.013046741
+bapa/arith/fol_0000042.smt2,sat,0.299346685,benchmarks/bapa/arith/cvc5_mapa/fol_0000042.smt2,sat,0.010330439,benchmarks/bapa/arith/cvc5_mapa/fol_0000042.smt2,sat,0.011210203
+bapa/arith/fol_0000043.smt2,sat,0.214483738,benchmarks/bapa/arith/cvc5_mapa/fol_0000043.smt2,sat,0.013598919,benchmarks/bapa/arith/cvc5_mapa/fol_0000043.smt2,sat,0.014955282
+bapa/arith/fol_0000044.smt2,sat,0.301258087,benchmarks/bapa/arith/cvc5_mapa/fol_0000044.smt2,sat,0.011958599,benchmarks/bapa/arith/cvc5_mapa/fol_0000044.smt2,sat,0.012628794
+bapa/arith/fol_0000045.smt2,unsat,4.047235489,benchmarks/bapa/arith/cvc5_mapa/fol_0000045.smt2,unsat,0.038336515,benchmarks/bapa/arith/cvc5_mapa/fol_0000045.smt2,unsat,0.035326958
+bapa/arith/fol_0000046.smt2,sat,0.241448164,benchmarks/bapa/arith/cvc5_mapa/fol_0000046.smt2,sat,0.01864624,benchmarks/bapa/arith/cvc5_mapa/fol_0000046.smt2,sat,0.01993227
+bapa/arith/fol_0000047.smt2,unsat,0.476460934,benchmarks/bapa/arith/cvc5_mapa/fol_0000047.smt2,unsat,0.040106297,benchmarks/bapa/arith/cvc5_mapa/fol_0000047.smt2,unsat,0.034976959
+bapa/arith/fol_0000048.smt2,sat,0.421058893,benchmarks/bapa/arith/cvc5_mapa/fol_0000048.smt2,sat,0.019812107,benchmarks/bapa/arith/cvc5_mapa/fol_0000048.smt2,sat,0.021236897
+bapa/arith/fol_0000049.smt2,sat,0.439365864,benchmarks/bapa/arith/cvc5_mapa/fol_0000049.smt2,sat,0.022224426,benchmarks/bapa/arith/cvc5_mapa/fol_0000049.smt2,sat,0.022798061
+bapa/arith/fol_0000050.smt2,sat,0.137499094,benchmarks/bapa/arith/cvc5_mapa/fol_0000050.smt2,sat,0.017246723,benchmarks/bapa/arith/cvc5_mapa/fol_0000050.smt2,sat,0.016987324
+bapa/arith/fol_0000051.smt2,sat,0.312210321,benchmarks/bapa/arith/cvc5_mapa/fol_0000051.smt2,sat,0.01616931,benchmarks/bapa/arith/cvc5_mapa/fol_0000051.smt2,sat,0.015257359
+bapa/arith/fol_0000052.smt2,sat,0.187070131,benchmarks/bapa/arith/cvc5_mapa/fol_0000052.smt2,sat,0.020399094,benchmarks/bapa/arith/cvc5_mapa/fol_0000052.smt2,sat,0.02132988
+bapa/arith/fol_0000053.smt2,sat,0.393288612,benchmarks/bapa/arith/cvc5_mapa/fol_0000053.smt2,sat,0.020820856,benchmarks/bapa/arith/cvc5_mapa/fol_0000053.smt2,sat,0.020979404
+bapa/arith/fol_0000054.smt2,sat,0.4038167,benchmarks/bapa/arith/cvc5_mapa/fol_0000054.smt2,sat,0.019674063,benchmarks/bapa/arith/cvc5_mapa/fol_0000054.smt2,sat,0.020825624
+bapa/arith/fol_0000055.smt2,unsat,0.163058996,benchmarks/bapa/arith/cvc5_mapa/fol_0000055.smt2,unsat,0.012516737,benchmarks/bapa/arith/cvc5_mapa/fol_0000055.smt2,unsat,0.01176548
+bapa/arith/fol_0000056.smt2,sat,0.433022261,benchmarks/bapa/arith/cvc5_mapa/fol_0000056.smt2,sat,0.015625954,benchmarks/bapa/arith/cvc5_mapa/fol_0000056.smt2,sat,0.013240814
+bapa/arith/fol_0000057.smt2,sat,0.223283052,benchmarks/bapa/arith/cvc5_mapa/fol_0000057.smt2,sat,0.015070677,benchmarks/bapa/arith/cvc5_mapa/fol_0000057.smt2,sat,0.013728619
+bapa/arith/fol_0000058.smt2,unsat,0.444403887,benchmarks/bapa/arith/cvc5_mapa/fol_0000058.smt2,unsat,0.042109013,benchmarks/bapa/arith/cvc5_mapa/fol_0000058.smt2,unsat,0.031905413
+bapa/arith/fol_0000059.smt2,unsat,0.143143177,benchmarks/bapa/arith/cvc5_mapa/fol_0000059.smt2,unsat,0.011226177,benchmarks/bapa/arith/cvc5_mapa/fol_0000059.smt2,unsat,0.010723114
+bapa/arith/fol_0000060.smt2,unsat,0.353300333,benchmarks/bapa/arith/cvc5_mapa/fol_0000060.smt2,unsat,0.038882017,benchmarks/bapa/arith/cvc5_mapa/fol_0000060.smt2,unsat,0.031084776
+bapa/arith/fol_0000061.smt2,unsat,2.110609055,benchmarks/bapa/arith/cvc5_mapa/fol_0000061.smt2,unsat,0.036804199,benchmarks/bapa/arith/cvc5_mapa/fol_0000061.smt2,unsat,0.031694651
+bapa/arith/fol_0000062.smt2,sat,0.239600658,benchmarks/bapa/arith/cvc5_mapa/fol_0000062.smt2,sat,0.017837048,benchmarks/bapa/arith/cvc5_mapa/fol_0000062.smt2,sat,0.017616034
+bapa/arith/fol_0000063.smt2,unsat,0.477570295,benchmarks/bapa/arith/cvc5_mapa/fol_0000063.smt2,unsat,0.035986185,benchmarks/bapa/arith/cvc5_mapa/fol_0000063.smt2,unsat,0.032127857
+bapa/arith/fol_0000064.smt2,unsat,0.153853655,benchmarks/bapa/arith/cvc5_mapa/fol_0000064.smt2,unsat,0.01117897,benchmarks/bapa/arith/cvc5_mapa/fol_0000064.smt2,unsat,0.009321928
+bapa/arith/fol_0000065.smt2,unsat,0.474838018,benchmarks/bapa/arith/cvc5_mapa/fol_0000065.smt2,unsat,0.039857388,benchmarks/bapa/arith/cvc5_mapa/fol_0000065.smt2,unsat,0.032881021
+bapa/arith/fol_0000066.smt2,unsat,0.484545708,benchmarks/bapa/arith/cvc5_mapa/fol_0000066.smt2,unsat,0.043352604,benchmarks/bapa/arith/cvc5_mapa/fol_0000066.smt2,unsat,0.033516407
+bapa/arith/fol_0000067.smt2,unsat,0.48368907,benchmarks/bapa/arith/cvc5_mapa/fol_0000067.smt2,unsat,0.038386583,benchmarks/bapa/arith/cvc5_mapa/fol_0000067.smt2,unsat,0.03471446
+bapa/arith/fol_0000068.smt2,unsat,0.483359098,benchmarks/bapa/arith/cvc5_mapa/fol_0000068.smt2,unsat,0.791043758,benchmarks/bapa/arith/cvc5_mapa/fol_0000068.smt2,unsat,0.032741308
+bapa/arith/fol_0000069.smt2,sat,0.249996901,benchmarks/bapa/arith/cvc5_mapa/fol_0000069.smt2,sat,0.015855074,benchmarks/bapa/arith/cvc5_mapa/fol_0000069.smt2,sat,0.015151978
+bapa/arith/fol_0000070.smt2,unsat,0.311168671,benchmarks/bapa/arith/cvc5_mapa/fol_0000070.smt2,unsat,0.038924456,benchmarks/bapa/arith/cvc5_mapa/fol_0000070.smt2,unsat,0.033031464
+bapa/arith/fol_0000071.smt2,sat,0.186611652,benchmarks/bapa/arith/cvc5_mapa/fol_0000071.smt2,sat,0.015651464,benchmarks/bapa/arith/cvc5_mapa/fol_0000071.smt2,sat,0.015672922
+bapa/arith/fol_0000072.smt2,sat,0.412837029,benchmarks/bapa/arith/cvc5_mapa/fol_0000072.smt2,sat,0.019203901,benchmarks/bapa/arith/cvc5_mapa/fol_0000072.smt2,sat,0.01830554
+bapa/arith/fol_0000073.smt2,sat,0.142560244,benchmarks/bapa/arith/cvc5_mapa/fol_0000073.smt2,sat,0.016374826,benchmarks/bapa/arith/cvc5_mapa/fol_0000073.smt2,sat,0.016121149
+bapa/arith/fol_0000074.smt2,sat,0.316891432,benchmarks/bapa/arith/cvc5_mapa/fol_0000074.smt2,sat,0.023632526,benchmarks/bapa/arith/cvc5_mapa/fol_0000074.smt2,sat,0.023392677
+bapa/arith/fol_0000075.smt2,sat,0.174988985,benchmarks/bapa/arith/cvc5_mapa/fol_0000075.smt2,sat,0.017077208,benchmarks/bapa/arith/cvc5_mapa/fol_0000075.smt2,sat,0.018686771
+bapa/arith/fol_0000076.smt2,sat,0.439435244,benchmarks/bapa/arith/cvc5_mapa/fol_0000076.smt2,sat,0.021989107,benchmarks/bapa/arith/cvc5_mapa/fol_0000076.smt2,sat,0.020504951
+bapa/arith/fol_0000077.smt2,sat,0.186956167,benchmarks/bapa/arith/cvc5_mapa/fol_0000077.smt2,sat,0.018845797,benchmarks/bapa/arith/cvc5_mapa/fol_0000077.smt2,sat,0.018752575
+bapa/arith/fol_0000078.smt2,unsat,0.175148964,benchmarks/bapa/arith/cvc5_mapa/fol_0000078.smt2,unsat,0.013098001,benchmarks/bapa/arith/cvc5_mapa/fol_0000078.smt2,unsat,0.01265955
+bapa/arith/fol_0000079.smt2,sat,0.329206467,benchmarks/bapa/arith/cvc5_mapa/fol_0000079.smt2,sat,0.020214796,benchmarks/bapa/arith/cvc5_mapa/fol_0000079.smt2,sat,0.018641949
+bapa/arith/fol_0000080.smt2,sat,0.320973396,benchmarks/bapa/arith/cvc5_mapa/fol_0000080.smt2,sat,0.015240908,benchmarks/bapa/arith/cvc5_mapa/fol_0000080.smt2,sat,0.014140368
+bapa/arith/fol_0000081.smt2,unsat,0.153393507,benchmarks/bapa/arith/cvc5_mapa/fol_0000081.smt2,unsat,0.011086226,benchmarks/bapa/arith/cvc5_mapa/fol_0000081.smt2,unsat,0.009482861
+bapa/arith/fol_0000082.smt2,sat,0.325311899,benchmarks/bapa/arith/cvc5_mapa/fol_0000082.smt2,sat,0.014525652,benchmarks/bapa/arith/cvc5_mapa/fol_0000082.smt2,sat,0.014642
+bapa/arith/fol_0000083.smt2,unsat,0.168785572,benchmarks/bapa/arith/cvc5_mapa/fol_0000083.smt2,unsat,0.010178566,benchmarks/bapa/arith/cvc5_mapa/fol_0000083.smt2,unsat,0.012191534
+bapa/arith/fol_0000084.smt2,sat,0.234989405,benchmarks/bapa/arith/cvc5_mapa/fol_0000084.smt2,sat,0.014402866,benchmarks/bapa/arith/cvc5_mapa/fol_0000084.smt2,sat,0.014785767
+bapa/arith/fol_0000085.smt2,unsat,0.437607765,benchmarks/bapa/arith/cvc5_mapa/fol_0000085.smt2,unsat,0.038770199,benchmarks/bapa/arith/cvc5_mapa/fol_0000085.smt2,unsat,0.034096718
+bapa/arith/fol_0000086.smt2,unsat,0.461601496,benchmarks/bapa/arith/cvc5_mapa/fol_0000086.smt2,unsat,0.037492514,benchmarks/bapa/arith/cvc5_mapa/fol_0000086.smt2,unsat,0.032221794
+bapa/arith/fol_0000087.smt2,unsat,0.16346097,benchmarks/bapa/arith/cvc5_mapa/fol_0000087.smt2,unsat,0.011476994,benchmarks/bapa/arith/cvc5_mapa/fol_0000087.smt2,unsat,0.010953188
+bapa/arith/fol_0000088.smt2,unsat,0.272383213,benchmarks/bapa/arith/cvc5_mapa/fol_0000088.smt2,unsat,0.037819386,benchmarks/bapa/arith/cvc5_mapa/fol_0000088.smt2,unsat,0.033119678
+bapa/arith/fol_0000089.smt2,unsat,0.28525877,benchmarks/bapa/arith/cvc5_mapa/fol_0000089.smt2,unsat,0.039062977,benchmarks/bapa/arith/cvc5_mapa/fol_0000089.smt2,unsat,0.034294605
+bapa/arith/fol_0000090.smt2,sat,0.309170246,benchmarks/bapa/arith/cvc5_mapa/fol_0000090.smt2,sat,0.012408495,benchmarks/bapa/arith/cvc5_mapa/fol_0000090.smt2,sat,0.01226902
+bapa/arith/fol_0000091.smt2,unsat,0.158828974,benchmarks/bapa/arith/cvc5_mapa/fol_0000091.smt2,unsat,0.010545969,benchmarks/bapa/arith/cvc5_mapa/fol_0000091.smt2,unsat,0.011460304
+bapa/arith/fol_0000092.smt2,unsat,0.16163063,benchmarks/bapa/arith/cvc5_mapa/fol_0000092.smt2,unsat,0.010330439,benchmarks/bapa/arith/cvc5_mapa/fol_0000092.smt2,unsat,0.01227212
+bapa/arith/fol_0000093.smt2,unsat,0.16138792,benchmarks/bapa/arith/cvc5_mapa/fol_0000093.smt2,unsat,0.012368917,benchmarks/bapa/arith/cvc5_mapa/fol_0000093.smt2,unsat,0.011746407
+bapa/arith/fol_0000094.smt2,unsat,0.456709385,benchmarks/bapa/arith/cvc5_mapa/fol_0000094.smt2,unsat,0.039772511,benchmarks/bapa/arith/cvc5_mapa/fol_0000094.smt2,unsat,0.035286188
+bapa/arith/fol_0000095.smt2,unsat,0.280497789,benchmarks/bapa/arith/cvc5_mapa/fol_0000095.smt2,unsat,0.04006052,benchmarks/bapa/arith/cvc5_mapa/fol_0000095.smt2,unsat,0.032583952
+bapa/arith/fol_0000096.smt2,sat,0.222700596,benchmarks/bapa/arith/cvc5_mapa/fol_0000096.smt2,sat,0.013827562,benchmarks/bapa/arith/cvc5_mapa/fol_0000096.smt2,sat,0.0119555
+bapa/arith/fol_0000097.smt2,unsat,0.447142839,benchmarks/bapa/arith/cvc5_mapa/fol_0000097.smt2,unsat,0.039634943,benchmarks/bapa/arith/cvc5_mapa/fol_0000097.smt2,unsat,0.033333063
+bapa/arith/fol_0000098.smt2,unsat,0.481195688,benchmarks/bapa/arith/cvc5_mapa/fol_0000098.smt2,unsat,0.038202763,benchmarks/bapa/arith/cvc5_mapa/fol_0000098.smt2,unsat,0.034368515
+bapa/arith/fol_0000099.smt2,sat,0.31131053,benchmarks/bapa/arith/cvc5_mapa/fol_0000099.smt2,sat,0.014670372,benchmarks/bapa/arith/cvc5_mapa/fol_0000099.smt2,sat,0.015453577
+bapa/arith/fol_0000100.smt2,sat,0.186290979,benchmarks/bapa/arith/cvc5_mapa/fol_0000100.smt2,sat,0.01977396,benchmarks/bapa/arith/cvc5_mapa/fol_0000100.smt2,sat,0.018345594
+bapa/arith/fol_0000101.smt2,sat,0.133745193,benchmarks/bapa/arith/cvc5_mapa/fol_0000101.smt2,sat,0.015486002,benchmarks/bapa/arith/cvc5_mapa/fol_0000101.smt2,sat,0.016178846
+bapa/arith/fol_0000102.smt2,sat,0.31361413,benchmarks/bapa/arith/cvc5_mapa/fol_0000102.smt2,sat,0.014913797,benchmarks/bapa/arith/cvc5_mapa/fol_0000102.smt2,sat,0.016181946
+bapa/arith/fol_0000103.smt2,sat,0.179777861,benchmarks/bapa/arith/cvc5_mapa/fol_0000103.smt2,sat,0.020857334,benchmarks/bapa/arith/cvc5_mapa/fol_0000103.smt2,sat,0.020484686
+bapa/arith/fol_0000104.smt2,sat,0.395292997,benchmarks/bapa/arith/cvc5_mapa/fol_0000104.smt2,sat,0.021323204,benchmarks/bapa/arith/cvc5_mapa/fol_0000104.smt2,sat,0.021586657
+bapa/arith/fol_0000105.smt2,sat,0.180557251,benchmarks/bapa/arith/cvc5_mapa/fol_0000105.smt2,sat,0.021946669,benchmarks/bapa/arith/cvc5_mapa/fol_0000105.smt2,sat,0.022848368
+bapa/arith/fol_0000106.smt2,sat,0.182405472,benchmarks/bapa/arith/cvc5_mapa/fol_0000106.smt2,sat,0.019601107,benchmarks/bapa/arith/cvc5_mapa/fol_0000106.smt2,sat,0.021009922
+bapa/arith/fol_0000107.smt2,unsat,0.165134668,benchmarks/bapa/arith/cvc5_mapa/fol_0000107.smt2,unsat,0.011844873,benchmarks/bapa/arith/cvc5_mapa/fol_0000107.smt2,unsat,0.010392427
+bapa/arith/fol_0000108.smt2,sat,0.320556879,benchmarks/bapa/arith/cvc5_mapa/fol_0000108.smt2,sat,0.017991781,benchmarks/bapa/arith/cvc5_mapa/fol_0000108.smt2,sat,0.017415762
+bapa/arith/fol_0000109.smt2,sat,0.231084824,benchmarks/bapa/arith/cvc5_mapa/fol_0000109.smt2,sat,0.018886089,benchmarks/bapa/arith/cvc5_mapa/fol_0000109.smt2,sat,0.018476725
+bapa/arith/fol_0000110.smt2,unsat,3.921538591,benchmarks/bapa/arith/cvc5_mapa/fol_0000110.smt2,unsat,0.037363768,benchmarks/bapa/arith/cvc5_mapa/fol_0000110.smt2,unsat,0.032397032
+bapa/arith/fol_0000111.smt2,unsat,0.159286737,benchmarks/bapa/arith/cvc5_mapa/fol_0000111.smt2,unsat,0.011721611,benchmarks/bapa/arith/cvc5_mapa/fol_0000111.smt2,unsat,0.01184392
+bapa/arith/fol_0000112.smt2,unsat,0.326863289,benchmarks/bapa/arith/cvc5_mapa/fol_0000112.smt2,unsat,0.036829948,benchmarks/bapa/arith/cvc5_mapa/fol_0000112.smt2,unsat,0.034514189
+bapa/arith/fol_0000113.smt2,sat,0.308773518,benchmarks/bapa/arith/cvc5_mapa/fol_0000113.smt2,sat,0.013432503,benchmarks/bapa/arith/cvc5_mapa/fol_0000113.smt2,sat,0.012742758
+bapa/arith/fol_0000114.smt2,unsat,0.156377792,benchmarks/bapa/arith/cvc5_mapa/fol_0000114.smt2,unsat,0.010916233,benchmarks/bapa/arith/cvc5_mapa/fol_0000114.smt2,unsat,0.010554552
+bapa/arith/fol_0000115.smt2,unsat,0.149849892,benchmarks/bapa/arith/cvc5_mapa/fol_0000115.smt2,unsat,0.009613752,benchmarks/bapa/arith/cvc5_mapa/fol_0000115.smt2,unsat,0.010828257
+bapa/arith/fol_0000116.smt2,unsat,0.156991482,benchmarks/bapa/arith/cvc5_mapa/fol_0000116.smt2,unsat,0.01166749,benchmarks/bapa/arith/cvc5_mapa/fol_0000116.smt2,unsat,0.011390924
+bapa/arith/fol_0000117.smt2,sat,0.400486231,benchmarks/bapa/arith/cvc5_mapa/fol_0000117.smt2,sat,0.012051344,benchmarks/bapa/arith/cvc5_mapa/fol_0000117.smt2,sat,0.011631727
+bapa/arith/fol_0000118.smt2,sat,0.217529535,benchmarks/bapa/arith/cvc5_mapa/fol_0000118.smt2,sat,0.013709307,benchmarks/bapa/arith/cvc5_mapa/fol_0000118.smt2,sat,0.013317108
+bapa/arith/fol_0000119.smt2,unsat,0.267045975,benchmarks/bapa/arith/cvc5_mapa/fol_0000119.smt2,unsat,0.038934708,benchmarks/bapa/arith/cvc5_mapa/fol_0000119.smt2,unsat,0.032262325
+bapa/arith/fol_0000120.smt2,unsat,0.146548271,benchmarks/bapa/arith/cvc5_mapa/fol_0000120.smt2,unsat,0.011002541,benchmarks/bapa/arith/cvc5_mapa/fol_0000120.smt2,unsat,0.011390209
+bapa/card/fol_0000001.smt2,sat,0.283255816,benchmarks/bapa/card/cvc5_mapa/fol_0000001.smt2,sat,0.010156393,benchmarks/bapa/card/cvc5_mapa/fol_0000001.smt2,sat,0.010887384
+bapa/card/fol_0000002.smt2,sat,0.279324293,benchmarks/bapa/card/cvc5_mapa/fol_0000002.smt2,sat,0.010899782,benchmarks/bapa/card/cvc5_mapa/fol_0000002.smt2,sat,0.011507511
+bapa/card/fol_0000003.smt2,sat,0.281014204,benchmarks/bapa/card/cvc5_mapa/fol_0000003.smt2,sat,0.011002541,benchmarks/bapa/card/cvc5_mapa/fol_0000003.smt2,sat,0.011501312
+bapa/card/fol_0000004.smt2,sat,0.286376476,benchmarks/bapa/card/cvc5_mapa/fol_0000004.smt2,sat,0.013601303,benchmarks/bapa/card/cvc5_mapa/fol_0000004.smt2,sat,0.012800455
+bapa/card/fol_0000005.smt2,sat,0.292086124,benchmarks/bapa/card/cvc5_mapa/fol_0000005.smt2,sat,0.010934114,benchmarks/bapa/card/cvc5_mapa/fol_0000005.smt2,sat,0.011601925
+bapa/card/fol_0000006.smt2,sat,0.300486326,benchmarks/bapa/card/cvc5_mapa/fol_0000006.smt2,sat,0.013300657,benchmarks/bapa/card/cvc5_mapa/fol_0000006.smt2,sat,0.013864756
+bapa/card/fol_0000007.smt2,sat,0.289987087,benchmarks/bapa/card/cvc5_mapa/fol_0000007.smt2,sat,0.011454821,benchmarks/bapa/card/cvc5_mapa/fol_0000007.smt2,sat,0.011633635
+bapa/card/fol_0000008.smt2,sat,0.29144454,benchmarks/bapa/card/cvc5_mapa/fol_0000008.smt2,sat,0.011701822,benchmarks/bapa/card/cvc5_mapa/fol_0000008.smt2,sat,0.011387348
+bapa/card/fol_0000009.smt2,sat,0.302447557,benchmarks/bapa/card/cvc5_mapa/fol_0000009.smt2,sat,0.011191845,benchmarks/bapa/card/cvc5_mapa/fol_0000009.smt2,sat,0.011176109
+bapa/card/fol_0000010.smt2,sat,0.288416624,benchmarks/bapa/card/cvc5_mapa/fol_0000010.smt2,sat,0.011975288,benchmarks/bapa/card/cvc5_mapa/fol_0000010.smt2,sat,0.011764288
+bapa/card/fol_0000011.smt2,sat,0.319440126,benchmarks/bapa/card/cvc5_mapa/fol_0000011.smt2,sat,0.012178898,benchmarks/bapa/card/cvc5_mapa/fol_0000011.smt2,sat,0.010846376
+bapa/card/fol_0000012.smt2,sat,0.297825336,benchmarks/bapa/card/cvc5_mapa/fol_0000012.smt2,sat,0.010549068,benchmarks/bapa/card/cvc5_mapa/fol_0000012.smt2,sat,0.010439873
+bapa/card/fol_0000013.smt2,sat,0.29280591,benchmarks/bapa/card/cvc5_mapa/fol_0000013.smt2,sat,0.012705803,benchmarks/bapa/card/cvc5_mapa/fol_0000013.smt2,sat,0.012650013
+bapa/card/fol_0000014.smt2,sat,0.303855181,benchmarks/bapa/card/cvc5_mapa/fol_0000014.smt2,sat,0.012147188,benchmarks/bapa/card/cvc5_mapa/fol_0000014.smt2,sat,0.01252079
+bapa/card/fol_0000015.smt2,sat,0.297189951,benchmarks/bapa/card/cvc5_mapa/fol_0000015.smt2,sat,0.011735439,benchmarks/bapa/card/cvc5_mapa/fol_0000015.smt2,sat,0.011701107
+bapa/card/fol_0000016.smt2,sat,0.300237417,benchmarks/bapa/card/cvc5_mapa/fol_0000016.smt2,sat,0.011040688,benchmarks/bapa/card/cvc5_mapa/fol_0000016.smt2,sat,0.011887789
+bapa/card/fol_0000017.smt2,sat,0.296292782,benchmarks/bapa/card/cvc5_mapa/fol_0000017.smt2,sat,0.012178659,benchmarks/bapa/card/cvc5_mapa/fol_0000017.smt2,sat,0.012828588
+bapa/card/fol_0000018.smt2,sat,0.297888517,benchmarks/bapa/card/cvc5_mapa/fol_0000018.smt2,sat,0.011727095,benchmarks/bapa/card/cvc5_mapa/fol_0000018.smt2,sat,0.012096643
+bapa/card/fol_0000019.smt2,sat,0.319734812,benchmarks/bapa/card/cvc5_mapa/fol_0000019.smt2,sat,0.01480484,benchmarks/bapa/card/cvc5_mapa/fol_0000019.smt2,sat,0.014556885
+bapa/card/fol_0000020.smt2,sat,0.312626123,benchmarks/bapa/card/cvc5_mapa/fol_0000020.smt2,sat,0.011669159,benchmarks/bapa/card/cvc5_mapa/fol_0000020.smt2,sat,0.011825323
+bapa/card/fol_0000021.smt2,unsat,0.160765409,benchmarks/bapa/card/cvc5_mapa/fol_0000021.smt2,unsat,0.011119604,benchmarks/bapa/card/cvc5_mapa/fol_0000021.smt2,unsat,0.011360884
+bapa/card/fol_0000022.smt2,sat,0.298527241,benchmarks/bapa/card/cvc5_mapa/fol_0000022.smt2,sat,0.012513638,benchmarks/bapa/card/cvc5_mapa/fol_0000022.smt2,sat,0.011876822
+bapa/card/fol_0000023.smt2,unsat,0.159338474,benchmarks/bapa/card/cvc5_mapa/fol_0000023.smt2,unsat,0.011002302,benchmarks/bapa/card/cvc5_mapa/fol_0000023.smt2,unsat,0.01009059
+bapa/card/fol_0000024.smt2,sat,0.320631981,benchmarks/bapa/card/cvc5_mapa/fol_0000024.smt2,sat,0.017384052,benchmarks/bapa/card/cvc5_mapa/fol_0000024.smt2,sat,0.017491341
+bapa/card/fol_0000025.smt2,sat,0.291079521,benchmarks/bapa/card/cvc5_mapa/fol_0000025.smt2,sat,0.010532379,benchmarks/bapa/card/cvc5_mapa/fol_0000025.smt2,sat,0.011823893
+bapa/card/fol_0000026.smt2,sat,0.416231155,benchmarks/bapa/card/cvc5_mapa/fol_0000026.smt2,sat,0.012239695,benchmarks/bapa/card/cvc5_mapa/fol_0000026.smt2,sat,0.011840105
+bapa/card/fol_0000027.smt2,sat,0.295929909,benchmarks/bapa/card/cvc5_mapa/fol_0000027.smt2,sat,0.011935472,benchmarks/bapa/card/cvc5_mapa/fol_0000027.smt2,sat,0.010711908
+bapa/card/fol_0000028.smt2,unsat,0.45016551,benchmarks/bapa/card/cvc5_mapa/fol_0000028.smt2,unsat,0.037148237,benchmarks/bapa/card/cvc5_mapa/fol_0000028.smt2,unsat,0.031548023
+bapa/card/fol_0000029.smt2,sat,0.226243973,benchmarks/bapa/card/cvc5_mapa/fol_0000029.smt2,sat,0.018197775,benchmarks/bapa/card/cvc5_mapa/fol_0000029.smt2,sat,0.018594265
+bapa/card/fol_0000030.smt2,unsat,0.152578354,benchmarks/bapa/card/cvc5_mapa/fol_0000030.smt2,unsat,0.010984182,benchmarks/bapa/card/cvc5_mapa/fol_0000030.smt2,unsat,0.009819031
+bapa/card/fol_0000031.smt2,sat,0.317049265,benchmarks/bapa/card/cvc5_mapa/fol_0000031.smt2,sat,0.011347055,benchmarks/bapa/card/cvc5_mapa/fol_0000031.smt2,sat,0.012195349
+bapa/card/fol_0000032.smt2,unsat,0.155900955,benchmarks/bapa/card/cvc5_mapa/fol_0000032.smt2,unsat,0.009578705,benchmarks/bapa/card/cvc5_mapa/fol_0000032.smt2,unsat,0.009335518
+bapa/card/fol_0000033.smt2,sat,0.32063365,benchmarks/bapa/card/cvc5_mapa/fol_0000033.smt2,sat,0.01284337,benchmarks/bapa/card/cvc5_mapa/fol_0000033.smt2,sat,0.013145924
+bapa/card/fol_0000034.smt2,unsat,0.154262304,benchmarks/bapa/card/cvc5_mapa/fol_0000034.smt2,unsat,0.011600971,benchmarks/bapa/card/cvc5_mapa/fol_0000034.smt2,unsat,0.010293245
+bapa/card/fol_0000035.smt2,sat,0.316426516,benchmarks/bapa/card/cvc5_mapa/fol_0000035.smt2,sat,0.013266802,benchmarks/bapa/card/cvc5_mapa/fol_0000035.smt2,sat,0.011770725
+bapa/card/fol_0000036.smt2,sat,0.283187628,benchmarks/bapa/card/cvc5_mapa/fol_0000036.smt2,sat,0.011133671,benchmarks/bapa/card/cvc5_mapa/fol_0000036.smt2,sat,0.011783838
+bapa/card/fol_0000037.smt2,sat,0.297120571,benchmarks/bapa/card/cvc5_mapa/fol_0000037.smt2,sat,0.012010336,benchmarks/bapa/card/cvc5_mapa/fol_0000037.smt2,sat,0.012081861
+bapa/card/fol_0000038.smt2,unsat,0.157526255,benchmarks/bapa/card/cvc5_mapa/fol_0000038.smt2,unsat,0.010728359,benchmarks/bapa/card/cvc5_mapa/fol_0000038.smt2,unsat,0.01043725
+bapa/card/fol_0000039.smt2,sat,0.294830084,benchmarks/bapa/card/cvc5_mapa/fol_0000039.smt2,sat,0.011332273,benchmarks/bapa/card/cvc5_mapa/fol_0000039.smt2,sat,0.011969805
+bapa/card/fol_0000040.smt2,unsat,0.160120487,benchmarks/bapa/card/cvc5_mapa/fol_0000040.smt2,unsat,0.011488438,benchmarks/bapa/card/cvc5_mapa/fol_0000040.smt2,unsat,0.010922909
+bapa/card/fol_0000041.smt2,sat,0.298484087,benchmarks/bapa/card/cvc5_mapa/fol_0000041.smt2,sat,0.012764454,benchmarks/bapa/card/cvc5_mapa/fol_0000041.smt2,sat,0.012274265
+bapa/card/fol_0000042.smt2,sat,0.296357155,benchmarks/bapa/card/cvc5_mapa/fol_0000042.smt2,sat,0.0107131,benchmarks/bapa/card/cvc5_mapa/fol_0000042.smt2,sat,0.010287046
+bapa/card/fol_0000043.smt2,sat,0.221686602,benchmarks/bapa/card/cvc5_mapa/fol_0000043.smt2,sat,0.012712002,benchmarks/bapa/card/cvc5_mapa/fol_0000043.smt2,sat,0.012970924
+bapa/card/fol_0000044.smt2,sat,1.967040539,benchmarks/bapa/card/cvc5_mapa/fol_0000044.smt2,sat,0.012073755,benchmarks/bapa/card/cvc5_mapa/fol_0000044.smt2,sat,0.011295795
+bapa/card/fol_0000045.smt2,unsat,1.491548777,benchmarks/bapa/card/cvc5_mapa/fol_0000045.smt2,unsat,0.108235598,benchmarks/bapa/card/cvc5_mapa/fol_0000045.smt2,unsat,0.0877285
+bapa/card/fol_0000046.smt2,timeout,104.9443359,benchmarks/bapa/card/cvc5_mapa/fol_0000046.smt2,sat,0.769466639,benchmarks/bapa/card/cvc5_mapa/fol_0000046.smt2,sat,0.528176785
+bapa/card/fol_0000047.smt2,timeout,105.097821,benchmarks/bapa/card/cvc5_mapa/fol_0000047.smt2,unsat,0.788295746,benchmarks/bapa/card/cvc5_mapa/fol_0000047.smt2,unsat,0.553550482
+bapa/card/fol_0000048.smt2,timeout,105.0564947,benchmarks/bapa/card/cvc5_mapa/fol_0000048.smt2,timeout,104.1689081,benchmarks/bapa/card/cvc5_mapa/fol_0000048.smt2,timeout,104.4240084
+bapa/card/fol_0000049.smt2,timeout,105.1588304,benchmarks/bapa/card/cvc5_mapa/fol_0000049.smt2,timeout,104.8045454,benchmarks/bapa/card/cvc5_mapa/fol_0000049.smt2,timeout,103.5519545
+bapa/card/fol_0000050.smt2,timeout,104.9191408,benchmarks/bapa/card/cvc5_mapa/fol_0000050.smt2,sat,0.021796942,benchmarks/bapa/card/cvc5_mapa/fol_0000050.smt2,sat,0.020849228
+bapa/card/fol_0000051.smt2,timeout,105.0142403,benchmarks/bapa/card/cvc5_mapa/fol_0000051.smt2,sat,0.021059036,benchmarks/bapa/card/cvc5_mapa/fol_0000051.smt2,sat,0.020886183
+bapa/card/fol_0000052.smt2,timeout,105.0152457,benchmarks/bapa/card/cvc5_mapa/fol_0000052.smt2,sat,0.77635479,benchmarks/bapa/card/cvc5_mapa/fol_0000052.smt2,sat,0.55354619
+bapa/card/fol_0000053.smt2,timeout,105.1842697,benchmarks/bapa/card/cvc5_mapa/fol_0000053.smt2,sat,0.024024725,benchmarks/bapa/card/cvc5_mapa/fol_0000053.smt2,sat,0.024001122
+bapa/card/fol_0000054.smt2,timeout,104.860482,benchmarks/bapa/card/cvc5_mapa/fol_0000054.smt2,sat,0.765702248,benchmarks/bapa/card/cvc5_mapa/fol_0000054.smt2,sat,0.533083677
+bapa/card/fol_0000055.smt2,timeout,106.6984661,benchmarks/bapa/card/cvc5_mapa/fol_0000055.smt2,unsat,0.983957529,benchmarks/bapa/card/cvc5_mapa/fol_0000055.smt2,unsat,1.014003277
+bapa/card/fol_0000056.smt2,timeout,105.1026247,benchmarks/bapa/card/cvc5_mapa/fol_0000056.smt2,sat,0.0213871,benchmarks/bapa/card/cvc5_mapa/fol_0000056.smt2,sat,0.020268917
+bapa/card/fol_0000057.smt2,sat,2.064798594,benchmarks/bapa/card/cvc5_mapa/fol_0000057.smt2,sat,0.108089924,benchmarks/bapa/card/cvc5_mapa/fol_0000057.smt2,sat,0.084196091
+bapa/card/fol_0000058.smt2,unsat,0.4516325,benchmarks/bapa/card/cvc5_mapa/fol_0000058.smt2,unsat,0.038115263,benchmarks/bapa/card/cvc5_mapa/fol_0000058.smt2,unsat,0.031290054
+bapa/card/fol_0000059.smt2,unsat,0.180830956,benchmarks/bapa/card/cvc5_mapa/fol_0000059.smt2,unsat,0.007176161,benchmarks/bapa/card/cvc5_mapa/fol_0000059.smt2,unsat,0.007361412
+bapa/card/fol_0000060.smt2,unsat,1.392211676,benchmarks/bapa/card/cvc5_mapa/fol_0000060.smt2,unsat,0.111397505,benchmarks/bapa/card/cvc5_mapa/fol_0000060.smt2,unsat,0.083183289
+bapa/card/fol_0000061.smt2,unsat,1.355546951,benchmarks/bapa/card/cvc5_mapa/fol_0000061.smt2,unsat,0.106749058,benchmarks/bapa/card/cvc5_mapa/fol_0000061.smt2,unsat,0.085627794
+bapa/card/fol_0000062.smt2,sat,2.812538385,benchmarks/bapa/card/cvc5_mapa/fol_0000062.smt2,sat,0.114958286,benchmarks/bapa/card/cvc5_mapa/fol_0000062.smt2,sat,0.087985039
+bapa/card/fol_0000063.smt2,unsat,0.350518227,benchmarks/bapa/card/cvc5_mapa/fol_0000063.smt2,unsat,0.038750887,benchmarks/bapa/card/cvc5_mapa/fol_0000063.smt2,unsat,0.036116362
+bapa/card/fol_0000064.smt2,unsat,0.183596134,benchmarks/bapa/card/cvc5_mapa/fol_0000064.smt2,unsat,0.008205414,benchmarks/bapa/card/cvc5_mapa/fol_0000064.smt2,unsat,0.008278608
+bapa/card/fol_0000065.smt2,unsat,1.396263361,benchmarks/bapa/card/cvc5_mapa/fol_0000065.smt2,unsat,0.107069254,benchmarks/bapa/card/cvc5_mapa/fol_0000065.smt2,unsat,0.084511518
+bapa/card/fol_0000066.smt2,unsat,1.497215271,benchmarks/bapa/card/cvc5_mapa/fol_0000066.smt2,unsat,0.108688116,benchmarks/bapa/card/cvc5_mapa/fol_0000066.smt2,unsat,0.084813595
+bapa/card/fol_0000067.smt2,unsat,1.425381184,benchmarks/bapa/card/cvc5_mapa/fol_0000067.smt2,unsat,0.106894493,benchmarks/bapa/card/cvc5_mapa/fol_0000067.smt2,unsat,0.08605504
+bapa/card/fol_0000068.smt2,unsat,1.358068466,benchmarks/bapa/card/cvc5_mapa/fol_0000068.smt2,unsat,0.107118368,benchmarks/bapa/card/cvc5_mapa/fol_0000068.smt2,unsat,0.081124067
+bapa/card/fol_0000069.smt2,timeout,105.0500247,benchmarks/bapa/card/cvc5_mapa/fol_0000069.smt2,sat,0.794481754,benchmarks/bapa/card/cvc5_mapa/fol_0000069.smt2,sat,0.551850319
+bapa/card/fol_0000070.smt2,timeout,104.915751,benchmarks/bapa/card/cvc5_mapa/fol_0000070.smt2,unsat,0.7946558,benchmarks/bapa/card/cvc5_mapa/fol_0000070.smt2,unsat,0.563616276
+bapa/card/fol_0000071.smt2,timeout,105.2057455,benchmarks/bapa/card/cvc5_mapa/fol_0000071.smt2,timeout,105.8025584,benchmarks/bapa/card/cvc5_mapa/fol_0000071.smt2,timeout,102.3476431
+bapa/card/fol_0000072.smt2,timeout,106.8306081,benchmarks/bapa/card/cvc5_mapa/fol_0000072.smt2,timeout,108.0634844,benchmarks/bapa/card/cvc5_mapa/fol_0000072.smt2,timeout,103.6559987
+bapa/card/fol_0000073.smt2,timeout,105.1565483,benchmarks/bapa/card/cvc5_mapa/fol_0000073.smt2,sat,0.028450966,benchmarks/bapa/card/cvc5_mapa/fol_0000073.smt2,sat,0.029602289
+bapa/card/fol_0000074.smt2,timeout,104.9759636,benchmarks/bapa/card/cvc5_mapa/fol_0000074.smt2,sat,0.021563292,benchmarks/bapa/card/cvc5_mapa/fol_0000074.smt2,sat,0.02066803
+bapa/card/fol_0000075.smt2,timeout,104.944144,benchmarks/bapa/card/cvc5_mapa/fol_0000075.smt2,sat,0.770115137,benchmarks/bapa/card/cvc5_mapa/fol_0000075.smt2,sat,0.534326077
+bapa/card/fol_0000076.smt2,sat,2.042373896,benchmarks/bapa/card/cvc5_mapa/fol_0000076.smt2,sat,0.030246735,benchmarks/bapa/card/cvc5_mapa/fol_0000076.smt2,sat,0.02897501
+bapa/card/fol_0000077.smt2,timeout,104.9586115,benchmarks/bapa/card/cvc5_mapa/fol_0000077.smt2,sat,0.77559185,benchmarks/bapa/card/cvc5_mapa/fol_0000077.smt2,sat,0.565167665
+bapa/card/fol_0000078.smt2,timeout,105.1143312,benchmarks/bapa/card/cvc5_mapa/fol_0000078.smt2,unsat,1.102555513,benchmarks/bapa/card/cvc5_mapa/fol_0000078.smt2,unsat,1.145474434
+bapa/card/fol_0000079.smt2,sat,0.926323652,benchmarks/bapa/card/cvc5_mapa/fol_0000079.smt2,sat,0.020706415,benchmarks/bapa/card/cvc5_mapa/fol_0000079.smt2,sat,0.019842148
+bapa/card/fol_0000080.smt2,sat,7.877845526,benchmarks/bapa/card/cvc5_mapa/fol_0000080.smt2,sat,0.182487011,benchmarks/bapa/card/cvc5_mapa/fol_0000080.smt2,sat,0.18350625
+bapa/card/fol_0000081.smt2,unsat,0.187861919,benchmarks/bapa/card/cvc5_mapa/fol_0000081.smt2,unsat,0.009051323,benchmarks/bapa/card/cvc5_mapa/fol_0000081.smt2,unsat,0.008540392
+bapa/card/fol_0000082.smt2,timeout,106.5771108,benchmarks/bapa/card/cvc5_mapa/fol_0000082.smt2,sat,0.361620903,benchmarks/bapa/card/cvc5_mapa/fol_0000082.smt2,sat,0.374883652
+bapa/card/fol_0000083.smt2,timeout,105.0099189,benchmarks/bapa/card/cvc5_mapa/fol_0000083.smt2,unsat,0.175405502,benchmarks/bapa/card/cvc5_mapa/fol_0000083.smt2,unsat,0.182933807
+bapa/card/fol_0000084.smt2,timeout,105.0347142,benchmarks/bapa/card/cvc5_mapa/fol_0000084.smt2,sat,0.790679216,benchmarks/bapa/card/cvc5_mapa/fol_0000084.smt2,sat,0.561992884
+bapa/card/fol_0000085.smt2,unsat,1.422907829,benchmarks/bapa/card/cvc5_mapa/fol_0000085.smt2,unsat,0.110264301,benchmarks/bapa/card/cvc5_mapa/fol_0000085.smt2,unsat,0.083978891
+bapa/card/fol_0000086.smt2,unsat,1.428211927,benchmarks/bapa/card/cvc5_mapa/fol_0000086.smt2,unsat,0.10776186,benchmarks/bapa/card/cvc5_mapa/fol_0000086.smt2,unsat,0.08234787
+bapa/card/fol_0000087.smt2,timeout,105.1159036,benchmarks/bapa/card/cvc5_mapa/fol_0000087.smt2,unsat,0.175252199,benchmarks/bapa/card/cvc5_mapa/fol_0000087.smt2,unsat,0.173178911
+bapa/card/fol_0000088.smt2,timeout,104.829685,benchmarks/bapa/card/cvc5_mapa/fol_0000088.smt2,unsat,0.730261803,benchmarks/bapa/card/cvc5_mapa/fol_0000088.smt2,unsat,0.505670786
+bapa/card/fol_0000089.smt2,timeout,105.1540682,benchmarks/bapa/card/cvc5_mapa/fol_0000089.smt2,unsat,0.804674864,benchmarks/bapa/card/cvc5_mapa/fol_0000089.smt2,unsat,0.582866669
+bapa/card/fol_0000090.smt2,timeout,105.2899914,benchmarks/bapa/card/cvc5_mapa/fol_0000090.smt2,sat,0.173912287,benchmarks/bapa/card/cvc5_mapa/fol_0000090.smt2,sat,0.179326057
+bapa/card/fol_0000091.smt2,unsat,0.166368484,benchmarks/bapa/card/cvc5_mapa/fol_0000091.smt2,unsat,0.011995077,benchmarks/bapa/card/cvc5_mapa/fol_0000091.smt2,unsat,0.010154009
+bapa/card/fol_0000092.smt2,timeout,105.1361651,benchmarks/bapa/card/cvc5_mapa/fol_0000092.smt2,unsat,0.16974926,benchmarks/bapa/card/cvc5_mapa/fol_0000092.smt2,unsat,0.169325113
+bapa/card/fol_0000093.smt2,timeout,105.0772891,benchmarks/bapa/card/cvc5_mapa/fol_0000093.smt2,unsat,0.182137251,benchmarks/bapa/card/cvc5_mapa/fol_0000093.smt2,unsat,0.181236029
+bapa/card/fol_0000094.smt2,unsat,1.517265558,benchmarks/bapa/card/cvc5_mapa/fol_0000094.smt2,unsat,0.104871035,benchmarks/bapa/card/cvc5_mapa/fol_0000094.smt2,unsat,0.082825661
+bapa/card/fol_0000095.smt2,timeout,106.2514246,benchmarks/bapa/card/cvc5_mapa/fol_0000095.smt2,unsat,0.739505053,benchmarks/bapa/card/cvc5_mapa/fol_0000095.smt2,unsat,0.508425236
+bapa/card/fol_0000096.smt2,timeout,104.3699486,benchmarks/bapa/card/cvc5_mapa/fol_0000096.smt2,timeout,105.6563652,benchmarks/bapa/card/cvc5_mapa/fol_0000096.smt2,timeout,103.6021709
+bapa/card/fol_0000097.smt2,timeout,104.2311716,benchmarks/bapa/card/cvc5_mapa/fol_0000097.smt2,timeout,105.5204339,benchmarks/bapa/card/cvc5_mapa/fol_0000097.smt2,timeout,103.2644532
+bapa/card/fol_0000098.smt2,timeout,104.8672276,benchmarks/bapa/card/cvc5_mapa/fol_0000098.smt2,timeout,102.5786195,benchmarks/bapa/card/cvc5_mapa/fol_0000098.smt2,timeout,100.0497692
+bapa/card/fol_0000099.smt2,timeout,104.8354745,benchmarks/bapa/card/cvc5_mapa/fol_0000099.smt2,timeout,103.1418593,benchmarks/bapa/card/cvc5_mapa/fol_0000099.smt2,timeout,100.0456693
+bapa/card/fol_0000100.smt2,timeout,104.8158329,benchmarks/bapa/card/cvc5_mapa/fol_0000100.smt2,timeout,103.72946,benchmarks/bapa/card/cvc5_mapa/fol_0000100.smt2,timeout,100.0430734
+bapa/card/fol_0000101.smt2,timeout,104.8271821,benchmarks/bapa/card/cvc5_mapa/fol_0000101.smt2,sat,0.031290293,benchmarks/bapa/card/cvc5_mapa/fol_0000101.smt2,sat,0.030393124
+bapa/card/fol_0000102.smt2,timeout,104.8750272,benchmarks/bapa/card/cvc5_mapa/fol_0000102.smt2,timeout,102.9754629,benchmarks/bapa/card/cvc5_mapa/fol_0000102.smt2,timeout,100.0400362
+bapa/card/fol_0000103.smt2,timeout,104.9035561,benchmarks/bapa/card/cvc5_mapa/fol_0000103.smt2,sat,0.024562597,benchmarks/bapa/card/cvc5_mapa/fol_0000103.smt2,sat,0.025890112
+bapa/card/fol_0000104.smt2,timeout,106.6496205,benchmarks/bapa/card/cvc5_mapa/fol_0000104.smt2,timeout,102.6823146,benchmarks/bapa/card/cvc5_mapa/fol_0000104.smt2,timeout,100.0576558
+bapa/card/fol_0000105.smt2,timeout,104.8571048,benchmarks/bapa/card/cvc5_mapa/fol_0000105.smt2,sat,0.038024426,benchmarks/bapa/card/cvc5_mapa/fol_0000105.smt2,sat,0.040858269
+bapa/card/fol_0000106.smt2,timeout,105.3858585,benchmarks/bapa/card/cvc5_mapa/fol_0000106.smt2,timeout,102.579407,benchmarks/bapa/card/cvc5_mapa/fol_0000106.smt2,timeout,101.048543
+bapa/card/fol_0000107.smt2,timeout,105.4718852,benchmarks/bapa/card/cvc5_mapa/fol_0000107.smt2,timeout,102.458477,benchmarks/bapa/card/cvc5_mapa/fol_0000107.smt2,timeout,100.2129107
+bapa/card/fol_0000108.smt2,timeout,105.4489596,benchmarks/bapa/card/cvc5_mapa/fol_0000108.smt2,sat,0.025499105,benchmarks/bapa/card/cvc5_mapa/fol_0000108.smt2,sat,0.028442621
+bapa/card/fol_0000109.smt2,timeout,105.4383583,benchmarks/bapa/card/cvc5_mapa/fol_0000109.smt2,sat,0.817466497,benchmarks/bapa/card/cvc5_mapa/fol_0000109.smt2,sat,0.538416386
+bapa/card/fol_0000110.smt2,unsat,1.395848989,benchmarks/bapa/card/cvc5_mapa/fol_0000110.smt2,unsat,0.115592003,benchmarks/bapa/card/cvc5_mapa/fol_0000110.smt2,unsat,0.08240366
+bapa/card/fol_0000111.smt2,timeout,105.2538848,benchmarks/bapa/card/cvc5_mapa/fol_0000111.smt2,unsat,0.171648026,benchmarks/bapa/card/cvc5_mapa/fol_0000111.smt2,unsat,0.160605907
+bapa/card/fol_0000112.smt2,timeout,105.343878,benchmarks/bapa/card/cvc5_mapa/fol_0000112.smt2,unsat,0.757560968,benchmarks/bapa/card/cvc5_mapa/fol_0000112.smt2,unsat,0.52017951
+bapa/card/fol_0000113.smt2,timeout,105.3210573,benchmarks/bapa/card/cvc5_mapa/fol_0000113.smt2,sat,1.029397726,benchmarks/bapa/card/cvc5_mapa/fol_0000113.smt2,sat,1.084956884
+bapa/card/fol_0000114.smt2,timeout,105.3330617,benchmarks/bapa/card/cvc5_mapa/fol_0000114.smt2,unsat,0.17517519,benchmarks/bapa/card/cvc5_mapa/fol_0000114.smt2,unsat,0.183882952
+bapa/card/fol_0000115.smt2,timeout,106.9647892,benchmarks/bapa/card/cvc5_mapa/fol_0000115.smt2,unsat,0.165422201,benchmarks/bapa/card/cvc5_mapa/fol_0000115.smt2,unsat,0.165783167
+bapa/card/fol_0000116.smt2,timeout,105.3314342,benchmarks/bapa/card/cvc5_mapa/fol_0000116.smt2,unsat,1.024266958,benchmarks/bapa/card/cvc5_mapa/fol_0000116.smt2,unsat,1.072891474
+bapa/card/fol_0000117.smt2,timeout,105.3704572,benchmarks/bapa/card/cvc5_mapa/fol_0000117.smt2,sat,0.981233597,benchmarks/bapa/card/cvc5_mapa/fol_0000117.smt2,sat,1.02862072
+bapa/card/fol_0000118.smt2,timeout,105.2719505,benchmarks/bapa/card/cvc5_mapa/fol_0000118.smt2,timeout,105.490129,benchmarks/bapa/card/cvc5_mapa/fol_0000118.smt2,sat,99.12370682
+bapa/card/fol_0000119.smt2,timeout,105.1402988,benchmarks/bapa/card/cvc5_mapa/fol_0000119.smt2,unsat,0.74715662,benchmarks/bapa/card/cvc5_mapa/fol_0000119.smt2,unsat,0.510104179
+bapa/card/fol_0000120.smt2,timeout,105.3972669,benchmarks/bapa/card/cvc5_mapa/fol_0000120.smt2,unsat,0.947906256,benchmarks/bapa/card/cvc5_mapa/fol_0000120.smt2,unsat,0.990481377
