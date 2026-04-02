@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # === Load CSV ===
-df = pd.read_csv("comparison_mapa.csv")
+df = pd.read_csv("comparison_bapa.csv")
 
 # === Filter out timeouts ===
 df_sls = df[df["sls result"].astype(str).str.strip() != "timeout"]
@@ -32,7 +32,7 @@ plt.plot(normaliz_cum, normaliz_x, label="normaliz", linewidth=2)
 
 plt.xlabel("Cumulative time (s)")
 plt.ylabel("Number of solved instances")
-plt.title("Cactus Plot: Solver Performance")
+plt.title("Cactus Plot: Solver Performance in sets")
 plt.grid(True, linestyle="--", alpha=0.5)
 
 # === Magnified legend ===
@@ -47,6 +47,6 @@ plt.legend(
 plt.tight_layout()
 
 # === Save to file ===
-plt.savefig("cactus_plot.png", dpi=300)
+plt.savefig("cactus_plot_papa.png", dpi=300)
 
 plt.show()
