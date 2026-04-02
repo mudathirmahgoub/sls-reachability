@@ -1,4 +1,4 @@
-﻿sls filename,sls result,sls duration,cvc5 lia filename,cvc5 lia result,cvc5 lia duration,lia normaliz,lia normaliz result,lia normaliz duration
+﻿sls filename,sls result,sls duration,cvc5 lia filename,cvc5 lia result,cvc5 lia duration,lia normaliz filename,lia normaliz result,lia normaliz duration
 bapa/arith/fol_0000001.smt2,sat,0.410186529,benchmarks/bapa/arith/cvc5_mapa/fol_0000001.smt2,sat,0.010293007,benchmarks/bapa/arith/cvc5_mapa/fol_0000001.smt2,sat,0.01134491
 bapa/arith/fol_0000002.smt2,sat,0.286105871,benchmarks/bapa/arith/cvc5_mapa/fol_0000002.smt2,sat,0.011740685,benchmarks/bapa/arith/cvc5_mapa/fol_0000002.smt2,sat,0.011458158
 bapa/arith/fol_0000003.smt2,sat,0.307407379,benchmarks/bapa/arith/cvc5_mapa/fol_0000003.smt2,sat,0.012347221,benchmarks/bapa/arith/cvc5_mapa/fol_0000003.smt2,sat,0.010519505
