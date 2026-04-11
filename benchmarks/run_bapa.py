@@ -71,7 +71,7 @@ def main():
                     print("{}/{}...".format(d, f))
 
                     # Set up command line arguments to lia_star_solver.py
-                    cmd = ["python3", "../lia_star_solver.py", "{}/{}".format(d, f), "--unfold={}".format(unfold), "-i"]
+                    cmd = ["/home/mudathir/all/sls-reachability/.venv/bin/python3", "../lia_star_solver.py", "{}/{}".format(d, f), "--unfold={}".format(unfold), "-i"]
                     if mapa:
                         cmd.append("--mapa")
                     if no_interp:
@@ -82,8 +82,10 @@ def main():
                     try:
 
                         # Attempt to run command
-                        res = subprocess.check_output(cmd, stderr=subprocess.STDOUT, timeout=timeout)
-                        output_lines = res.decode("utf-8").split("\n")
+                        res = subprocess.run(cmd, capture_output=True, timeout=timeout)
+                        output_lines = res.stdout.strip().decode("utf-8").split("\n")
+                        output_lines.insert(0, '')
+                        print(output_lines)
                         output = output_lines[3]
 
                         # Collect statistics
@@ -101,7 +103,8 @@ def main():
                     except subprocess.TimeoutExpired as exc:
                         end = time.time()
                         output_lines = exc.output.decode("utf-8").split('\n')
-                        stats = {'sat': 2, 'problem_size': int(output_lines[1])}
+                        print(output_lines)
+                        stats = {'sat': 2, 'problem_size': -1}
                         output = "timeout"
 
                     # Write sat or unsat and time taken to file
