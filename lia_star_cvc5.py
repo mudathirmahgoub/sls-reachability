@@ -177,10 +177,18 @@ def main():
 
     # Get assertions for A and B from bapa file
     multiset_fmls = dsl.parse_bapa(bapa_file, mapa)
-    fmls, star_defs, star_fmls = dsl.to_lia_star(And(multiset_fmls))
+    fmls, star_defs, star_fmls = dsl.to_lia_star(And(multiset_fmls))    
     A_assertions = [fmls]
+    
     B_assertions = [a == b for (a, b) in star_defs] + star_fmls
     set_vars = [a for (a, b) in star_defs]
+
+    print(f'fmls: {fmls}')
+    print(f'A_assertions: {A_assertions}')
+    print(f'star_defs: {star_defs}')
+    print(f'star_fmls: {star_fmls}')
+    print(f'B_assertions: {B_assertions}')
+    print(f'set_vars: {set_vars}')
 
     # Record statistics
     statistics.problem_size = len(A_assertions) + len(B_assertions)

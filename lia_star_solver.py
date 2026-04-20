@@ -6,6 +6,7 @@ import interpolant
 import statistics
 import time
 import dsl
+import pdb
 
 from z3 import *
 
@@ -63,8 +64,7 @@ def toMacro(fmls):
 
 # Given a solver with constraints, check the solver and return
 # the model if it exists. If the problem is unsat, return None.
-def getModel(s, X=[]):
-
+def getModel(s, X=[]):    
     # Return None if unsat
     res = s.check()
     statistics.z3_calls += 1
@@ -73,6 +73,18 @@ def getModel(s, X=[]):
 
     # Otherwise return the model
     m = s.model()
+    pdb.set_trace()
+    X = list(X)
+    for d in m.decls():     
+     try:
+        print("name:", d.name())        
+        print("arity:", d.arity())
+        for i in range(d.arity()):
+            print("  domain", i, ":", d.domain(i))
+        print("  range:", d.range())        
+        print("  value:", m[d])
+     except Exception as e:
+         print("  python-level error:", e)
     return [m.eval(x).as_long() for x in X]
 
 # Print a solution vector and SLS or unsat and exit
@@ -122,16 +134,17 @@ def checkUnsatWithInterpolant(inductive_clauses, A):
 # Return a non-negative vector which satisfies the formula A and SLS*
 # If no such vector exists, return None.
 def findSolution(A, sls):
-    start = time.time()
+    start = time.time()    
+
 
     # Assert that X satisfies A and is in SLS*
     s = Solver()
     s.add([v >= 0 for v in A.args])
     s.add(A())
     s.add(sls.star())
-
+    pdb.set_trace()
     # Check satisfiability
-    printV("\nLooking for a solution vector with the following constraints:\n\n{}".format(s))
+    #printV("\nLooking for a solution vector with the following constraints:\n\n{}".format(s))
     m = getModel(s, A.args)
     end = time.time()
     statistics.solution_time += end - start
