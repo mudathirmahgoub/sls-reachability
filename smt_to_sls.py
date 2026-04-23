@@ -1,4 +1,5 @@
 import cvc5
+import sys
 from cvc5 import Kind
 from z3 import *
 from lia_star_solver import *
@@ -85,65 +86,41 @@ def cvc5_to_z3(term, symbols):
     Convert a cvc5 Term into a z3 term.
     symbols: dict mapping cvc5 terms to z3 constants
     """
-    print(f"translating term: {term}")
-
+    
     # const cases
     if term.isBooleanValue():
         return BoolVal(term.getBooleanValue())
 
     if term.isIntegerValue():
-        value = term.getIntegerValue()
-        print(value)
+        value = term.getIntegerValue()        
         return IntVal(value)
 
 
     k = term.getKind()
-    cvc5_children = list(term)
-    # print(f"Translating kind: {k}")
+    cvc5_children = list(term)    
     if k == Kind.CONSTANT or k == Kind.VARIABLE:
         return symbols[str(term)]
 
     # Recursive cases
-    if k == Kind.STAR_CONTAINS:
-        print(str(Kind.STAR_CONTAINS))
-        
+    if k == Kind.STAR_CONTAINS:                
         lambda_term = list(cvc5_children[0])
         body = cvc5_to_z3(lambda_term[1], symbols)
-        print(f"body: {lambda_term[1]}")
-        outer_vector_smt = cvc5_children[1:]        
-        print(f"outer_vector_smt: {outer_vector_smt}")
-        outer_vector = [cvc5_to_z3(child, symbols) for child in outer_vector_smt]
-        print(f"outer_vector: {outer_vector}")
         return body
 
     if term.getNumChildren() == 0:        
         raise Exception(f"Unhandled cvc5 term: {k} ({term})")
-
-    print(f"cvc5_children: {cvc5_children}")
+    
     z3_children = [cvc5_to_z3(child, symbols) for child in term]
-    print(f"after recursion term: {term}")
-    print(f"after recursion children: {len(z3_children)}")
-    # print(f"after recursion child[0]: {str(children[0])}")
-    # print(f"after recursion children: {children}")    
-    print(f"k: {k}")
-
-    if k == Kind.EQUAL:        
-        print(z3_children[0].sort())
-        print(z3_children[1].sort())
+    
+    if k == Kind.EQUAL:                
         equality = z3_children[0] == z3_children[1]        
         return equality
 
-    if k == Kind.NOT:        
-        print(z3_children[0].sort())
+    if k == Kind.NOT:                
         return Not(z3_children[0])
 
-    if k == Kind.AND:        
-        print("before Kind.AND")
-        print(len(z3_children))
-        print(z3_children[0].sort())
-        print(z3_children[1].sort())
-        ret = And(*z3_children)
-        print("after Kind.AND")
+    if k == Kind.AND:                
+        ret = And(*z3_children)        
         return ret
 
     if k == Kind.OR:
@@ -180,6 +157,11 @@ def cvc5_to_z3(term, symbols):
 
 
 if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print(f"Usage: {sys.argv[0]} <filename.smt2>")
+        sys.exit(1)
+    filename = sys.argv[1]
+
     tm = cvc5.TermManager()
     slv = cvc5.Solver(tm)
 
@@ -191,9 +173,9 @@ if __name__ == "__main__":
 
     parser.setFileInput(
         cvc5.InputLanguage.SMT_LIB_2_6,
-        "/home/mudathir/all/SQLSolver/cvc5/calcite/query013-call-0.smt2",
+        filename,
     )
-
+    
     # get the symbol manager of the parser, used when invoking commands below
     sm = parser.getSymbolManager()
 
@@ -201,8 +183,7 @@ if __name__ == "__main__":
     while True:
         cmd = parser.nextCommand()
         if cmd.isNull():
-            break
-        print(f"{cmd}:")
+            break        
         # invoke the command on the solver and the symbol manager, print the result        
         if cmd.getCommandName != "check-sat":
             cmd.invoke(slv, sm)
@@ -211,19 +192,16 @@ if __name__ == "__main__":
     # declare z3 constants
     symbols = {}
     for term in sm.getDeclaredTerms():
-        symbols[str(term)] = Int(str(term))
-    print(symbols)
+        symbols[str(term)] = Int(str(term))    
     # create a z3 solver
     z3_solver = Solver()
     phi_assertions = []
     star_predicate = None
 
     for assertion in slv.getAssertions():
-        k = assertion.getKind()
-        print(f'assertion: {assertion}')
+        k = assertion.getKind()        
         assert k == Kind.AND        
-        for conjunct in assertion:
-            print(f"translating conjunct: {conjunct}")
+        for conjunct in assertion:            
             z3_term = cvc5_to_z3(conjunct, symbols)            
             if conjunct.getKind() == Kind.STAR_CONTAINS:
                 star_predicate = z3_term

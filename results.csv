@@ -1,0 +1,52 @@
+filename,result,duration
+/home/mudathir/all/SQLSolver/cvc5/calcite/query026-call-0.smt2,sat,0.355
+/home/mudathir/all/SQLSolver/cvc5/calcite/query040-call-0.smt2,sat,0.279
+/home/mudathir/all/SQLSolver/cvc5/calcite/query059-call-0.smt2,timeout,109.444
+/home/mudathir/all/SQLSolver/cvc5/spark/query090-call-2.smt2,timeout,109.624
+/home/mudathir/all/SQLSolver/cvc5/calcite/query076-call-0.smt2,sat,1.180
+/home/mudathir/all/SQLSolver/cvc5/spark/query054-call-0.smt2,sat,0.212
+/home/mudathir/all/SQLSolver/cvc5/calcite/query127-call-0.smt2,timeout,108.392
+/home/mudathir/all/SQLSolver/cvc5/calcite/query143-call-0.smt2,sat,0.839
+/home/mudathir/all/SQLSolver/cvc5/calcite/query151-call-0.smt2,sat,0.327
+/home/mudathir/all/SQLSolver/cvc5/spark/query015-call-0.smt2,error,0.076
+/home/mudathir/all/SQLSolver/cvc5/calcite/query176-call-0.smt2,sat,1.736
+/home/mudathir/all/SQLSolver/cvc5/calcite/query193-call-0.smt2,sat,0.159
+/home/mudathir/all/SQLSolver/cvc5/calcite/query193-call-4.smt2,sat,0.156
+/home/mudathir/all/SQLSolver/cvc5/calcite/query222-call-0.smt2,sat,0.253
+/home/mudathir/all/SQLSolver/cvc5/calcite/query222-call-2.smt2,sat,0.989
+/home/mudathir/all/SQLSolver/cvc5/calcite/query116-call-0.smt2,error,0.212
+/home/mudathir/all/SQLSolver/cvc5/calcite/query050-call-0.smt2,timeout,112.410
+/home/mudathir/all/SQLSolver/cvc5/spark/query048-call-0.smt2,timeout,109.535
+/home/mudathir/all/SQLSolver/cvc5/calcite/query126-call-0.smt2,timeout,109.673
+/home/mudathir/all/SQLSolver/cvc5/calcite/query126-call-4.smt2,timeout,107.873
+/home/mudathir/all/SQLSolver/cvc5/spark/query035-call-0.smt2,sat,84.205
+/home/mudathir/all/SQLSolver/cvc5/calcite/query191-call-0.smt2,timeout,109.327
+/home/mudathir/all/SQLSolver/cvc5/calcite/query211-call-0.smt2,timeout,109.309
+/home/mudathir/all/SQLSolver/cvc5/calcite/query218-call-0.smt2,timeout,112.012
+/home/mudathir/all/SQLSolver/cvc5/calcite/query013-call-0.smt2,Finished parsing commands,0.124
+/home/mudathir/all/SQLSolver/cvc5/calcite/query026-call-4.smt2,sat,1.347
+/home/mudathir/all/SQLSolver/cvc5/spark/query107-call-0.smt2,timeout,109.353
+/home/mudathir/all/SQLSolver/cvc5/calcite/query039-call-0.smt2,sat,0.374
+/home/mudathir/all/SQLSolver/cvc5/calcite/query044-call-0.smt2,sat,0.827
+/home/mudathir/all/SQLSolver/cvc5/calcite/query051-call-0.smt2,sat,0.372
+/home/mudathir/all/SQLSolver/cvc5/spark/query106-call-0.smt2,timeout,109.408
+/home/mudathir/all/SQLSolver/cvc5/spark/query090-call-0.smt2,error,0.089
+/home/mudathir/all/SQLSolver/cvc5/calcite/query062-call-4.smt2,Finished parsing commands,0.177
+/home/mudathir/all/SQLSolver/cvc5/spark/query089-call-0.smt2,Finished parsing commands,0.437
+/home/mudathir/all/SQLSolver/cvc5/calcite/query073-call-0.smt2,Finished parsing commands,0.208
+/home/mudathir/all/SQLSolver/cvc5/calcite/query082-call-0.smt2,sat,0.441
+/home/mudathir/all/SQLSolver/cvc5/spark/query070-call-0.smt2,Finished parsing commands,8.273
+/home/mudathir/all/SQLSolver/cvc5/calcite/query088-call-0.smt2,Finished parsing commands,0.140
+/home/mudathir/all/SQLSolver/cvc5/calcite/query120-call-0.smt2,sat,0.490
+/home/mudathir/all/SQLSolver/cvc5/calcite/query153-call-0.smt2,error,0.079
+/home/mudathir/all/SQLSolver/cvc5/calcite/query156-call-0.smt2,sat,0.368
+/home/mudathir/all/SQLSolver/cvc5/calcite/query161-call-0.smt2,Finished parsing commands,0.189
+/home/mudathir/all/SQLSolver/cvc5/calcite/query172-call-0.smt2,Finished parsing commands,0.174
+/home/mudathir/all/SQLSolver/cvc5/calcite/query185-call-0.smt2,Finished parsing commands,0.184
+/home/mudathir/all/SQLSolver/cvc5/spark/query004-call-0.smt2,error,0.078
+/home/mudathir/all/SQLSolver/cvc5/calcite/query202-call-0.smt2,error,0.084
+/home/mudathir/all/SQLSolver/cvc5/calcite/query205-call-0.smt2,error,0.080
+/home/mudathir/all/SQLSolver/cvc5/calcite/query207-call-0.smt2,timeout,109.630
+/home/mudathir/all/SQLSolver/cvc5/spark/query003-call-0.smt2,error,0.077
+/home/mudathir/all/SQLSolver/cvc5/calcite/query219-call-0.smt2,sat,0.510
+/home/mudathir/all/SQLSolver/cvc5/calcite/query220-call-0.smt2,Finished parsing commands,0.283

@@ -74,16 +74,16 @@ def getModel(s, X=[]):
     # Otherwise return the model
     m = s.model()
     X = list(X)
-    for d in m.decls():
-     try:
-        print("name:", d.name())
-        print("arity:", d.arity())
-        for i in range(d.arity()):
-            print("  domain", i, ":", d.domain(i))
-        print("  range:", d.range())
-        print("  value:", m[d])
-     except Exception as e:
-         print("  python-level error:", e)
+    # for d in m.decls():
+    #  try:
+    #     print("name:", d.name())
+    #     print("arity:", d.arity())
+    #     for i in range(d.arity()):
+    #         print("  domain", i, ":", d.domain(i))
+    #     print("  range:", d.range())
+    #     print("  value:", m[d])
+    #  except Exception as e:
+    #      print("  python-level error:", e)
     return [m.eval(x).as_long() for x in X]
 
 # Print a solution vector and SLS or unsat and exit
