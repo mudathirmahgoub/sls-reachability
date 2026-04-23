@@ -32,8 +32,15 @@ def run_one(filename: str) -> tuple[str, float]:
     if proc.returncode != 0:
         return "error", duration
 
-    lines = [line for line in proc.stdout.splitlines() if line.strip()]
-    result = lines[-2].strip() if lines else "unknown"
+    result = "unknown"
+    for line in proc.stdout.splitlines():
+        stripped = line.strip()
+        if stripped == "unsat":
+            result = "unsat"
+            break
+        if stripped == "sat":
+            result = "sat"
+            break
     return result, duration
 
 

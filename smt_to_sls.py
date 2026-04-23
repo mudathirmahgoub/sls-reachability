@@ -3,8 +3,6 @@ import sys
 from cvc5 import Kind
 from z3 import *
 from lia_star_solver import *
-import pdb
-
 
 
 x1 = Int("x1")
@@ -185,7 +183,7 @@ if __name__ == "__main__":
         if cmd.isNull():
             break        
         # invoke the command on the solver and the symbol manager, print the result        
-        if cmd.getCommandName != "check-sat":
+        if cmd.getCommandName() != "check-sat":
             cmd.invoke(slv, sm)
 
     print("Finished parsing commands")
