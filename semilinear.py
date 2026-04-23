@@ -264,7 +264,6 @@ class SLS:
 
         # Find non-negative X that satisfies phi and isn't reached by the current underapproximation
         s = Solver()
-        pdb.set_trace()
         X = IntVector('x', self.dim)
         s.add([x >= 0 for x in X])
         s.add(self.phi(X))

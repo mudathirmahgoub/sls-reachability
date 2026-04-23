@@ -14,8 +14,10 @@ z2 = x1 == x2
 
 z3 = And(z1, z2)
 
+interpolation_on = True
+unfold = 5
+
 def sls_solver(phi_assertions, star_predicate, star_variables):
-    pdb.set_trace()
     A_assertions = phi_assertions
     B_assertions = [star_predicate]
     set_vars = star_variables
@@ -46,7 +48,7 @@ def sls_solver(phi_assertions, star_predicate, star_variables):
         X = findSolution(A, sls)
         if X:
             returnSolution(list(zip(A.args, X)), sls)
-
+        
         # Compute any new interpolants for this iteration
         start = time.time()
         if interpolation_on:
@@ -112,7 +114,6 @@ def cvc5_to_z3(term, symbols):
         print(f"outer_vector_smt: {outer_vector_smt}")
         outer_vector = [cvc5_to_z3(child, symbols) for child in outer_vector_smt]
         print(f"outer_vector: {outer_vector}")
-        pdb.set_trace()
         return body
 
     if term.getNumChildren() == 0:        

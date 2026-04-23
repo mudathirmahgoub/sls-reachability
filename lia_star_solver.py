@@ -73,15 +73,14 @@ def getModel(s, X=[]):
 
     # Otherwise return the model
     m = s.model()
-    pdb.set_trace()
     X = list(X)
-    for d in m.decls():     
+    for d in m.decls():
      try:
-        print("name:", d.name())        
+        print("name:", d.name())
         print("arity:", d.arity())
         for i in range(d.arity()):
             print("  domain", i, ":", d.domain(i))
-        print("  range:", d.range())        
+        print("  range:", d.range())
         print("  value:", m[d])
      except Exception as e:
          print("  python-level error:", e)
@@ -142,7 +141,6 @@ def findSolution(A, sls):
     s.add([v >= 0 for v in A.args])
     s.add(A())
     s.add(sls.star())
-    pdb.set_trace()
     # Check satisfiability
     #printV("\nLooking for a solution vector with the following constraints:\n\n{}".format(s))
     m = getModel(s, A.args)
