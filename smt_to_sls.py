@@ -14,7 +14,7 @@ z2 = x1 == x2
 z3 = And(z1, z2)
 
 interpolation_on = True
-unfold = 5
+unfold = 0
 
 def sls_solver(phi_assertions, star_predicate, star_variables):
     A_assertions = phi_assertions
