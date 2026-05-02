@@ -47,7 +47,7 @@
      (= u!19 0))
 ))
 (assert 
-  (int.star-contains 
+  ((int.star 
     (lambda ((u!7 Int)(u!8 Int)(u!9 Int)(u!11 Int)(u!12 Int)(u!14 Int)(u!15 Int)(u!17 Int)(u!18 Int)(u!19 Int)(b_ha!2!10 Int)(b_gy!4!16 Int)(b_gz!3!13 Int)(UNIVERALSET!1!6 Int)(f!0!5 Int)) 
       (and 
         (= u!7 (ite (> f!0!5 UNIVERALSET!1!6) 1 0))
@@ -69,6 +69,6 @@
         (>= b_ha!2!10 0)
         (>= b_gz!3!13 0)
         (>= b_gy!4!16 0)
-        ))
+        )))
     u!7 u!8 u!9 u!11 u!12 u!14 u!15 u!17 u!18 u!19 b_ha!2!10 b_gy!4!16 b_gz!3!13 UNIVERALSET!1!6 f!0!5 ))
 (check-sat)

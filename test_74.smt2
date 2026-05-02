@@ -40,7 +40,7 @@
      (not (>= i (- n t))))
 ))
 (assert 
-  (int.star-contains 
+  ((int.star 
     (lambda ((a Int)(b Int)(c Int)(d Int)(e Int)(g Int)(h Int)(i Int)(U Int)(f Int)(A Int)(B Int)) 
       (and 
         (= a (ite (> f U) 1 0))
@@ -59,6 +59,6 @@
         (>= U 0)
         (>= B 0)
         (>= A 0)
-        ))
+        )))
     a b c d e g h i U f A B ))
 (check-sat)
