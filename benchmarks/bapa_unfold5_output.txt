@@ -1,240 +1,240 @@
-bapa/arith/fol_0000001.smt2 :     sat : 1.114187479019165
-bapa/arith/fol_0000002.smt2 :     sat : 1.0532348155975342
-bapa/arith/fol_0000003.smt2 :     sat : 0.5210034847259521
-bapa/arith/fol_0000004.smt2 :     sat : 2.148228645324707
-bapa/arith/fol_0000005.smt2 :     sat : 2.628019094467163
-bapa/arith/fol_0000006.smt2 :     sat : 1.802774429321289
-bapa/arith/fol_0000007.smt2 :     sat : 2.6310536861419678
-bapa/arith/fol_0000008.smt2 :     sat : 1.9029576778411865
-bapa/arith/fol_0000009.smt2 :     sat : 1.5618486404418945
-bapa/arith/fol_0000010.smt2 :     sat : 1.503739833831787
-bapa/arith/fol_0000011.smt2 :     sat : 5.325503587722778
-bapa/arith/fol_0000012.smt2 :     sat : 2.2120554447174072
-bapa/arith/fol_0000013.smt2 :     sat : 0.5345096588134766
-bapa/arith/fol_0000014.smt2 :     sat : 0.7458078861236572
-bapa/arith/fol_0000015.smt2 :     sat : 0.49681639671325684
-bapa/arith/fol_0000016.smt2 :     sat : 2.3217873573303223
-bapa/arith/fol_0000017.smt2 :     sat : 1.158494472503662
-bapa/arith/fol_0000018.smt2 :     sat : 1.926259994506836
-bapa/arith/fol_0000019.smt2 :     sat : 1.9887936115264893
-bapa/arith/fol_0000020.smt2 :     sat : 2.4511382579803467
-bapa/arith/fol_0000021.smt2 :   unsat : 0.4832797050476074
-bapa/arith/fol_0000022.smt2 :     sat : 1.1582493782043457
-bapa/arith/fol_0000023.smt2 :   unsat : 0.4377553462982178
-bapa/arith/fol_0000024.smt2 :     sat : 2.0735392570495605
-bapa/arith/fol_0000025.smt2 :     sat : 0.5437591075897217
-bapa/arith/fol_0000026.smt2 :     sat : 7.6079652309417725
-bapa/arith/fol_0000027.smt2 :     sat : 1.861536979675293
-bapa/arith/fol_0000028.smt2 :   unsat : 0.6448805332183838
-bapa/arith/fol_0000029.smt2 :     sat : 3.9972457885742188
-bapa/arith/fol_0000030.smt2 :   unsat : 0.4520580768585205
-bapa/arith/fol_0000031.smt2 :     sat : 0.5070469379425049
-bapa/arith/fol_0000032.smt2 :   unsat : 0.44884538650512695
-bapa/arith/fol_0000033.smt2 :     sat : 1.2037327289581299
-bapa/arith/fol_0000034.smt2 :   unsat : 0.4414703845977783
-bapa/arith/fol_0000035.smt2 :     sat : 2.312204122543335
-bapa/arith/fol_0000036.smt2 :     sat : 2.432114362716675
-bapa/arith/fol_0000037.smt2 :     sat : 2.21850848197937
-bapa/arith/fol_0000038.smt2 :   unsat : 0.4604020118713379
-bapa/arith/fol_0000039.smt2 :     sat : 2.2980916500091553
-bapa/arith/fol_0000040.smt2 :   unsat : 0.489365816116333
-bapa/arith/fol_0000041.smt2 :     sat : 1.1739146709442139
-bapa/arith/fol_0000042.smt2 :     sat : 2.5969629287719727
-bapa/arith/fol_0000043.smt2 :     sat : 1.7169952392578125
-bapa/arith/fol_0000044.smt2 :     sat : 0.5202679634094238
-bapa/arith/fol_0000045.smt2 :   unsat : 0.6771519184112549
-bapa/arith/fol_0000046.smt2 :     sat : 0.5964665412902832
-bapa/arith/fol_0000047.smt2 :   unsat : 0.6804354190826416
-bapa/arith/fol_0000048.smt2 :     sat : 0.6102280616760254
-bapa/arith/fol_0000049.smt2 :     sat : 1.826186180114746
-bapa/arith/fol_0000050.smt2 :     sat : 1.6491832733154297
-bapa/arith/fol_0000051.smt2 :     sat : 1.4471147060394287
-bapa/arith/fol_0000052.smt2 :     sat : 1.8114452362060547
-bapa/arith/fol_0000053.smt2 :     sat : 1.826951026916504
-bapa/arith/fol_0000054.smt2 :     sat : 4.440725088119507
-bapa/arith/fol_0000055.smt2 :   unsat : 0.4709444046020508
-bapa/arith/fol_0000056.smt2 :     sat : 2.321139335632324
-bapa/arith/fol_0000057.smt2 :     sat : 1.43107008934021
-bapa/arith/fol_0000058.smt2 :   unsat : 0.643683910369873
-bapa/arith/fol_0000059.smt2 :   unsat : 0.456310510635376
-bapa/arith/fol_0000060.smt2 :   unsat : 0.7382545471191406
-bapa/arith/fol_0000061.smt2 :   unsat : 1.6776235103607178
-bapa/arith/fol_0000062.smt2 :     sat : 1.541491985321045
-bapa/arith/fol_0000063.smt2 :   unsat : 0.6981062889099121
-bapa/arith/fol_0000064.smt2 :   unsat : 0.5111961364746094
-bapa/arith/fol_0000065.smt2 :   unsat : 0.6142940521240234
-bapa/arith/fol_0000066.smt2 :   unsat : 0.7532398700714111
-bapa/arith/fol_0000067.smt2 :   unsat : 0.6751918792724609
-bapa/arith/fol_0000068.smt2 :   unsat : 0.637401819229126
-bapa/arith/fol_0000069.smt2 :     sat : 1.5159144401550293
-bapa/arith/fol_0000070.smt2 :   unsat : 0.6921226978302002
-bapa/arith/fol_0000071.smt2 :     sat : 0.5693008899688721
-bapa/arith/fol_0000072.smt2 :     sat : 1.5561637878417969
-bapa/arith/fol_0000073.smt2 :     sat : 0.5951972007751465
-bapa/arith/fol_0000074.smt2 :     sat : 1.4984004497528076
-bapa/arith/fol_0000075.smt2 :     sat : 1.9161272048950195
-bapa/arith/fol_0000076.smt2 :     sat : 0.6018345355987549
-bapa/arith/fol_0000077.smt2 :     sat : 0.5965111255645752
-bapa/arith/fol_0000078.smt2 :   unsat : 0.44237589836120605
-bapa/arith/fol_0000079.smt2 :     sat : 2.6478734016418457
-bapa/arith/fol_0000080.smt2 :     sat : 2.949439287185669
-bapa/arith/fol_0000081.smt2 :   unsat : 0.5432987213134766
-bapa/arith/fol_0000082.smt2 :     sat : 0.9032549858093262
-bapa/arith/fol_0000083.smt2 :   unsat : 0.43011045455932617
-bapa/arith/fol_0000084.smt2 :     sat : 0.5451667308807373
-bapa/arith/fol_0000085.smt2 :   unsat : 3.277508497238159
-bapa/arith/fol_0000086.smt2 :   unsat : 1.4361891746520996
-bapa/arith/fol_0000087.smt2 :   unsat : 0.47235727310180664
-bapa/arith/fol_0000088.smt2 :   unsat : 0.688197135925293
-bapa/arith/fol_0000089.smt2 :   unsat : 0.715634822845459
-bapa/arith/fol_0000090.smt2 :     sat : 0.5889937877655029
-bapa/arith/fol_0000091.smt2 :   unsat : 0.3872213363647461
-bapa/arith/fol_0000092.smt2 :   unsat : 0.5047903060913086
-bapa/arith/fol_0000093.smt2 :   unsat : 0.4316673278808594
-bapa/arith/fol_0000094.smt2 :   unsat : 0.6820268630981445
-bapa/arith/fol_0000095.smt2 :   unsat : 0.6745333671569824
-bapa/arith/fol_0000096.smt2 :     sat : 1.4809718132019043
-bapa/arith/fol_0000097.smt2 :   unsat : 1.9846470355987549
-bapa/arith/fol_0000098.smt2 :   unsat : 0.7534737586975098
-bapa/arith/fol_0000099.smt2 :     sat : 1.404585838317871
-bapa/arith/fol_0000100.smt2 :     sat : 1.8239078521728516
-bapa/arith/fol_0000101.smt2 :     sat : 1.176727533340454
-bapa/arith/fol_0000102.smt2 :     sat : 1.5473403930664062
-bapa/arith/fol_0000103.smt2 :     sat : 1.557471752166748
-bapa/arith/fol_0000104.smt2 :     sat : 1.9487724304199219
-bapa/arith/fol_0000105.smt2 :     sat : 1.4614450931549072
-bapa/arith/fol_0000106.smt2 :     sat : 0.5548944473266602
-bapa/arith/fol_0000107.smt2 :   unsat : 0.4642477035522461
-bapa/arith/fol_0000108.smt2 :     sat : 1.3103957176208496
-bapa/arith/fol_0000109.smt2 :     sat : 1.391266107559204
-bapa/arith/fol_0000110.smt2 :   unsat : 0.6787502765655518
-bapa/arith/fol_0000111.smt2 :   unsat : 0.41958093643188477
-bapa/arith/fol_0000112.smt2 :   unsat : 0.721435546875
-bapa/arith/fol_0000113.smt2 :     sat : 1.9505915641784668
-bapa/arith/fol_0000114.smt2 :   unsat : 0.5261790752410889
-bapa/arith/fol_0000115.smt2 :   unsat : 0.48847484588623047
-bapa/arith/fol_0000116.smt2 :   unsat : 0.524930477142334
-bapa/arith/fol_0000117.smt2 :     sat : 1.173060417175293
-bapa/arith/fol_0000118.smt2 :     sat : 3.162621259689331
-bapa/arith/fol_0000119.smt2 :   unsat : 0.6777427196502686
-bapa/arith/fol_0000120.smt2 :   unsat : 0.4808320999145508
-bapa/card/fol_0000001.smt2  :     sat : 1.23655104637146
-bapa/card/fol_0000002.smt2  :     sat : 1.2672507762908936
-bapa/card/fol_0000003.smt2  :     sat : 0.5062785148620605
-bapa/card/fol_0000004.smt2  :     sat : 2.2285027503967285
-bapa/card/fol_0000005.smt2  :     sat : 2.5785722732543945
-bapa/card/fol_0000006.smt2  :     sat : 1.8788907527923584
-bapa/card/fol_0000007.smt2  :     sat : 2.456139087677002
-bapa/card/fol_0000008.smt2  :     sat : 1.8211562633514404
-bapa/card/fol_0000009.smt2  :     sat : 1.5238018035888672
-bapa/card/fol_0000010.smt2  :     sat : 1.4783780574798584
-bapa/card/fol_0000011.smt2  :     sat : 2.7441701889038086
-bapa/card/fol_0000012.smt2  :     sat : 2.282245635986328
-bapa/card/fol_0000013.smt2  :     sat : 0.46698641777038574
-bapa/card/fol_0000014.smt2  :     sat : 0.7712504863739014
-bapa/card/fol_0000015.smt2  :     sat : 0.5344138145446777
-bapa/card/fol_0000016.smt2  :     sat : 2.440607786178589
-bapa/card/fol_0000017.smt2  :     sat : 1.2337665557861328
-bapa/card/fol_0000018.smt2  :     sat : 1.9055655002593994
-bapa/card/fol_0000019.smt2  :     sat : 4.582928657531738
-bapa/card/fol_0000020.smt2  :     sat : 2.3417372703552246
-bapa/card/fol_0000021.smt2  :   unsat : 0.5123336315155029
-bapa/card/fol_0000022.smt2  :     sat : 1.1521949768066406
-bapa/card/fol_0000023.smt2  :   unsat : 0.4715392589569092
-bapa/card/fol_0000024.smt2  :     sat : 2.120335340499878
-bapa/card/fol_0000025.smt2  :     sat : 0.5909323692321777
-bapa/card/fol_0000026.smt2  :     sat : 7.220049142837524
-bapa/card/fol_0000027.smt2  :     sat : 1.667675256729126
-bapa/card/fol_0000028.smt2  :   unsat : 0.6845300197601318
-bapa/card/fol_0000029.smt2  :     sat : 1.5083885192871094
-bapa/card/fol_0000030.smt2  :   unsat : 0.49146175384521484
-bapa/card/fol_0000031.smt2  :     sat : 0.5286850929260254
-bapa/card/fol_0000032.smt2  :   unsat : 0.4355747699737549
-bapa/card/fol_0000033.smt2  :     sat : 1.3344240188598633
-bapa/card/fol_0000034.smt2  :   unsat : 0.46531081199645996
-bapa/card/fol_0000035.smt2  :     sat : 2.0273919105529785
-bapa/card/fol_0000036.smt2  :     sat : 2.4794862270355225
-bapa/card/fol_0000037.smt2  :     sat : 1.9963505268096924
-bapa/card/fol_0000038.smt2  :   unsat : 0.5028102397918701
-bapa/card/fol_0000039.smt2  :     sat : 2.351334571838379
-bapa/card/fol_0000040.smt2  :   unsat : 0.43653416633605957
-bapa/card/fol_0000041.smt2  :     sat : 3.7692363262176514
-bapa/card/fol_0000042.smt2  :     sat : 2.7497284412384033
-bapa/card/fol_0000043.smt2  :     sat : 1.7366313934326172
-bapa/card/fol_0000044.smt2  :     sat : 0.4696044921875
-bapa/card/fol_0000045.smt2  :   unsat : 30.7133629322052
-bapa/card/fol_0000046.smt2  : timeout : 107.69075894355774
-bapa/card/fol_0000047.smt2  : timeout : 107.85880255699158
-bapa/card/fol_0000048.smt2  : timeout : 107.51090097427368
-bapa/card/fol_0000049.smt2  : timeout : 107.64302015304565
-bapa/card/fol_0000050.smt2  : timeout : 107.51315498352051
-bapa/card/fol_0000051.smt2  :     sat : 22.664297819137573
-bapa/card/fol_0000052.smt2  : timeout : 107.11460638046265
-bapa/card/fol_0000053.smt2  :     sat : 11.581682443618774
-bapa/card/fol_0000054.smt2  : timeout : 107.14704298973083
-bapa/card/fol_0000055.smt2  : timeout : 107.14280104637146
-bapa/card/fol_0000056.smt2  :     sat : 7.204630136489868
-bapa/card/fol_0000057.smt2  :     sat : 50.823662757873535
-bapa/card/fol_0000058.smt2  :   unsat : 0.5880513191223145
-bapa/card/fol_0000059.smt2  :   unsat : 0.4661216735839844
-bapa/card/fol_0000060.smt2  :   unsat : 39.92935252189636
-bapa/card/fol_0000061.smt2  :   unsat : 3.0472350120544434
-bapa/card/fol_0000062.smt2  : timeout : 107.30469679832458
-bapa/card/fol_0000063.smt2  :   unsat : 0.6474454402923584
-bapa/card/fol_0000064.smt2  :   unsat : 0.5243594646453857
-bapa/card/fol_0000065.smt2  :   unsat : 29.39164686203003
-bapa/card/fol_0000066.smt2  :   unsat : 5.466454744338989
-bapa/card/fol_0000067.smt2  :   unsat : 4.181167364120483
-bapa/card/fol_0000068.smt2  :   unsat : 1.4826011657714844
-bapa/card/fol_0000069.smt2  : timeout : 107.33861684799194
-bapa/card/fol_0000070.smt2  : timeout : 107.40315270423889
-bapa/card/fol_0000071.smt2  : timeout : 107.45762872695923
-bapa/card/fol_0000072.smt2  : timeout : 107.59050107002258
-bapa/card/fol_0000073.smt2  : timeout : 107.6879518032074
-bapa/card/fol_0000074.smt2  : timeout : 107.68059825897217
-bapa/card/fol_0000075.smt2  : timeout : 107.61746144294739
-bapa/card/fol_0000076.smt2  :     sat : 5.715226173400879
-bapa/card/fol_0000077.smt2  : timeout : 109.58233070373535
-bapa/card/fol_0000078.smt2  :   unsat : 3.9814043045043945
-bapa/card/fol_0000079.smt2  : timeout : 107.51009941101074
-bapa/card/fol_0000080.smt2  :     sat : 27.447797536849976
-bapa/card/fol_0000081.smt2  :   unsat : 0.4708554744720459
-bapa/card/fol_0000082.smt2  : timeout : 107.38016867637634
-bapa/card/fol_0000083.smt2  :   unsat : 1.0267388820648193
-bapa/card/fol_0000084.smt2  : timeout : 107.5857298374176
-bapa/card/fol_0000085.smt2  :   unsat : 1.7988362312316895
-bapa/card/fol_0000086.smt2  :   unsat : 4.856887340545654
-bapa/card/fol_0000087.smt2  :   unsat : 1.0165081024169922
-bapa/card/fol_0000088.smt2  :   unsat : 67.86928462982178
-bapa/card/fol_0000089.smt2  : timeout : 107.57265973091125
-bapa/card/fol_0000090.smt2  :     sat : 12.199918508529663
-bapa/card/fol_0000091.smt2  :   unsat : 0.5498409271240234
-bapa/card/fol_0000092.smt2  :   unsat : 3.5290379524230957
-bapa/card/fol_0000093.smt2  :   unsat : 0.9527103900909424
-bapa/card/fol_0000094.smt2  :   unsat : 1.8800694942474365
-bapa/card/fol_0000095.smt2  : timeout : 107.67190027236938
-bapa/card/fol_0000096.smt2  : timeout : 107.5735375881195
-bapa/card/fol_0000097.smt2  : timeout : 107.66256165504456
-bapa/card/fol_0000098.smt2  : timeout : 107.80660104751587
-bapa/card/fol_0000099.smt2  : timeout : 107.81204390525818
-bapa/card/fol_0000100.smt2  : timeout : 107.75702905654907
-bapa/card/fol_0000101.smt2  : timeout : 107.60792088508606
-bapa/card/fol_0000102.smt2  : timeout : 108.53589797019958
-bapa/card/fol_0000103.smt2  : timeout : 111.34940004348755
-bapa/card/fol_0000104.smt2  : timeout : 108.53064298629761
-bapa/card/fol_0000105.smt2  : timeout : 108.5403220653534
-bapa/card/fol_0000106.smt2  : timeout : 108.37360191345215
-bapa/card/fol_0000107.smt2  : timeout : 108.50371074676514
-bapa/card/fol_0000108.smt2  : timeout : 108.05270624160767
-bapa/card/fol_0000109.smt2  : timeout : 107.87574219703674
-bapa/card/fol_0000110.smt2  :   unsat : 96.94133734703064
-bapa/card/fol_0000111.smt2  : timeout : 108.02562808990479
-bapa/card/fol_0000112.smt2  : timeout : 108.10702347755432
-bapa/card/fol_0000113.smt2  : timeout : 107.42296242713928
-bapa/card/fol_0000114.smt2  :   unsat : 1.0602326393127441
-bapa/card/fol_0000115.smt2  :   unsat : 1.1157922744750977
-bapa/card/fol_0000116.smt2  :   unsat : 21.41166853904724
-bapa/card/fol_0000117.smt2  : timeout : 107.9987998008728
-bapa/card/fol_0000118.smt2  : timeout : 108.06617069244385
-bapa/card/fol_0000119.smt2  : timeout : 108.10003185272217
-bapa/card/fol_0000120.smt2  : timeout : 108.08987307548523
+bapa/arith/fol_0000001.smt2,sat,1.114187479019165
+bapa/arith/fol_0000002.smt2,sat,1.0532348155975342
+bapa/arith/fol_0000003.smt2,sat,0.5210034847259521
+bapa/arith/fol_0000004.smt2,sat,2.148228645324707
+bapa/arith/fol_0000005.smt2,sat,2.628019094467163
+bapa/arith/fol_0000006.smt2,sat,1.802774429321289
+bapa/arith/fol_0000007.smt2,sat,2.6310536861419678
+bapa/arith/fol_0000008.smt2,sat,1.9029576778411865
+bapa/arith/fol_0000009.smt2,sat,1.5618486404418945
+bapa/arith/fol_0000010.smt2,sat,1.503739833831787
+bapa/arith/fol_0000011.smt2,sat,5.325503587722778
+bapa/arith/fol_0000012.smt2,sat,2.2120554447174072
+bapa/arith/fol_0000013.smt2,sat,0.5345096588134766
+bapa/arith/fol_0000014.smt2,sat,0.7458078861236572
+bapa/arith/fol_0000015.smt2,sat,0.49681639671325684
+bapa/arith/fol_0000016.smt2,sat,2.3217873573303223
+bapa/arith/fol_0000017.smt2,sat,1.158494472503662
+bapa/arith/fol_0000018.smt2,sat,1.926259994506836
+bapa/arith/fol_0000019.smt2,sat,1.9887936115264893
+bapa/arith/fol_0000020.smt2,sat,2.4511382579803467
+bapa/arith/fol_0000021.smt2,unsat,0.4832797050476074
+bapa/arith/fol_0000022.smt2,sat,1.1582493782043457
+bapa/arith/fol_0000023.smt2,unsat,0.4377553462982178
+bapa/arith/fol_0000024.smt2,sat,2.0735392570495605
+bapa/arith/fol_0000025.smt2,sat,0.5437591075897217
+bapa/arith/fol_0000026.smt2,sat,7.6079652309417725
+bapa/arith/fol_0000027.smt2,sat,1.861536979675293
+bapa/arith/fol_0000028.smt2,unsat,0.6448805332183838
+bapa/arith/fol_0000029.smt2,sat,3.9972457885742188
+bapa/arith/fol_0000030.smt2,unsat,0.4520580768585205
+bapa/arith/fol_0000031.smt2,sat,0.5070469379425049
+bapa/arith/fol_0000032.smt2,unsat,0.44884538650512695
+bapa/arith/fol_0000033.smt2,sat,1.2037327289581299
+bapa/arith/fol_0000034.smt2,unsat,0.4414703845977783
+bapa/arith/fol_0000035.smt2,sat,2.312204122543335
+bapa/arith/fol_0000036.smt2,sat,2.432114362716675
+bapa/arith/fol_0000037.smt2,sat,2.21850848197937
+bapa/arith/fol_0000038.smt2,unsat,0.4604020118713379
+bapa/arith/fol_0000039.smt2,sat,2.2980916500091553
+bapa/arith/fol_0000040.smt2,unsat,0.489365816116333
+bapa/arith/fol_0000041.smt2,sat,1.1739146709442139
+bapa/arith/fol_0000042.smt2,sat,2.5969629287719727
+bapa/arith/fol_0000043.smt2,sat,1.7169952392578125
+bapa/arith/fol_0000044.smt2,sat,0.5202679634094238
+bapa/arith/fol_0000045.smt2,unsat,0.6771519184112549
+bapa/arith/fol_0000046.smt2,sat,0.5964665412902832
+bapa/arith/fol_0000047.smt2,unsat,0.6804354190826416
+bapa/arith/fol_0000048.smt2,sat,0.6102280616760254
+bapa/arith/fol_0000049.smt2,sat,1.826186180114746
+bapa/arith/fol_0000050.smt2,sat,1.6491832733154297
+bapa/arith/fol_0000051.smt2,sat,1.4471147060394287
+bapa/arith/fol_0000052.smt2,sat,1.8114452362060547
+bapa/arith/fol_0000053.smt2,sat,1.826951026916504
+bapa/arith/fol_0000054.smt2,sat,4.440725088119507
+bapa/arith/fol_0000055.smt2,unsat,0.4709444046020508
+bapa/arith/fol_0000056.smt2,sat,2.321139335632324
+bapa/arith/fol_0000057.smt2,sat,1.43107008934021
+bapa/arith/fol_0000058.smt2,unsat,0.643683910369873
+bapa/arith/fol_0000059.smt2,unsat,0.456310510635376
+bapa/arith/fol_0000060.smt2,unsat,0.7382545471191406
+bapa/arith/fol_0000061.smt2,unsat,1.6776235103607178
+bapa/arith/fol_0000062.smt2,sat,1.541491985321045
+bapa/arith/fol_0000063.smt2,unsat,0.6981062889099121
+bapa/arith/fol_0000064.smt2,unsat,0.5111961364746094
+bapa/arith/fol_0000065.smt2,unsat,0.6142940521240234
+bapa/arith/fol_0000066.smt2,unsat,0.7532398700714111
+bapa/arith/fol_0000067.smt2,unsat,0.6751918792724609
+bapa/arith/fol_0000068.smt2,unsat,0.637401819229126
+bapa/arith/fol_0000069.smt2,sat,1.5159144401550293
+bapa/arith/fol_0000070.smt2,unsat,0.6921226978302002
+bapa/arith/fol_0000071.smt2,sat,0.5693008899688721
+bapa/arith/fol_0000072.smt2,sat,1.5561637878417969
+bapa/arith/fol_0000073.smt2,sat,0.5951972007751465
+bapa/arith/fol_0000074.smt2,sat,1.4984004497528076
+bapa/arith/fol_0000075.smt2,sat,1.9161272048950195
+bapa/arith/fol_0000076.smt2,sat,0.6018345355987549
+bapa/arith/fol_0000077.smt2,sat,0.5965111255645752
+bapa/arith/fol_0000078.smt2,unsat,0.44237589836120605
+bapa/arith/fol_0000079.smt2,sat,2.6478734016418457
+bapa/arith/fol_0000080.smt2,sat,2.949439287185669
+bapa/arith/fol_0000081.smt2,unsat,0.5432987213134766
+bapa/arith/fol_0000082.smt2,sat,0.9032549858093262
+bapa/arith/fol_0000083.smt2,unsat,0.43011045455932617
+bapa/arith/fol_0000084.smt2,sat,0.5451667308807373
+bapa/arith/fol_0000085.smt2,unsat,3.277508497238159
+bapa/arith/fol_0000086.smt2,unsat,1.4361891746520996
+bapa/arith/fol_0000087.smt2,unsat,0.47235727310180664
+bapa/arith/fol_0000088.smt2,unsat,0.688197135925293
+bapa/arith/fol_0000089.smt2,unsat,0.715634822845459
+bapa/arith/fol_0000090.smt2,sat,0.5889937877655029
+bapa/arith/fol_0000091.smt2,unsat,0.3872213363647461
+bapa/arith/fol_0000092.smt2,unsat,0.5047903060913086
+bapa/arith/fol_0000093.smt2,unsat,0.4316673278808594
+bapa/arith/fol_0000094.smt2,unsat,0.6820268630981445
+bapa/arith/fol_0000095.smt2,unsat,0.6745333671569824
+bapa/arith/fol_0000096.smt2,sat,1.4809718132019043
+bapa/arith/fol_0000097.smt2,unsat,1.9846470355987549
+bapa/arith/fol_0000098.smt2,unsat,0.7534737586975098
+bapa/arith/fol_0000099.smt2,sat,1.404585838317871
+bapa/arith/fol_0000100.smt2,sat,1.8239078521728516
+bapa/arith/fol_0000101.smt2,sat,1.176727533340454
+bapa/arith/fol_0000102.smt2,sat,1.5473403930664062
+bapa/arith/fol_0000103.smt2,sat,1.557471752166748
+bapa/arith/fol_0000104.smt2,sat,1.9487724304199219
+bapa/arith/fol_0000105.smt2,sat,1.4614450931549072
+bapa/arith/fol_0000106.smt2,sat,0.5548944473266602
+bapa/arith/fol_0000107.smt2,unsat,0.4642477035522461
+bapa/arith/fol_0000108.smt2,sat,1.3103957176208496
+bapa/arith/fol_0000109.smt2,sat,1.391266107559204
+bapa/arith/fol_0000110.smt2,unsat,0.6787502765655518
+bapa/arith/fol_0000111.smt2,unsat,0.41958093643188477
+bapa/arith/fol_0000112.smt2,unsat,0.721435546875
+bapa/arith/fol_0000113.smt2,sat,1.9505915641784668
+bapa/arith/fol_0000114.smt2,unsat,0.5261790752410889
+bapa/arith/fol_0000115.smt2,unsat,0.48847484588623047
+bapa/arith/fol_0000116.smt2,unsat,0.524930477142334
+bapa/arith/fol_0000117.smt2,sat,1.173060417175293
+bapa/arith/fol_0000118.smt2,sat,3.162621259689331
+bapa/arith/fol_0000119.smt2,unsat,0.6777427196502686
+bapa/arith/fol_0000120.smt2,unsat,0.4808320999145508
+bapa/card/fol_0000001.smt2 ,sat,1.23655104637146
+bapa/card/fol_0000002.smt2 ,sat,1.2672507762908936
+bapa/card/fol_0000003.smt2 ,sat,0.5062785148620605
+bapa/card/fol_0000004.smt2 ,sat,2.2285027503967285
+bapa/card/fol_0000005.smt2 ,sat,2.5785722732543945
+bapa/card/fol_0000006.smt2 ,sat,1.8788907527923584
+bapa/card/fol_0000007.smt2 ,sat,2.456139087677002
+bapa/card/fol_0000008.smt2 ,sat,1.8211562633514404
+bapa/card/fol_0000009.smt2 ,sat,1.5238018035888672
+bapa/card/fol_0000010.smt2 ,sat,1.4783780574798584
+bapa/card/fol_0000011.smt2 ,sat,2.7441701889038086
+bapa/card/fol_0000012.smt2 ,sat,2.282245635986328
+bapa/card/fol_0000013.smt2 ,sat,0.46698641777038574
+bapa/card/fol_0000014.smt2 ,sat,0.7712504863739014
+bapa/card/fol_0000015.smt2 ,sat,0.5344138145446777
+bapa/card/fol_0000016.smt2 ,sat,2.440607786178589
+bapa/card/fol_0000017.smt2 ,sat,1.2337665557861328
+bapa/card/fol_0000018.smt2 ,sat,1.9055655002593994
+bapa/card/fol_0000019.smt2 ,sat,4.582928657531738
+bapa/card/fol_0000020.smt2 ,sat,2.3417372703552246
+bapa/card/fol_0000021.smt2 ,unsat,0.5123336315155029
+bapa/card/fol_0000022.smt2 ,sat,1.1521949768066406
+bapa/card/fol_0000023.smt2 ,unsat,0.4715392589569092
+bapa/card/fol_0000024.smt2 ,sat,2.120335340499878
+bapa/card/fol_0000025.smt2 ,sat,0.5909323692321777
+bapa/card/fol_0000026.smt2 ,sat,7.220049142837524
+bapa/card/fol_0000027.smt2 ,sat,1.667675256729126
+bapa/card/fol_0000028.smt2 ,unsat,0.6845300197601318
+bapa/card/fol_0000029.smt2 ,sat,1.5083885192871094
+bapa/card/fol_0000030.smt2 ,unsat,0.49146175384521484
+bapa/card/fol_0000031.smt2 ,sat,0.5286850929260254
+bapa/card/fol_0000032.smt2 ,unsat,0.4355747699737549
+bapa/card/fol_0000033.smt2 ,sat,1.3344240188598633
+bapa/card/fol_0000034.smt2 ,unsat,0.46531081199645996
+bapa/card/fol_0000035.smt2 ,sat,2.0273919105529785
+bapa/card/fol_0000036.smt2 ,sat,2.4794862270355225
+bapa/card/fol_0000037.smt2 ,sat,1.9963505268096924
+bapa/card/fol_0000038.smt2 ,unsat,0.5028102397918701
+bapa/card/fol_0000039.smt2 ,sat,2.351334571838379
+bapa/card/fol_0000040.smt2 ,unsat,0.43653416633605957
+bapa/card/fol_0000041.smt2 ,sat,3.7692363262176514
+bapa/card/fol_0000042.smt2 ,sat,2.7497284412384033
+bapa/card/fol_0000043.smt2 ,sat,1.7366313934326172
+bapa/card/fol_0000044.smt2 ,sat,0.4696044921875
+bapa/card/fol_0000045.smt2 ,unsat,30.7133629322052
+bapa/card/fol_0000046.smt2,timeout,107.69075894355774
+bapa/card/fol_0000047.smt2,timeout,107.85880255699158
+bapa/card/fol_0000048.smt2,timeout,107.51090097427368
+bapa/card/fol_0000049.smt2,timeout,107.64302015304565
+bapa/card/fol_0000050.smt2,timeout,107.51315498352051
+bapa/card/fol_0000051.smt2 ,sat,22.664297819137573
+bapa/card/fol_0000052.smt2,timeout,107.11460638046265
+bapa/card/fol_0000053.smt2 ,sat,11.581682443618774
+bapa/card/fol_0000054.smt2,timeout,107.14704298973083
+bapa/card/fol_0000055.smt2,timeout,107.14280104637146
+bapa/card/fol_0000056.smt2 ,sat,7.204630136489868
+bapa/card/fol_0000057.smt2 ,sat,50.823662757873535
+bapa/card/fol_0000058.smt2 ,unsat,0.5880513191223145
+bapa/card/fol_0000059.smt2 ,unsat,0.4661216735839844
+bapa/card/fol_0000060.smt2 ,unsat,39.92935252189636
+bapa/card/fol_0000061.smt2 ,unsat,3.0472350120544434
+bapa/card/fol_0000062.smt2,timeout,107.30469679832458
+bapa/card/fol_0000063.smt2 ,unsat,0.6474454402923584
+bapa/card/fol_0000064.smt2 ,unsat,0.5243594646453857
+bapa/card/fol_0000065.smt2 ,unsat,29.39164686203003
+bapa/card/fol_0000066.smt2 ,unsat,5.466454744338989
+bapa/card/fol_0000067.smt2 ,unsat,4.181167364120483
+bapa/card/fol_0000068.smt2 ,unsat,1.4826011657714844
+bapa/card/fol_0000069.smt2,timeout,107.33861684799194
+bapa/card/fol_0000070.smt2,timeout,107.40315270423889
+bapa/card/fol_0000071.smt2,timeout,107.45762872695923
+bapa/card/fol_0000072.smt2,timeout,107.59050107002258
+bapa/card/fol_0000073.smt2,timeout,107.6879518032074
+bapa/card/fol_0000074.smt2,timeout,107.68059825897217
+bapa/card/fol_0000075.smt2,timeout,107.61746144294739
+bapa/card/fol_0000076.smt2 ,sat,5.715226173400879
+bapa/card/fol_0000077.smt2,timeout,109.58233070373535
+bapa/card/fol_0000078.smt2 ,unsat,3.9814043045043945
+bapa/card/fol_0000079.smt2,timeout,107.51009941101074
+bapa/card/fol_0000080.smt2 ,sat,27.447797536849976
+bapa/card/fol_0000081.smt2 ,unsat,0.4708554744720459
+bapa/card/fol_0000082.smt2,timeout,107.38016867637634
+bapa/card/fol_0000083.smt2 ,unsat,1.0267388820648193
+bapa/card/fol_0000084.smt2,timeout,107.5857298374176
+bapa/card/fol_0000085.smt2 ,unsat,1.7988362312316895
+bapa/card/fol_0000086.smt2 ,unsat,4.856887340545654
+bapa/card/fol_0000087.smt2 ,unsat,1.0165081024169922
+bapa/card/fol_0000088.smt2 ,unsat,67.86928462982178
+bapa/card/fol_0000089.smt2,timeout,107.57265973091125
+bapa/card/fol_0000090.smt2 ,sat,12.199918508529663
+bapa/card/fol_0000091.smt2 ,unsat,0.5498409271240234
+bapa/card/fol_0000092.smt2 ,unsat,3.5290379524230957
+bapa/card/fol_0000093.smt2 ,unsat,0.9527103900909424
+bapa/card/fol_0000094.smt2 ,unsat,1.8800694942474365
+bapa/card/fol_0000095.smt2,timeout,107.67190027236938
+bapa/card/fol_0000096.smt2,timeout,107.5735375881195
+bapa/card/fol_0000097.smt2,timeout,107.66256165504456
+bapa/card/fol_0000098.smt2,timeout,107.80660104751587
+bapa/card/fol_0000099.smt2,timeout,107.81204390525818
+bapa/card/fol_0000100.smt2,timeout,107.75702905654907
+bapa/card/fol_0000101.smt2,timeout,107.60792088508606
+bapa/card/fol_0000102.smt2,timeout,108.53589797019958
+bapa/card/fol_0000103.smt2,timeout,111.34940004348755
+bapa/card/fol_0000104.smt2,timeout,108.53064298629761
+bapa/card/fol_0000105.smt2,timeout,108.5403220653534
+bapa/card/fol_0000106.smt2,timeout,108.37360191345215
+bapa/card/fol_0000107.smt2,timeout,108.50371074676514
+bapa/card/fol_0000108.smt2,timeout,108.05270624160767
+bapa/card/fol_0000109.smt2,timeout,107.87574219703674
+bapa/card/fol_0000110.smt2 ,unsat,96.94133734703064
+bapa/card/fol_0000111.smt2,timeout,108.02562808990479
+bapa/card/fol_0000112.smt2,timeout,108.10702347755432
+bapa/card/fol_0000113.smt2,timeout,107.42296242713928
+bapa/card/fol_0000114.smt2 ,unsat,1.0602326393127441
+bapa/card/fol_0000115.smt2 ,unsat,1.1157922744750977
+bapa/card/fol_0000116.smt2 ,unsat,21.41166853904724
+bapa/card/fol_0000117.smt2,timeout,107.9987998008728
+bapa/card/fol_0000118.smt2,timeout,108.06617069244385
+bapa/card/fol_0000119.smt2,timeout,108.10003185272217
+bapa/card/fol_0000120.smt2,timeout,108.08987307548523
