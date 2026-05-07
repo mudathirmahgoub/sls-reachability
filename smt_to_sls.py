@@ -114,8 +114,11 @@ def cvc5_to_z3(term, symbols):
         equality = z3_children[0] == z3_children[1]        
         return equality
 
-    if k == Kind.NOT:                
+    if k == Kind.NOT:
         return Not(z3_children[0])
+
+    if k == Kind.DISTINCT:
+        return Distinct(*z3_children)
 
     if k == Kind.AND:                
         ret = And(*z3_children)        
@@ -197,10 +200,9 @@ if __name__ == "__main__":
     star_predicate = None
 
     for assertion in slv.getAssertions():
-        k = assertion.getKind()        
-        assert k == Kind.AND        
-        for conjunct in assertion:            
-            z3_term = cvc5_to_z3(conjunct, symbols)            
+        conjuncts = list(assertion) if assertion.getKind() == Kind.AND else [assertion]
+        for conjunct in conjuncts:
+            z3_term = cvc5_to_z3(conjunct, symbols)
             if conjunct.getKind() == Kind.STAR_CONTAINS:
                 star_predicate = z3_term
             else:
