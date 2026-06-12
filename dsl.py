@@ -295,13 +295,14 @@ def bapa2ms(fmls):
 def parse_bapa(file, mapa):
     global mapa_flag
 
-    # Read file into solver state
-    s = Solver()
-    s.from_file(file)
+    # z3 >= 4.8.7 dropped the built-in set cardinality symbol, so 'card'
+    # must be pre-declared as an uninterpreted function for parsing
+    card_decl = Function('card', SetSort(IntSort()), IntSort())
+    fmls = parse_smt2_file(file, decls={'card': card_decl})
 
     # Set flag for parsing bapa examples as multiset formulas vs set formulas
     if mapa:
         mapa_flag = True
 
     # Conversion
-    return bapa2ms(s.assertions())
+    return bapa2ms(fmls)
