@@ -281,6 +281,6 @@ if __name__ == "__main__":
                      for q in other['qs']]
             disjuncts.append(And([atom['body']] + zeros))
         combined = Or(disjuncts)
-    combined = And([combined] + [q >= 0 for q in all_q])
+    # nonneg disabled (Z-summand semantics test)
 
     result = sls_solver(phi_assertions, combined, all_q)
