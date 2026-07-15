@@ -131,6 +131,13 @@ def cvc5_to_z3(term, symbols, stars, memo, polarity=True):
     if k == Kind.CONSTANT or k == Kind.VARIABLE:
         return symbols[str(term)]
 
+    if k == Kind.APPLY_UF:
+        # uninterpreted function application: child 0 is the function symbol
+        fn = symbols[str(cvc5_children[0])]
+        args = [cvc5_to_z3(c, symbols, stars, memo, polarity)
+                for c in cvc5_children[1:]]
+        return fn(*args)
+
     if k == Kind.STAR_CONTAINS:
         if not polarity:
             raise Exception("unsupported: star atom under negative polarity")
@@ -252,10 +259,17 @@ if __name__ == "__main__":
             cmd.invoke(slv, sm)
 
     print("Finished parsing commands")
-    # declare z3 constants
+    # declare z3 constants; declare-fun symbols with arity > 0 become z3
+    # uninterpreted Int functions (they may only occur outside star bodies)
     symbols = {}
     for term in sm.getDeclaredTerms():
-        symbols[str(term)] = Int(str(term))
+        sort = term.getSort()
+        if sort.isFunction():
+            arity = sort.getFunctionArity()
+            symbols[str(term)] = Function(
+                str(term), *([IntSort()] * arity + [IntSort()]))
+        else:
+            symbols[str(term)] = Int(str(term))
 
     # translate all assertions, collecting star atoms along the way
     stars = StarCollector()
