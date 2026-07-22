@@ -1,53 +1,63 @@
 #!/usr/bin/env python3
 
 """
-Run all bapa benchmarks in parallel and update the paper's comparison.csv.
+Run the paper's benchmarks and update the comparison.csv of the paper.
 
-The six configurations of the comparison table are executed one after the
-other; within a configuration, the 240 benchmarks run in parallel:
+Three benchmark groups are supported, each in the three configurations
+unfold0 / unfold5 / no_interp:
 
     sets (BAPA):  bapa_unfold0    bapa_unfold5    bapa_no_interp
     bags (MAPA):  mapa_unfold0    mapa_unfold5    mapa_no_interp   (--mapa)
+    sql:          sql_unfold0     sql_unfold5     sql_no_interp
 
-Each benchmark is a single solver invocation, e.g.
+Sets and bags run the 240 bapa benchmarks through lia_star_solver.py, e.g.
 
     python3 lia_star_solver.py benchmarks/bapa/arith/fol_0000001.smt2 \\
             -i --unfold=5 --mapa
 
-with the same per-benchmark timeout and error handling as run_bapa.py.
+The sql group runs the benchmarks in benchmarks/sql/linear/ (copied from
+SQLSolver/cvc5/linear) through smt_to_sls.py using the cvc5-enabled .venv
+interpreter, e.g.
+
+    .venv/bin/python3 smt_to_sls.py benchmarks/sql/linear/calcite-query013-call-0.smt2 \\
+            --unfold=5
 
 Pipeline
 --------
-1. run: every configuration runs all benchmarks in a worker pool and writes
-   <name>.txt and <name>.csv (run_bapa.py's formats) into the output
-   directory (default: benchmarks/output/, which is git-ignored).
+1. run: every configuration runs all its benchmarks and writes <name>.txt
+   (and, for sets/bags, <name>.csv with solver statistics) into the output
+   directory (default: benchmarks/output/).
 2. parse: the txt files are parsed as colon-separated values, stripping all
    padding spaces.
 3. update: the results are written into the unfold0 / unfold5 / no_interp
-   columns of comparison.csv. Data rows 1-240 of that csv hold the sets
-   results, rows 241-480 the bags results; the cvc5 and sqlsolver columns
-   are never touched. comparison.csv is saved after every configuration, so
-   an interrupted run keeps its completed results.
+   columns of comparison.csv. Data rows 1-240 hold the sets results, rows
+   241-480 the bags results, and the sql results follow after them (rows
+   for missing sql benchmarks are appended with all other columns left
+   empty, to be filled by later runs). The cvc5 and sqlsolver columns are
+   never touched. comparison.csv is saved after every configuration, so an
+   interrupted run keeps its completed results.
 
 Concurrency
 -----------
-The pool is a ThreadPoolExecutor, not a ProcessPoolExecutor, and that is
-deliberate: each job only calls subprocess.run(), i.e. it spawns a solver
-process and blocks until it exits. All CPU work happens in those solver
-processes, and a thread blocked in subprocess.run() releases the GIL, so
-threads already provide full parallelism. Worker processes would only add
-interpreter-spawn and pickling overhead (measured: 12 benchmarks / 6
-workers -> threads 0.70s, processes 0.80s, sequential 2.34s).
+Sets and bags use a ThreadPoolExecutor, not a ProcessPoolExecutor, and that
+is deliberate: each job only calls subprocess.run(), i.e. it spawns a
+solver process and blocks until it exits. All CPU work happens in those
+solver processes, and a thread blocked in subprocess.run() releases the
+GIL, so threads already provide full parallelism. Worker processes would
+only add interpreter-spawn and pickling overhead (measured: 12 benchmarks /
+6 workers -> threads 0.70s, processes 0.80s, sequential 2.34s).
 
 By default two CPUs are left free for the operating system and the IDE.
 Note that heavy parallelism can still inflate the measured solver times
-through CPU contention; use -j to trade wall-clock time for fidelity.
+through CPU contention; use -j to trade wall-clock time for fidelity. The
+sql benchmarks are fast (mostly well under a second), so they run
+sequentially by default for accurate timings; -j overrides that too.
 
 Usage
 -----
-    python3 update_comparison.py 100            # full run, timeout 100s
+    python3 update_comparison.py 100            # everything, timeout 100s
+    python3 update_comparison.py --only sql     # sql group only, sequential
     python3 update_comparison.py 100 -j 8       # at most 8 solvers at once
-    python3 update_comparison.py --only bags    # mapa configurations only
     python3 update_comparison.py --parse-only   # skip runs, just update csv
 """
 
@@ -68,7 +78,12 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))   # .../benchmarks
 REPO_DIR = os.path.dirname(SCRIPT_DIR)                    # repository root
-SOLVER = os.path.join(REPO_DIR, "lia_star_solver.py")
+BAPA_SOLVER = os.path.join(REPO_DIR, "lia_star_solver.py")
+SQL_SOLVER = os.path.join(REPO_DIR, "smt_to_sls.py")
+
+# smt_to_sls.py needs the cvc5 package, which lives in the repo's .venv
+VENV_PYTHON = os.path.join(REPO_DIR, ".venv", "bin", "python3")
+SQL_PYTHON = VENV_PYTHON if os.path.exists(VENV_PYTHON) else sys.executable
 
 DEFAULT_OUT_DIR = os.path.join(SCRIPT_DIR, "output")
 DEFAULT_CSV = os.path.expanduser(
@@ -86,8 +101,9 @@ CONFIGS = [
     Config("no_interp", ["--no-interp"], column=9),
 ]
 
-# A section is one half of comparison.csv: `row` is its first data row
-# (0-based, header excluded). Sets rows come first, bags rows second.
+# A section is one fixed-position block of comparison.csv: `row` is its
+# first data row (0-based, header excluded). Sets rows come first, bags
+# rows second; the sql rows follow after both sections.
 Section = namedtuple("Section", ["prefix", "mapa", "row"])
 SECTIONS = [
     Section("bapa", mapa=False, row=0),    # sets: data rows 0-239
@@ -96,10 +112,15 @@ SECTIONS = [
 
 # Benchmark names as they appear in the txt files and in comparison.csv,
 # relative to the benchmarks directory
-BENCHMARKS = ["{}/fol_{:07d}.smt2".format(d, i)
-              for d in ("bapa/arith", "bapa/card")
-              for i in range(1, 121)]
-SECTION_SIZE = len(BENCHMARKS)  # 120 arith + 120 card = 240
+BAPA_BENCHMARKS = ["{}/fol_{:07d}.smt2".format(d, i)
+                   for d in ("bapa/arith", "bapa/card")
+                   for i in range(1, 121)]
+SECTION_SIZE = len(BAPA_BENCHMARKS)  # 120 arith + 120 card = 240
+
+SQL_BENCHMARKS = sorted(
+    "sql/linear/" + f
+    for f in os.listdir(os.path.join(SCRIPT_DIR, "sql", "linear"))
+    if f.endswith(".smt2"))
 
 # Columns of the per-configuration statistics csv, as written by run_bapa.py
 STATS_FIELDS = [
@@ -111,17 +132,18 @@ STATS_FIELDS = [
 
 
 # ---------------------------------------------------------------------------
-# Running the solver
+# Running the solvers
 # ---------------------------------------------------------------------------
 
-def solve(benchmark, timeout, mapa, solver_args):
-    """Run lia_star_solver.py on a single benchmark.
+def solve_bapa(benchmark, timeout, mapa, solver_args):
+    """Run lia_star_solver.py on a single bapa benchmark.
 
     Timeout and error handling mirror run_bapa.py. Returns
     (benchmark, result, duration, stats) where result is 'sat', 'unsat',
     'timeout' or 'ERROR ...'.
     """
-    cmd = [sys.executable, SOLVER, os.path.join(SCRIPT_DIR, benchmark), "-i"]
+    cmd = [sys.executable, BAPA_SOLVER,
+           os.path.join(SCRIPT_DIR, benchmark), "-i"]
     cmd += solver_args
     if mapa:
         cmd.append("--mapa")
@@ -153,45 +175,99 @@ def solve(benchmark, timeout, mapa, solver_args):
     return benchmark, result, duration, stats
 
 
-def run_configuration(name, timeout, mapa, solver_args, jobs, out_dir):
-    """Run all benchmarks of one configuration in a worker pool, then write
-    <name>.txt and <name>.csv (run_bapa.py's formats) into out_dir."""
-    print("\n=== {}: {} benchmarks, {} parallel jobs, timeout {}s ===".format(
-        name, len(BENCHMARKS), jobs, timeout), flush=True)
+def solve_sql(benchmark, timeout, mapa, solver_args):
+    """Run smt_to_sls.py on a single sql benchmark (mapa is ignored; it
+    exists to share solve_bapa's signature).
 
-    # Threads, not processes: each job just waits on a solver subprocess,
-    # which releases the GIL (see the module docstring)
+    Result detection mirrors run_sql.py: scan stdout for a line that is
+    exactly 'sat' or 'unsat'. Returns (benchmark, result, duration, stats)
+    with stats always empty (smt_to_sls.py prints no statistics).
+    """
+    cmd = [SQL_PYTHON, SQL_SOLVER, os.path.join(SCRIPT_DIR, benchmark)]
+    cmd += solver_args
+
+    start = time.time()
+    try:
+        proc = subprocess.run(cmd, capture_output=True, timeout=timeout,
+                              cwd=REPO_DIR)
+        duration = time.time() - start
+        if proc.returncode != 0:
+            result = "error"
+        else:
+            result = "unknown"
+            for line in proc.stdout.decode("utf-8").splitlines():
+                if line.strip() in ("sat", "unsat"):
+                    result = line.strip()
+                    break
+
+    except subprocess.TimeoutExpired:
+        duration = time.time() - start
+        result = "timeout"
+
+    return benchmark, result, duration, {"name": benchmark}
+
+
+def run_configuration(name, benchmarks, solver, timeout, mapa, solver_args,
+                      jobs, out_dir):
+    """Run all benchmarks of one configuration through `solver` (one of the
+    solve_* functions), then write the result files into out_dir.
+
+    With jobs == 1 the benchmarks run strictly sequentially, which gives
+    the most accurate timings; otherwise a thread pool runs `jobs` solver
+    subprocesses at a time (threads suffice: see the module docstring).
+    """
+    print("\n=== {}: {} benchmarks, {}, timeout {}s ===".format(
+        name, len(benchmarks),
+        "sequential" if jobs == 1 else "{} parallel jobs".format(jobs),
+        timeout), flush=True)
+
     results = {}
-    with ThreadPoolExecutor(max_workers=jobs) as pool:
-        futures = [pool.submit(solve, b, timeout, mapa, solver_args)
-                   for b in BENCHMARKS]
-        for done, future in enumerate(as_completed(futures), 1):
-            benchmark, result, duration, stats = future.result()
-            results[benchmark] = (result, duration, stats)
-            print("  [{}/{}] {} : {} : {:.2f}s".format(
-                done, len(BENCHMARKS), benchmark, result, duration),
-                flush=True)
 
-    write_run_files(name, results, out_dir)
+    def record(outcome, done):
+        benchmark, result, duration, stats = outcome
+        results[benchmark] = (result, duration, stats)
+        print("  [{}/{}] {} : {} : {:.2f}s".format(
+            done, len(benchmarks), benchmark, result, duration), flush=True)
+
+    if jobs == 1:
+        for done, benchmark in enumerate(benchmarks, 1):
+            record(solver(benchmark, timeout, mapa, solver_args), done)
+    else:
+        with ThreadPoolExecutor(max_workers=jobs) as pool:
+            futures = [pool.submit(solver, b, timeout, mapa, solver_args)
+                       for b in benchmarks]
+            for done, future in enumerate(as_completed(futures), 1):
+                record(future.result(), done)
+
+    write_run_files(name, benchmarks, results, out_dir)
 
 
-def write_run_files(name, results, out_dir):
-    """Write <name>.txt and <name>.csv into out_dir, in benchmark order
-    (results arrive in completion order)."""
+def write_run_files(name, benchmarks, results, out_dir):
+    """Write <name>.txt (and <name>.csv when solver statistics are
+    available) into out_dir, in benchmark order (results may arrive in
+    completion order)."""
     os.makedirs(out_dir, exist_ok=True)
     txt_path = os.path.join(out_dir, name + ".txt")
-    csv_path = os.path.join(out_dir, name + ".csv")
 
-    with open(txt_path, "w") as txt, open(csv_path, "w", newline="") as csvf:
-        writer = csv.DictWriter(csvf, fieldnames=STATS_FIELDS)
-        writer.writeheader()
-        for benchmark in BENCHMARKS:
-            result, duration, stats = results[benchmark]
+    with open(txt_path, "w") as txt:
+        for benchmark in benchmarks:
+            result, duration, _ = results[benchmark]
             txt.write("{} : {} : {}\n".format(
                 benchmark.ljust(27), result.rjust(7), duration))
-            writer.writerow(stats)
+    written = txt_path
 
-    print("  wrote {} and {}".format(txt_path, csv_path), flush=True)
+    # a stats csv (run_bapa.py's format) only makes sense if the solver
+    # reported statistics beyond the benchmark name
+    if any(len(stats) > 1 for _, _, stats in results.values()):
+        csv_path = os.path.join(out_dir, name + ".csv")
+        with open(csv_path, "w", newline="") as csvf:
+            writer = csv.DictWriter(csvf, fieldnames=STATS_FIELDS)
+            writer.writeheader()
+            for benchmark in benchmarks:
+                writer.writerow(results[benchmark][2])
+        written += " and " + csv_path
+
+    print("  wrote {}".format(written), flush=True)
 
 
 # ---------------------------------------------------------------------------
@@ -219,12 +295,12 @@ def parse_txt(path):
     return results
 
 
-def update_rows(rows, results, section_row, column, label):
-    """Write result/duration into one configuration's columns of one
-    section, matching rows by the benchmark name in the config's file
-    column (stripped: some legacy cells carry padding spaces)."""
+def update_rows(section_rows, results, column, label):
+    """Write result/duration into one configuration's columns of the given
+    rows, matching by the benchmark name in the config's file column
+    (stripped: some legacy cells carry padding spaces)."""
     updated, missing = 0, []
-    for row in rows[1 + section_row: 1 + section_row + SECTION_SIZE]:
+    for row in section_rows:
         benchmark = row[column].strip()
         if benchmark in results:
             row[column] = benchmark
@@ -233,20 +309,41 @@ def update_rows(rows, results, section_row, column, label):
         else:
             missing.append(benchmark)
 
-    print("  {}: updated {}/{} rows".format(label, updated, SECTION_SIZE))
+    print("  {}: updated {}/{} rows".format(label, updated,
+                                            len(section_rows)))
     if missing:
         print("  {}: WARNING: no txt entry for {} benchmarks (e.g. {})"
               .format(label, len(missing), missing[0]))
 
 
+def ensure_sql_rows(rows):
+    """Append a row for every sql benchmark that comparison.csv does not
+    have yet: the benchmark name goes into the three file columns owned by
+    the unfold0/unfold5/no_interp configurations, everything else stays
+    empty for later runs (cvc5, sqlsolver, ...)."""
+    width = len(rows[0])
+    present = {row[CONFIGS[0].column].strip() for row in rows[1:]}
+    added = 0
+    for benchmark in SQL_BENCHMARKS:
+        if benchmark in present:
+            continue
+        row = [""] * width
+        for config in CONFIGS:
+            row[config.column] = benchmark
+        rows.append(row)
+        added += 1
+    if added:
+        print("  appended {} sql rows to comparison.csv".format(added))
+
+
 def read_comparison(path):
-    """Read comparison.csv and check it has the expected shape."""
+    """Read comparison.csv and check it has at least the bapa/mapa rows."""
     with open(path, newline="") as f:
         rows = list(csv.reader(f))
-    expected = 1 + len(SECTIONS) * SECTION_SIZE
-    if len(rows) != expected:
-        sys.exit("error: {} has {} rows, expected {}".format(
-            path, len(rows), expected))
+    minimum = 1 + len(SECTIONS) * SECTION_SIZE
+    if len(rows) < minimum:
+        sys.exit("error: {} has {} rows, expected at least {}".format(
+            path, len(rows), minimum))
     return rows
 
 
@@ -267,48 +364,69 @@ def parse_args():
     p.add_argument("timeout", metavar="TIMEOUT", nargs="?", type=int,
                    default=100,
                    help="timeout per benchmark in seconds (default: 100)")
-    p.add_argument("-j", "--jobs", type=int, default=DEFAULT_JOBS,
+    p.add_argument("-j", "--jobs", type=int, default=None,
                    help="number of benchmarks to run in parallel (default: "
-                        "all cpus but two, here {})".format(DEFAULT_JOBS))
+                        "all cpus but two for sets/bags, here {}; 1 -- i.e. "
+                        "sequential -- for the fast sql benchmarks)".format(
+                            DEFAULT_JOBS))
     p.add_argument("--csv", default=DEFAULT_CSV,
                    help="comparison.csv to update (default: {})".format(
                        DEFAULT_CSV))
     p.add_argument("--out-dir", default=DEFAULT_OUT_DIR,
                    help="directory for all generated txt/csv files "
-                        "(default: benchmarks/output, git-ignored)")
+                        "(default: benchmarks/output)")
     p.add_argument("--parse-only", action="store_true",
                    help="do not run the benchmarks; just parse existing "
                         "txt files and update the csv")
-    p.add_argument("--only", choices=["sets", "bags"],
-                   help="run/update only the sets (bapa) or bags (mapa) half")
+    p.add_argument("--only", choices=["sets", "bags", "sql"],
+                   help="run/update only the sets (bapa), bags (mapa) or "
+                        "sql group")
     return p.parse_args()
+
+
+def update_from_txt(rows, csv_path, out_dir, name, section_rows, column):
+    """Parse out_dir/<name>.txt into the given comparison.csv rows and save
+    the file, so every finished configuration is persisted immediately."""
+    txt = os.path.join(out_dir, name + ".txt")
+    if not os.path.exists(txt):
+        print("  {}: WARNING: {} not found, skipping".format(name, txt))
+        return
+    update_rows(section_rows, parse_txt(txt), column, name)
+    write_comparison(csv_path, rows)
 
 
 def main():
     args = parse_args()
     rows = read_comparison(args.csv)
 
+    # sets and bags: fixed-position sections of comparison.csv
     for section in SECTIONS:
-        if args.only == "sets" and section.mapa:
+        if args.only in ("sql", "sets" if section.mapa else "bags"):
             continue
-        if args.only == "bags" and not section.mapa:
-            continue
-
         for config in CONFIGS:
             name = "{}_{}".format(section.prefix, config.name)
             if not args.parse_only:
-                run_configuration(name, args.timeout, section.mapa,
-                                  config.solver_args, args.jobs, args.out_dir)
+                run_configuration(name, BAPA_BENCHMARKS, solve_bapa,
+                                  args.timeout, section.mapa,
+                                  config.solver_args,
+                                  args.jobs or DEFAULT_JOBS, args.out_dir)
+            section_rows = rows[1 + section.row:
+                                1 + section.row + SECTION_SIZE]
+            update_from_txt(rows, args.csv, args.out_dir, name,
+                            section_rows, config.column)
 
-            txt = os.path.join(args.out_dir, name + ".txt")
-            if not os.path.exists(txt):
-                print("  {}: WARNING: {} not found, skipping".format(
-                    name, txt))
-                continue
-            update_rows(rows, parse_txt(txt), section.row, config.column,
-                        name)
-            # save progress after every configuration
-            write_comparison(args.csv, rows)
+    # sql: rows appended after the bapa/mapa sections as needed
+    if args.only in (None, "sql"):
+        ensure_sql_rows(rows)
+        sql_rows = rows[1 + len(SECTIONS) * SECTION_SIZE:]
+        for config in CONFIGS:
+            name = "sql_{}".format(config.name)
+            if not args.parse_only:
+                run_configuration(name, SQL_BENCHMARKS, solve_sql,
+                                  args.timeout, False, config.solver_args,
+                                  args.jobs or 1, args.out_dir)
+            update_from_txt(rows, args.csv, args.out_dir, name,
+                            sql_rows, config.column)
 
     print("\nUpdated {}".format(args.csv))
 

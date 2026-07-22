@@ -1,3 +1,4 @@
+import argparse
 import cvc5
 import sys
 from cvc5 import Kind
@@ -227,10 +228,20 @@ def cvc5_to_z3(term, symbols, stars, memo, polarity=True):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print(f"Usage: {sys.argv[0]} <filename.smt2>")
-        sys.exit(1)
-    filename = sys.argv[1]
+    p = argparse.ArgumentParser(
+        description='Solves an smt2 file with int.star-contains atoms by '
+                    'translating it to a LIA* problem')
+    p.add_argument('file', metavar='FILEPATH', type=str,
+                   help='path to the smt2 benchmark file')
+    p.add_argument('--no-interp', action='store_true',
+                   help='turn off interpolation')
+    p.add_argument('--unfold', metavar='N', type=int, default=0,
+                   help='number of unfoldings to use when interpolating '
+                        '(default: 0)')
+    args = p.parse_args()
+    filename = args.file
+    interpolation_on = not args.no_interp
+    unfold = args.unfold
 
     tm = cvc5.TermManager()
     slv = cvc5.Solver(tm)
