@@ -6,9 +6,12 @@ Run the paper's benchmarks and update the comparison.csv of the paper.
 Three benchmark groups are supported, each in the three configurations
 unfold0 / unfold5 / no_interp:
 
-    sets (BAPA):  bapa_unfold0    bapa_unfold5    bapa_no_interp   bapa_cvc5
-    bags (MAPA):  mapa_unfold0    mapa_unfold5    mapa_no_interp   mapa_cvc5
-    sql:          sql_unfold0     sql_unfold5     sql_no_interp    sql_cvc5
+    sets (BAPA):  bapa_unfold0  bapa_unfold5  bapa_no_interp  bapa_cvc5
+                  bapa_sqlsolver  bapa_modified_sqlsolver
+    bags (MAPA):  mapa_unfold0  mapa_unfold5  mapa_no_interp  mapa_cvc5
+                  mapa_sqlsolver  mapa_modified_sqlsolver     (--mapa)
+    sql:          sql_unfold0   sql_unfold5   sql_no_interp   sql_cvc5
+                  sql_sqlsolver   sql_modified_sqlsolver
 
 Sets and bags run the 240 bapa benchmarks through lia_star_solver.py, e.g.
 
@@ -31,12 +34,27 @@ configuration, filling the "cvc5 lia" columns of comparison.csv):
 
     ~/cvc5/liastar/build/bin/cvc5 benchmarks/sql/linear/... --tlimit=100000
 
-and through the modified SQLSolver pipeline (the sql_modified_sqlsolver
-configuration, filling the "modified_sqlsolver" columns). That one is a
-single gradle invocation of the JUnit test runLinearSqlSolverBenchmarks in
-~/SQLSolver, which runs the same smt2 files (its own copy in cvc5/linear/)
-sequentially and writes sql_solver.csv; the per-benchmark 100s timeout is
-hardcoded in the test, so this script's TIMEOUT argument does not apply.
+and through the SQLSolver pipeline: the *_sqlsolver configurations fill
+the "sqlsolver" columns, the *_modified_sqlsolver configurations the
+"modified_sqlsolver" ones. Each of those is a single gradle invocation of
+a JUnit test of SmtBenchmarks in ~/SQLSolver (runLinearSqlSolverBenchmarks
+/ runAllBapaBenchmarks / runAllMapaBenchmarks) running SQLSolver's own
+copy of the same smt2 files and writing a filename,result,duration csv.
+The tests parallelize internally (except the fast sql one, which stays
+sequential for accurate timings); their per-benchmark 100s timeout is
+hardcoded in Java, so this script's TIMEOUT argument does not apply.
+
+Both sqlsolver flavors run the SAME tests -- which pipeline they measure
+depends on the state of the ~/SQLSolver working tree. The convention this
+script enforces before running (and cannot check with --parse-only):
+
+    sqlsolver           requires superopt/src/main to have NO uncommitted
+                        changes (the original, committed pipeline)
+    modified_sqlsolver  requires uncommitted changes under
+                        superopt/src/main (your modifications)
+
+so switch the tree (git stash / git stash pop) to flip between them.
+Gradle recompiles the pipeline automatically on every run.
 
 Pipeline
 --------
@@ -125,15 +143,20 @@ CONFIGS = [
 # modified SQLSolver pipeline and owns the "modified_sqlsolver" columns.
 CVC5_BINARY = os.path.expanduser("~/cvc5/liastar/build/bin/cvc5")
 CVC5_CONFIG = Config("cvc5", [], column=3)
+SQLSOLVER_CONFIG = Config("sqlsolver", [], column=12)
+MODIFIED_CONFIG = Config("modified_sqlsolver", [], column=15)
+SQLSOLVER_FLAVORS = ("sqlsolver", "modified_sqlsolver")
+BAPA_CONFIGS = CONFIGS + [CVC5_CONFIG, SQLSOLVER_CONFIG, MODIFIED_CONFIG]
+SQL_CONFIGS = CONFIGS + [CVC5_CONFIG, SQLSOLVER_CONFIG, MODIFIED_CONFIG]
+
+# Per group: the SmtBenchmarks JUnit test that runs the modified SQLSolver
+# pipeline on it, and the csv file the test writes into the SQLSolver root
 SQLSOLVER_DIR = os.path.expanduser("~/SQLSolver")
-SQLSOLVER_TEST = ("sqlsolver.superopt.liastar."
-                  "SmtBenchmarks.runLinearSqlSolverBenchmarks")
-SQLSOLVER_CSV = os.path.join(SQLSOLVER_DIR, "sql_solver.csv")
-BAPA_CONFIGS = CONFIGS + [CVC5_CONFIG]
-SQL_CONFIGS = CONFIGS + [
-    CVC5_CONFIG,
-    Config("modified_sqlsolver", [], column=15),
-]
+SQLSOLVER_TESTS = {
+    "sql":  ("runLinearSqlSolverBenchmarks", "sql_solver.csv"),
+    "bapa": ("runAllBapaBenchmarks",         "sql_bapa.csv"),
+    "mapa": ("runAllMapaBenchmarks",         "sql_mapa.csv"),
+}
 
 # A section is one fixed-position block of comparison.csv: `row` is its
 # first data row (0-based, header excluded). Sets rows come first, bags
@@ -164,6 +187,18 @@ SQL_BENCHMARKS = sorted(
     "sql/linear/" + f
     for f in os.listdir(os.path.join(SCRIPT_DIR, "sql", "linear"))
     if f.endswith(".smt2"))
+
+# The benchmarks the SQLSolver pipeline runs on, named as its JUnit tests
+# list them (SQLSolver's own copies, relative to its root); the sql
+# group's names are renamed to sql/linear/ when parsing instead
+SQLSOLVER_BENCHMARKS = {
+    prefix: ["cvc5/sls-reachability/{}/cvc5_{}/fol_{:07d}.smt2".format(
+                 d, prefix, i)
+             for d in ("arith", "card")
+             for i in range(1, 121)]
+    for prefix in ("bapa", "mapa")
+}
+SQLSOLVER_BENCHMARKS["sql"] = SQL_BENCHMARKS
 
 # Columns of the per-configuration statistics csv, as written by run_bapa.py
 STATS_FIELDS = [
@@ -290,35 +325,65 @@ def solve_cvc5(benchmark, timeout, mapa, solver_args):
     return benchmark, result, duration, {"name": benchmark}
 
 
-def run_modified_sqlsolver(name, out_dir):
-    """Run the modified SQLSolver pipeline on all sql benchmarks and write
-    <name>.csv into out_dir.
+def check_sqlsolver_flavor(config_name):
+    """Both sqlsolver flavors run the same JUnit tests; which pipeline they
+    measure depends on the ~/SQLSolver working tree. Enforce the
+    convention: 'sqlsolver' must run on a clean superopt/src/main (the
+    committed pipeline), 'modified_sqlsolver' on one with uncommitted
+    changes. Aborts with instructions if the tree does not match."""
+    status = subprocess.run(
+        ["git", "status", "--porcelain", "--", "superopt/src/main"],
+        cwd=SQLSOLVER_DIR, capture_output=True).stdout.decode().strip()
+    if config_name == "sqlsolver" and status:
+        sys.exit("error: cannot run the '{}' configuration: {} has "
+                 "uncommitted changes under superopt/src/main:\n{}\n"
+                 "stash them first (git stash) or run "
+                 "--configs modified_sqlsolver instead".format(
+                     config_name, SQLSOLVER_DIR, status))
+    if config_name == "modified_sqlsolver" and not status:
+        sys.exit("error: cannot run the '{}' configuration: {} has no "
+                 "uncommitted changes under superopt/src/main, so this "
+                 "would measure the unmodified pipeline; restore your "
+                 "modifications (git stash pop) or run "
+                 "--configs sqlsolver instead".format(
+                     config_name, SQLSOLVER_DIR))
 
-    Unlike the other runners this is one gradle invocation: the JUnit test
-    runLinearSqlSolverBenchmarks runs every smt2 file in cvc5/linear/ (the
-    SQLSolver copy of the same benchmarks) sequentially with a hardcoded
-    100s per-benchmark timeout, and writes filename,result,duration rows to
-    sql_solver.csv in the SQLSolver root."""
-    cmd = ["./gradlew", ":superopt:test", "--tests", SQLSOLVER_TEST,
+
+def run_sqlsolver_pipeline(config_name, prefix, name, out_dir):
+    """Run the SQLSolver pipeline ('sqlsolver' or 'modified_sqlsolver',
+    depending on the working-tree state, which is checked first) on one
+    group's benchmarks ('sql', 'bapa' or 'mapa') and write <name>.csv into
+    out_dir.
+
+    Unlike the other runners this is one gradle invocation: the group's
+    SmtBenchmarks JUnit test recompiles the pipeline, runs SQLSolver's
+    copy of the benchmarks with a hardcoded 100s per-benchmark timeout (in
+    parallel, except the fast sql test) and writes
+    filename,result,duration rows to a csv in the SQLSolver root."""
+    check_sqlsolver_flavor(config_name)
+    test, test_csv = SQLSOLVER_TESTS[prefix]
+    cmd = ["./gradlew", ":superopt:test", "--tests",
+           "sqlsolver.superopt.liastar.SmtBenchmarks." + test,
            "--console=plain"]
-    print("\n=== {}: gradle test {} ===".format(name, SQLSOLVER_TEST),
-          flush=True)
+    print("\n=== {}: gradle test {} ===".format(name, test), flush=True)
     subprocess.run(cmd, cwd=SQLSOLVER_DIR, check=True)
 
-    # convert sql_solver.csv rows to this script's benchmark names; the
+    # convert the test's csv rows to this script's benchmark names; the
     # test reports SAT/UNSAT but comparison.csv uses lowercase throughout
     results = {}
-    with open(SQLSOLVER_CSV, newline="") as f:
+    with open(os.path.join(SQLSOLVER_DIR, test_csv), newline="") as f:
         for row in csv.DictReader(f):
-            benchmark = "sql/linear/" + os.path.basename(row["filename"])
+            benchmark = row["filename"]
+            if prefix == "sql":
+                benchmark = "sql/linear/" + os.path.basename(benchmark)
             results[benchmark] = (row["result"].lower(),
                                   float(row["duration"]),
                                   {"name": benchmark})
 
-    missing = [b for b in SQL_BENCHMARKS if b not in results]
+    missing = [b for b in SQLSOLVER_BENCHMARKS[prefix] if b not in results]
     if missing:
         print("  WARNING: {} has no result for {} benchmarks (e.g. {})"
-              .format(SQLSOLVER_CSV, len(missing), missing[0]))
+              .format(test_csv, len(missing), missing[0]))
     write_run_files(name, sorted(results), results, out_dir)
 
 
@@ -427,6 +492,16 @@ def update_rows(section_rows, results, column, label):
               .format(label, len(missing), missing[0]))
 
 
+def set_file_column(section_rows, benchmarks, column):
+    """Overwrite a fixed-position section's file column with the given
+    benchmark names, in section order. Needed when the recorded filenames
+    come from another machine or layout (e.g. the modified_sqlsolver cells
+    written on the original authors' machine) and can no longer be matched
+    by name."""
+    for row, benchmark in zip(section_rows, benchmarks):
+        row[column] = benchmark
+
+
 def ensure_sql_rows(rows):
     """Append a row for every sql benchmark that comparison.csv does not
     have yet, and put the benchmark name into the file column of every sql
@@ -496,8 +571,8 @@ def parse_args():
                         "sql group")
     p.add_argument("--configs", metavar="NAME[,NAME...]", default=None,
                    help="run/update only these configurations (unfold0, "
-                        "unfold5, no_interp, cvc5, modified_sqlsolver; "
-                        "default: all)")
+                        "unfold5, no_interp, cvc5, sqlsolver, "
+                        "modified_sqlsolver; default: all)")
     args = p.parse_args()
     args.configs = args.configs.split(",") if args.configs else None
     return args
@@ -528,7 +603,10 @@ def main():
                 continue
             name = "{}_{}".format(section.prefix, config.name)
             if not args.parse_only:
-                if config.name == "cvc5":
+                if config.name in SQLSOLVER_FLAVORS:
+                    run_sqlsolver_pipeline(config.name, section.prefix,
+                                           name, args.out_dir)
+                elif config.name == "cvc5":
                     run_configuration(name, CVC5_BENCHMARKS[section.prefix],
                                       solve_cvc5, args.timeout,
                                       section.mapa, config.solver_args,
@@ -542,6 +620,12 @@ def main():
                                       args.out_dir)
             section_rows = rows[1 + section.row:
                                 1 + section.row + SECTION_SIZE]
+            if config.name in SQLSOLVER_FLAVORS:
+                # the recorded cells hold the original authors' paths,
+                # which never match the new run's names
+                set_file_column(section_rows,
+                                SQLSOLVER_BENCHMARKS[section.prefix],
+                                config.column)
             update_from_results(rows, args.csv, args.out_dir, name,
                                 section_rows, config.column)
 
@@ -554,8 +638,9 @@ def main():
                 continue
             name = "sql_{}".format(config.name)
             if not args.parse_only:
-                if config.name == "modified_sqlsolver":
-                    run_modified_sqlsolver(name, args.out_dir)
+                if config.name in SQLSOLVER_FLAVORS:
+                    run_sqlsolver_pipeline(config.name, "sql", name,
+                                           args.out_dir)
                 else:
                     solver = (solve_cvc5 if config.name == "cvc5"
                               else solve_sql)
