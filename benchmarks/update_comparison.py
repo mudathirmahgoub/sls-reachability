@@ -8,7 +8,7 @@ unfold0 / unfold5 / no_interp:
 
     sets (BAPA):  bapa_unfold0    bapa_unfold5    bapa_no_interp
     bags (MAPA):  mapa_unfold0    mapa_unfold5    mapa_no_interp   (--mapa)
-    sql:          sql_unfold0     sql_unfold5     sql_no_interp
+    sql:          sql_unfold0     sql_unfold5     sql_no_interp    sql_cvc5
 
 Sets and bags run the 240 bapa benchmarks through lia_star_solver.py, e.g.
 
@@ -21,6 +21,11 @@ interpreter, e.g.
 
     .venv/bin/python3 smt_to_sls.py benchmarks/sql/linear/calcite-query013-call-0.smt2 \\
             --unfold=5
+
+and additionally through the liastar cvc5 binary itself (the sql_cvc5
+configuration, filling the "cvc5 lia" columns of comparison.csv):
+
+    ~/cvc5/liastar/build/bin/cvc5 benchmarks/sql/linear/... --tlimit=100000
 
 Pipeline
 --------
@@ -57,6 +62,7 @@ Usage
 -----
     python3 update_comparison.py 100            # everything, timeout 100s
     python3 update_comparison.py --only sql     # sql group only, sequential
+    python3 update_comparison.py --only sql --configs cvc5   # one config only
     python3 update_comparison.py 100 -j 8       # at most 8 solvers at once
     python3 update_comparison.py --parse-only   # skip runs, just update csv
 """
@@ -100,6 +106,11 @@ CONFIGS = [
     Config("unfold5",   ["--unfold=5"],  column=6),
     Config("no_interp", ["--no-interp"], column=9),
 ]
+
+# The sql group additionally runs the liastar cvc5 binary on the same smt2
+# files; it owns the "cvc5 lia" columns of comparison.csv
+CVC5_BINARY = os.path.expanduser("~/cvc5/liastar/build/bin/cvc5")
+SQL_CONFIGS = CONFIGS + [Config("cvc5", [], column=3)]
 
 # A section is one fixed-position block of comparison.csv: `row` is its
 # first data row (0-based, header excluded). Sets rows come first, bags
@@ -197,6 +208,42 @@ def solve_sql(benchmark, timeout, mapa, solver_args):
             result = "unknown"
             for line in proc.stdout.decode("utf-8").splitlines():
                 if line.strip() in ("sat", "unsat"):
+                    result = line.strip()
+                    break
+
+    except subprocess.TimeoutExpired:
+        duration = time.time() - start
+        result = "timeout"
+
+    return benchmark, result, duration, {"name": benchmark}
+
+
+def solve_cvc5(benchmark, timeout, mapa, solver_args):
+    """Run the liastar cvc5 binary on a single sql benchmark (mapa and
+    solver_args are ignored; they exist to share solve_bapa's signature).
+
+    Invocation mirrors run_cvc5.py: the timeout is also passed to cvc5 as
+    --tlimit (in milliseconds), which makes it exit with 'cvc5 interrupted
+    by timeout.' when hit. Returns (benchmark, result, duration, stats)
+    with stats always empty.
+    """
+    cmd = [CVC5_BINARY, os.path.join(SCRIPT_DIR, benchmark),
+           "--tlimit={}".format(timeout * 1000)]
+
+    start = time.time()
+    try:
+        proc = subprocess.run(cmd, capture_output=True, timeout=timeout,
+                              cwd=REPO_DIR)
+        duration = time.time() - start
+        output = (proc.stdout + proc.stderr).decode("utf-8")
+        if "interrupted by timeout" in output:
+            result = "timeout"
+        elif proc.returncode != 0:
+            result = "error"
+        else:
+            result = "unknown"
+            for line in output.splitlines():
+                if line.strip() in ("sat", "unsat", "unknown"):
                     result = line.strip()
                     break
 
@@ -318,20 +365,22 @@ def update_rows(section_rows, results, column, label):
 
 def ensure_sql_rows(rows):
     """Append a row for every sql benchmark that comparison.csv does not
-    have yet: the benchmark name goes into the three file columns owned by
-    the unfold0/unfold5/no_interp configurations, everything else stays
-    empty for later runs (cvc5, sqlsolver, ...)."""
+    have yet, and put the benchmark name into the file column of every sql
+    configuration (all four run on the same smt2 file). Everything else
+    stays empty for later runs (sqlsolver, ...)."""
     width = len(rows[0])
-    present = {row[CONFIGS[0].column].strip() for row in rows[1:]}
+    existing = {row[CONFIGS[0].column].strip(): row
+                for row in rows[1 + len(SECTIONS) * SECTION_SIZE:]}
     added = 0
     for benchmark in SQL_BENCHMARKS:
-        if benchmark in present:
-            continue
-        row = [""] * width
-        for config in CONFIGS:
-            row[config.column] = benchmark
-        rows.append(row)
-        added += 1
+        row = existing.get(benchmark)
+        if row is None:
+            row = [""] * width
+            rows.append(row)
+            added += 1
+        for config in SQL_CONFIGS:
+            if not row[config.column].strip():
+                row[config.column] = benchmark
     if added:
         print("  appended {} sql rows to comparison.csv".format(added))
 
@@ -381,7 +430,12 @@ def parse_args():
     p.add_argument("--only", choices=["sets", "bags", "sql"],
                    help="run/update only the sets (bapa), bags (mapa) or "
                         "sql group")
-    return p.parse_args()
+    p.add_argument("--configs", metavar="NAME[,NAME...]", default=None,
+                   help="run/update only these configurations "
+                        "(unfold0, unfold5, no_interp, cvc5; default: all)")
+    args = p.parse_args()
+    args.configs = args.configs.split(",") if args.configs else None
+    return args
 
 
 def update_from_txt(rows, csv_path, out_dir, name, section_rows, column):
@@ -404,6 +458,8 @@ def main():
         if args.only in ("sql", "sets" if section.mapa else "bags"):
             continue
         for config in CONFIGS:
+            if args.configs and config.name not in args.configs:
+                continue
             name = "{}_{}".format(section.prefix, config.name)
             if not args.parse_only:
                 run_configuration(name, BAPA_BENCHMARKS, solve_bapa,
@@ -419,10 +475,13 @@ def main():
     if args.only in (None, "sql"):
         ensure_sql_rows(rows)
         sql_rows = rows[1 + len(SECTIONS) * SECTION_SIZE:]
-        for config in CONFIGS:
+        for config in SQL_CONFIGS:
+            if args.configs and config.name not in args.configs:
+                continue
+            solver = solve_cvc5 if config.name == "cvc5" else solve_sql
             name = "sql_{}".format(config.name)
             if not args.parse_only:
-                run_configuration(name, SQL_BENCHMARKS, solve_sql,
+                run_configuration(name, SQL_BENCHMARKS, solver,
                                   args.timeout, False, config.solver_args,
                                   args.jobs or 1, args.out_dir)
             update_from_txt(rows, args.csv, args.out_dir, name,
