@@ -6,14 +6,18 @@ Run the paper's benchmarks and update the comparison.csv of the paper.
 Three benchmark groups are supported, each in the three configurations
 unfold0 / unfold5 / no_interp:
 
-    sets (BAPA):  bapa_unfold0    bapa_unfold5    bapa_no_interp
-    bags (MAPA):  mapa_unfold0    mapa_unfold5    mapa_no_interp   (--mapa)
+    sets (BAPA):  bapa_unfold0    bapa_unfold5    bapa_no_interp   bapa_cvc5
+    bags (MAPA):  mapa_unfold0    mapa_unfold5    mapa_no_interp   mapa_cvc5
     sql:          sql_unfold0     sql_unfold5     sql_no_interp    sql_cvc5
 
 Sets and bags run the 240 bapa benchmarks through lia_star_solver.py, e.g.
 
     python3 lia_star_solver.py benchmarks/bapa/arith/fol_0000001.smt2 \\
             -i --unfold=5 --mapa
+
+Their cvc5 configurations run the liastar cvc5 binary on the translated
+benchmarks in benchmarks/bapa/*/cvc5_bapa/ (sets) and cvc5_mapa/ (bags),
+which are the files the "cvc5" columns of comparison.csv refer to.
 
 The sql group runs the benchmarks in benchmarks/sql/linear/ (copied from
 SQLSolver/cvc5/linear) through smt_to_sls.py using the cvc5-enabled .venv
@@ -27,13 +31,20 @@ configuration, filling the "cvc5 lia" columns of comparison.csv):
 
     ~/cvc5/liastar/build/bin/cvc5 benchmarks/sql/linear/... --tlimit=100000
 
+and through the modified SQLSolver pipeline (the sql_modified_sqlsolver
+configuration, filling the "modified_sqlsolver" columns). That one is a
+single gradle invocation of the JUnit test runLinearSqlSolverBenchmarks in
+~/SQLSolver, which runs the same smt2 files (its own copy in cvc5/linear/)
+sequentially and writes sql_solver.csv; the per-benchmark 100s timeout is
+hardcoded in the test, so this script's TIMEOUT argument does not apply.
+
 Pipeline
 --------
-1. run: every configuration runs all its benchmarks and writes <name>.txt
-   (and, for sets/bags, <name>.csv with solver statistics) into the output
-   directory (default: benchmarks/output/).
-2. parse: the txt files are parsed as colon-separated values, stripping all
-   padding spaces.
+1. run: every configuration runs all its benchmarks and writes <name>.csv
+   with filename,result,duration rows -- a format Excel opens directly --
+   (and, where the solver reports statistics, <name>_stats.csv) into the
+   output directory (default: benchmarks/output/).
+2. parse: the result csv files are read back, stripping any padding spaces.
 3. update: the results are written into the unfold0 / unfold5 / no_interp
    columns of comparison.csv. Data rows 1-240 hold the sets results, rows
    241-480 the bags results, and the sql results follow after them (rows
@@ -107,10 +118,22 @@ CONFIGS = [
     Config("no_interp", ["--no-interp"], column=9),
 ]
 
-# The sql group additionally runs the liastar cvc5 binary on the same smt2
-# files; it owns the "cvc5 lia" columns of comparison.csv
+# The cvc5 configuration runs the liastar cvc5 binary: in the sql group on
+# the same smt2 files, in the sets/bags groups on the translated benchmarks
+# under cvc5_bapa/ and cvc5_mapa/. It owns the "cvc5" columns of
+# comparison.csv. The sql group's modified_sqlsolver configuration runs the
+# modified SQLSolver pipeline and owns the "modified_sqlsolver" columns.
 CVC5_BINARY = os.path.expanduser("~/cvc5/liastar/build/bin/cvc5")
-SQL_CONFIGS = CONFIGS + [Config("cvc5", [], column=3)]
+CVC5_CONFIG = Config("cvc5", [], column=3)
+SQLSOLVER_DIR = os.path.expanduser("~/SQLSolver")
+SQLSOLVER_TEST = ("sqlsolver.superopt.liastar."
+                  "SmtBenchmarks.runLinearSqlSolverBenchmarks")
+SQLSOLVER_CSV = os.path.join(SQLSOLVER_DIR, "sql_solver.csv")
+BAPA_CONFIGS = CONFIGS + [CVC5_CONFIG]
+SQL_CONFIGS = CONFIGS + [
+    CVC5_CONFIG,
+    Config("modified_sqlsolver", [], column=15),
+]
 
 # A section is one fixed-position block of comparison.csv: `row` is its
 # first data row (0-based, header excluded). Sets rows come first, bags
@@ -127,6 +150,15 @@ BAPA_BENCHMARKS = ["{}/fol_{:07d}.smt2".format(d, i)
                    for d in ("bapa/arith", "bapa/card")
                    for i in range(1, 121)]
 SECTION_SIZE = len(BAPA_BENCHMARKS)  # 120 arith + 120 card = 240
+
+# The translated benchmarks the cvc5 binary runs on for sets/bags, named
+# exactly as the "cvc5 filename" cells of comparison.csv (repo-relative)
+CVC5_BENCHMARKS = {
+    prefix: ["benchmarks/bapa/{}/cvc5_{}/fol_{:07d}.smt2".format(d, prefix, i)
+             for d in ("arith", "card")
+             for i in range(1, 121)]
+    for prefix in ("bapa", "mapa")
+}
 
 SQL_BENCHMARKS = sorted(
     "sql/linear/" + f
@@ -227,7 +259,11 @@ def solve_cvc5(benchmark, timeout, mapa, solver_args):
     by timeout.' when hit. Returns (benchmark, result, duration, stats)
     with stats always empty.
     """
-    cmd = [CVC5_BINARY, os.path.join(SCRIPT_DIR, benchmark),
+    # sql benchmark names are relative to the benchmarks directory, the
+    # translated bapa/mapa ones to the repository root (matching the cells
+    # of comparison.csv)
+    base = REPO_DIR if benchmark.startswith("benchmarks/") else SCRIPT_DIR
+    cmd = [CVC5_BINARY, os.path.join(base, benchmark),
            "--tlimit={}".format(timeout * 1000)]
 
     start = time.time()
@@ -252,6 +288,38 @@ def solve_cvc5(benchmark, timeout, mapa, solver_args):
         result = "timeout"
 
     return benchmark, result, duration, {"name": benchmark}
+
+
+def run_modified_sqlsolver(name, out_dir):
+    """Run the modified SQLSolver pipeline on all sql benchmarks and write
+    <name>.csv into out_dir.
+
+    Unlike the other runners this is one gradle invocation: the JUnit test
+    runLinearSqlSolverBenchmarks runs every smt2 file in cvc5/linear/ (the
+    SQLSolver copy of the same benchmarks) sequentially with a hardcoded
+    100s per-benchmark timeout, and writes filename,result,duration rows to
+    sql_solver.csv in the SQLSolver root."""
+    cmd = ["./gradlew", ":superopt:test", "--tests", SQLSOLVER_TEST,
+           "--console=plain"]
+    print("\n=== {}: gradle test {} ===".format(name, SQLSOLVER_TEST),
+          flush=True)
+    subprocess.run(cmd, cwd=SQLSOLVER_DIR, check=True)
+
+    # convert sql_solver.csv rows to this script's benchmark names; the
+    # test reports SAT/UNSAT but comparison.csv uses lowercase throughout
+    results = {}
+    with open(SQLSOLVER_CSV, newline="") as f:
+        for row in csv.DictReader(f):
+            benchmark = "sql/linear/" + os.path.basename(row["filename"])
+            results[benchmark] = (row["result"].lower(),
+                                  float(row["duration"]),
+                                  {"name": benchmark})
+
+    missing = [b for b in SQL_BENCHMARKS if b not in results]
+    if missing:
+        print("  WARNING: {} has no result for {} benchmarks (e.g. {})"
+              .format(SQLSOLVER_CSV, len(missing), missing[0]))
+    write_run_files(name, sorted(results), results, out_dir)
 
 
 def run_configuration(name, benchmarks, solver, timeout, mapa, solver_args,
@@ -290,29 +358,30 @@ def run_configuration(name, benchmarks, solver, timeout, mapa, solver_args,
 
 
 def write_run_files(name, benchmarks, results, out_dir):
-    """Write <name>.txt (and <name>.csv when solver statistics are
-    available) into out_dir, in benchmark order (results may arrive in
-    completion order)."""
+    """Write <name>.csv with filename,result,duration rows (and
+    <name>_stats.csv when solver statistics are available) into out_dir,
+    in benchmark order (results may arrive in completion order)."""
     os.makedirs(out_dir, exist_ok=True)
-    txt_path = os.path.join(out_dir, name + ".txt")
+    csv_path = os.path.join(out_dir, name + ".csv")
 
-    with open(txt_path, "w") as txt:
+    with open(csv_path, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["filename", "result", "duration"])
         for benchmark in benchmarks:
             result, duration, _ = results[benchmark]
-            txt.write("{} : {} : {}\n".format(
-                benchmark.ljust(27), result.rjust(7), duration))
-    written = txt_path
+            writer.writerow([benchmark, result, duration])
+    written = csv_path
 
     # a stats csv (run_bapa.py's format) only makes sense if the solver
     # reported statistics beyond the benchmark name
     if any(len(stats) > 1 for _, _, stats in results.values()):
-        csv_path = os.path.join(out_dir, name + ".csv")
-        with open(csv_path, "w", newline="") as csvf:
-            writer = csv.DictWriter(csvf, fieldnames=STATS_FIELDS)
+        stats_path = os.path.join(out_dir, name + "_stats.csv")
+        with open(stats_path, "w", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=STATS_FIELDS)
             writer.writeheader()
             for benchmark in benchmarks:
                 writer.writerow(results[benchmark][2])
-        written += " and " + csv_path
+        written += " and " + stats_path
 
     print("  wrote {}".format(written), flush=True)
 
@@ -321,24 +390,19 @@ def write_run_files(name, benchmarks, results, out_dir):
 # Updating comparison.csv
 # ---------------------------------------------------------------------------
 
-def parse_txt(path):
-    """Parse a generated txt file into {benchmark: (result, duration)},
-    treating ':' as the delimiter and stripping all padding spaces."""
+def parse_results(path):
+    """Parse a <name>.csv results file into {benchmark: (result,
+    duration)}, stripping any padding spaces."""
     results = {}
-    with open(path) as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
+    with open(path, newline="") as f:
+        for row in csv.DictReader(f):
             try:
-                head, duration = line.rsplit(":", 1)
-                benchmark, result = head.split(":", 1)
-                float(duration)
-            except ValueError:
-                print("  WARNING: skipping unparseable line: {!r}".format(
-                    line))
+                float(row["duration"])
+            except (KeyError, TypeError, ValueError):
+                print("  WARNING: skipping unparseable row: {!r}".format(row))
                 continue
-            results[benchmark.strip()] = (result.strip(), duration.strip())
+            results[row["filename"].strip()] = (row["result"].strip(),
+                                                row["duration"].strip())
     return results
 
 
@@ -359,7 +423,7 @@ def update_rows(section_rows, results, column, label):
     print("  {}: updated {}/{} rows".format(label, updated,
                                             len(section_rows)))
     if missing:
-        print("  {}: WARNING: no txt entry for {} benchmarks (e.g. {})"
+        print("  {}: WARNING: no result for {} benchmarks (e.g. {})"
               .format(label, len(missing), missing[0]))
 
 
@@ -426,26 +490,28 @@ def parse_args():
                         "(default: benchmarks/output)")
     p.add_argument("--parse-only", action="store_true",
                    help="do not run the benchmarks; just parse existing "
-                        "txt files and update the csv")
+                        "result csv files and update comparison.csv")
     p.add_argument("--only", choices=["sets", "bags", "sql"],
                    help="run/update only the sets (bapa), bags (mapa) or "
                         "sql group")
     p.add_argument("--configs", metavar="NAME[,NAME...]", default=None,
-                   help="run/update only these configurations "
-                        "(unfold0, unfold5, no_interp, cvc5; default: all)")
+                   help="run/update only these configurations (unfold0, "
+                        "unfold5, no_interp, cvc5, modified_sqlsolver; "
+                        "default: all)")
     args = p.parse_args()
     args.configs = args.configs.split(",") if args.configs else None
     return args
 
 
-def update_from_txt(rows, csv_path, out_dir, name, section_rows, column):
-    """Parse out_dir/<name>.txt into the given comparison.csv rows and save
+def update_from_results(rows, csv_path, out_dir, name, section_rows, column):
+    """Parse out_dir/<name>.csv into the given comparison.csv rows and save
     the file, so every finished configuration is persisted immediately."""
-    txt = os.path.join(out_dir, name + ".txt")
-    if not os.path.exists(txt):
-        print("  {}: WARNING: {} not found, skipping".format(name, txt))
+    results_csv = os.path.join(out_dir, name + ".csv")
+    if not os.path.exists(results_csv):
+        print("  {}: WARNING: {} not found, skipping".format(
+            name, results_csv))
         return
-    update_rows(section_rows, parse_txt(txt), column, name)
+    update_rows(section_rows, parse_results(results_csv), column, name)
     write_comparison(csv_path, rows)
 
 
@@ -457,19 +523,27 @@ def main():
     for section in SECTIONS:
         if args.only in ("sql", "sets" if section.mapa else "bags"):
             continue
-        for config in CONFIGS:
+        for config in BAPA_CONFIGS:
             if args.configs and config.name not in args.configs:
                 continue
             name = "{}_{}".format(section.prefix, config.name)
             if not args.parse_only:
-                run_configuration(name, BAPA_BENCHMARKS, solve_bapa,
-                                  args.timeout, section.mapa,
-                                  config.solver_args,
-                                  args.jobs or DEFAULT_JOBS, args.out_dir)
+                if config.name == "cvc5":
+                    run_configuration(name, CVC5_BENCHMARKS[section.prefix],
+                                      solve_cvc5, args.timeout,
+                                      section.mapa, config.solver_args,
+                                      args.jobs or DEFAULT_JOBS,
+                                      args.out_dir)
+                else:
+                    run_configuration(name, BAPA_BENCHMARKS, solve_bapa,
+                                      args.timeout, section.mapa,
+                                      config.solver_args,
+                                      args.jobs or DEFAULT_JOBS,
+                                      args.out_dir)
             section_rows = rows[1 + section.row:
                                 1 + section.row + SECTION_SIZE]
-            update_from_txt(rows, args.csv, args.out_dir, name,
-                            section_rows, config.column)
+            update_from_results(rows, args.csv, args.out_dir, name,
+                                section_rows, config.column)
 
     # sql: rows appended after the bapa/mapa sections as needed
     if args.only in (None, "sql"):
@@ -478,14 +552,19 @@ def main():
         for config in SQL_CONFIGS:
             if args.configs and config.name not in args.configs:
                 continue
-            solver = solve_cvc5 if config.name == "cvc5" else solve_sql
             name = "sql_{}".format(config.name)
             if not args.parse_only:
-                run_configuration(name, SQL_BENCHMARKS, solver,
-                                  args.timeout, False, config.solver_args,
-                                  args.jobs or 1, args.out_dir)
-            update_from_txt(rows, args.csv, args.out_dir, name,
-                            sql_rows, config.column)
+                if config.name == "modified_sqlsolver":
+                    run_modified_sqlsolver(name, args.out_dir)
+                else:
+                    solver = (solve_cvc5 if config.name == "cvc5"
+                              else solve_sql)
+                    run_configuration(name, SQL_BENCHMARKS, solver,
+                                      args.timeout, False,
+                                      config.solver_args,
+                                      args.jobs or 1, args.out_dir)
+            update_from_results(rows, args.csv, args.out_dir, name,
+                                sql_rows, config.column)
 
     print("\nUpdated {}".format(args.csv))
 
