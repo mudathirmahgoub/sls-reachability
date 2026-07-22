@@ -138,7 +138,7 @@ class SLS:
     # 'phi' is the original LIA formula, a function that returns a Z3 expression
     # 'dim' is the number of args to phi
     def __init__(self, phi, set_vars, dimension):
-        self.sets = []
+        self.sets = [LS([0]*dimension, [], phi)]
         self.dim = dimension
         self.phi = phi
         self.set_vars = set_vars
@@ -228,11 +228,8 @@ class SLS:
     def star(self, X=None):
 
         # Quantify an unquantified star
-        if self.sets == []:
-            return False
-        else:
-            vars, fmls = self.starU(X)
-            return Exists(vars, And(fmls))
+        vars, fmls = self.starU(X)
+        return Exists(vars, And(fmls))
 
     # Attempt to apply merge, shiftDown, and offsetDown to reduce the size of the SLS
     def reduce(self):

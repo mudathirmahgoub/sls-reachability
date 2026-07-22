@@ -71,7 +71,7 @@ def main():
                     print("{}/{}...".format(d, f))
 
                     # Set up command line arguments to lia_star_solver.py
-                    cmd = ["/home/mudathir/all/sls-reachability/.venv/bin/python3", "../lia_star_solver.py", "{}/{}".format(d, f), "--unfold={}".format(unfold), "-i"]
+                    cmd = [sys.executable, "../lia_star_solver.py", "{}/{}".format(d, f), "--unfold={}".format(unfold), "-i"]
                     if mapa:
                         cmd.append("--mapa")
                     if no_interp:
