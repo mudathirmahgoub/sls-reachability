@@ -7,8 +7,8 @@ One command runs everything:
 
     python3 update_comparison.py
 
-Every tool reads the SAME smt2 files: the canonical benchmark set in
-<repo>/fmcad26, grouped into three sections:
+The canonical benchmark set lives in <repo>/fmcad26, grouped into three
+sections (one comparison.csv row per benchmark):
 
     sets (bapa):  fmcad26/arith/cvc5_bapa + fmcad26/card/cvc5_bapa  (240)
     bags (mapa):  fmcad26/arith/cvc5_mapa + fmcad26/card/cvc5_mapa  (240)
@@ -17,15 +17,30 @@ Every tool reads the SAME smt2 files: the canonical benchmark set in
 and each section runs in six configurations, one per column triple of
 comparison.csv:
 
-    unfold0 / unfold5 / no_interp
-        the SLS solver, via the smt-to-sls translator:
-        .venv/bin/python3 smt_to_sls.py fmcad26/... [--unfold=N|--no-interp]
+    unfold0 / unfold5 / no_interp  (the SLS solver)
+        For the sets/bags sections SLS does NOT read the cvc5-format
+        files: translating them back through smt_to_sls.py was measured
+        to hurt its performance badly (e.g. bapa unfold0: 53 timeouts via
+        the translator vs 20 natively). It runs lia_star_solver.py on the
+        NATIVE benchmarks instead -- benchmarks/bapa/{arith,card}/fol_*,
+        the very files the fmcad26 cvc5_bapa/cvc5_mapa ones were
+        generated from -- with --mapa selecting the bags interpretation:
+        .venv/bin/python3 lia_star_solver.py benchmarks/bapa/... -i \\
+            [--unfold=N|--no-interp] [--mapa]
+        The sql section has no native form, so there SLS goes through the
+        smt-to-sls translator on the fmcad26 files:
+        .venv/bin/python3 smt_to_sls.py fmcad26/sql/linear/... [args]
     cvc5
         the liastar cvc5 binary: ~/cvc5/liastar/build/bin/cvc5 fmcad26/...
     sqlsolver / modified_sqlsolver
         the SQLSolver pipeline, via its SmtBenchmarks JUnit tests
         (runAllBapaBenchmarks / runAllMapaBenchmarks /
         runLinearSqlSolverBenchmarks), which read the same fmcad26 files
+
+Each configuration's file column in comparison.csv records the file that
+configuration actually ran (the native path for sets/bags SLS, the
+fmcad26 path everywhere else); rows correspond across columns by
+position: fol_N under arith/card maps to fol_N in every encoding.
 
 SQLSolver flavors
 -----------------
@@ -91,6 +106,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))   # .../benchmarks
 REPO_DIR = os.path.dirname(SCRIPT_DIR)                    # repository root
 FMCAD26_DIR = os.path.join(REPO_DIR, "fmcad26")           # benchmark set
+SLS_SOLVER = os.path.join(REPO_DIR, "lia_star_solver.py")
 SLS_TRANSLATOR = os.path.join(REPO_DIR, "smt_to_sls.py")
 CVC5_BINARY = os.path.expanduser("~/cvc5/liastar/build/bin/cvc5")
 
@@ -170,13 +186,47 @@ TOTAL_BENCHMARKS = _row
 # --only names the sections by their paper terminology
 ONLY_TO_PREFIX = {"sets": "bapa", "bags": "mapa", "sql": "sql"}
 
+# The native benchmarks the SLS configurations run for sets/bags (via
+# lia_star_solver.py; names relative to the benchmarks directory). Sets
+# and bags share the files -- --mapa selects the bags interpretation --
+# and fol_N here corresponds positionally to fol_N of the fmcad26 set.
+SLS_NATIVE_BENCHMARKS = ["bapa/{}/fol_{:07d}.smt2".format(d, i)
+                         for d in ("arith", "card")
+                         for i in range(1, 121)]
+
 
 # ---------------------------------------------------------------------------
 # Running the solvers
 # ---------------------------------------------------------------------------
 
+def solve_lia_star(benchmark, timeout, solver_args):
+    """Run the SLS solver natively (lia_star_solver.py) on a single
+    sets/bags benchmark (names relative to the benchmarks directory;
+    solver_args carries --mapa for the bags interpretation). With -i its
+    stdout is: problem size / stats dict / sat|unsat. Returns
+    (benchmark, result, duration)."""
+    cmd = [SLS_PYTHON, SLS_SOLVER,
+           os.path.join(SCRIPT_DIR, benchmark), "-i"] + solver_args
+    start = time.time()
+    try:
+        proc = subprocess.run(cmd, capture_output=True, timeout=timeout,
+                              cwd=REPO_DIR)
+        duration = time.time() - start
+        try:
+            result = proc.stdout.decode("utf-8").strip().split("\n")[2]
+            if result not in ("sat", "unsat"):
+                result = "error"
+        except IndexError:
+            result = "error"
+    except subprocess.TimeoutExpired:
+        duration = time.time() - start
+        result = "timeout"
+    return benchmark, result, duration
+
+
 def solve_sls(benchmark, timeout, solver_args):
-    """Run the smt-to-sls translator + SLS solver on a single benchmark.
+    """Run the smt-to-sls translator + SLS solver on a single benchmark
+    (used for the sql section, which only exists in cvc5 format).
     Returns (benchmark, result, duration) with result 'sat', 'unsat',
     'unknown', 'timeout' or 'error'."""
     cmd = [SLS_PYTHON, SLS_TRANSLATOR,
@@ -392,10 +442,10 @@ def update_rows(section_rows, results, column, label):
 
 
 def set_file_column(section_rows, benchmarks, column):
-    """Set a section's file column to the canonical fmcad26 benchmark
-    names, in section order. All tools run the same files, so every
-    configuration's file column carries the same name; this also migrates
-    rows recorded under older naming schemes."""
+    """Set one configuration's file column to the names of the files that
+    configuration runs, in section order (rows correspond across
+    configurations by position). This also migrates rows recorded under
+    older naming schemes."""
     for row, benchmark in zip(section_rows, benchmarks):
         row[column] = benchmark
 
@@ -507,6 +557,19 @@ def main():
             if args.configs and config.name not in args.configs:
                 continue
             name = "{}_{}".format(section.prefix, config.name)
+
+            # the SLS configurations of sets/bags run the native
+            # benchmarks through lia_star_solver.py; everything else runs
+            # the fmcad26 files (see the module docstring)
+            benchmarks, solver, extra_args = (
+                section.benchmarks, solve_sls, [])
+            if (config.name not in SQLSOLVER_FLAVORS
+                    and config.name != "cvc5"
+                    and section.prefix != "sql"):
+                benchmarks = SLS_NATIVE_BENCHMARKS
+                solver = solve_lia_star
+                extra_args = ["--mapa"] if section.prefix == "mapa" else []
+
             if not args.parse_only:
                 if config.name in SQLSOLVER_FLAVORS:
                     run_sqlsolver_pipeline(config.name, section.prefix,
@@ -516,11 +579,11 @@ def main():
                                       args.timeout, config.solver_args,
                                       jobs, args.out_dir)
                 else:
-                    run_configuration(name, section.benchmarks, solve_sls,
-                                      args.timeout, config.solver_args,
+                    run_configuration(name, benchmarks, solver,
+                                      args.timeout,
+                                      config.solver_args + extra_args,
                                       jobs, args.out_dir)
-            set_file_column(section_rows, section.benchmarks,
-                            config.column)
+            set_file_column(section_rows, benchmarks, config.column)
             update_from_results(rows, args.csv, args.out_dir, name,
                                 section_rows, config.column)
 
