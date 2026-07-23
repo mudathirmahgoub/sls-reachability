@@ -86,3 +86,9 @@ python3 lia_star_solver.py my_mapa_file.smt2 --mapa --unfold=10
 python3 lia_star_solver.py my_bapa_file.smt2 --unfold=2
 python3 lia_star_solver.py my_mapa_file.smt2 --mapa -v
 ```
+
+## fmcad experiments
+
+The benchmark orchestration and the canonical fmcad benchmark set moved to
+[github.com/mudathirmahgoub/fmcad](https://github.com/mudathirmahgoub/fmcad),
+which clones and builds this repository automatically — see its README.
