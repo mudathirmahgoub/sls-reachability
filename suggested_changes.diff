@@ -1,0 +1,127 @@
+diff --git a/smt_to_sls.py b/smt_to_sls.py
+index 919d2b5..2efb757 100644
+--- a/smt_to_sls.py
++++ b/smt_to_sls.py
+@@ -158,7 +158,7 @@ def cvc5_to_z3(term, symbols, stars, memo, polarity=True):
+         inner = dict(symbols)
+         inner.update(dict(zip(binders, qs)))
+         body = cvc5_to_z3(body_term, inner, stars, memo, True)
+-        stars.atoms.append({'qs': qs, 'body': body})
++        stars.atoms.append({'qs': qs, 'body': body, 'points': points})
+         points_z3 = [cvc5_to_z3(p, symbols, stars, memo, polarity)
+                      for p in points]
+         replacement = And([p == q for (p, q) in zip(points_z3, qs)])
+@@ -227,6 +227,77 @@ def cvc5_to_z3(term, symbols, stars, memo, polarity=True):
+     raise Exception("Unsupported cvc5 operator: {} ({})".format(k, term))
+ 
+ 
++def _count_free_occurrences(term, counts, seen):
++    """Count occurrences of declared constants in a term, EXCLUDING bare
++    constants standing as star-application points (those are the
++    projection candidates -- see select_set_vars)."""
++    if term in seen:
++        return
++    seen.add(term)
++    k = term.getKind()
++    if k == Kind.CONSTANT:
++        counts[str(term)] = counts.get(str(term), 0) + 1
++        return
++    children = list(term)
++    if k == Kind.STAR_CONTAINS:
++        _count_free_occurrences(children[0], counts, seen)  # the lambda
++        for p in children[1:]:
++            if p.getKind() != Kind.CONSTANT:
++                _count_free_occurrences(p, counts, seen)
++        return
++    for c in children:
++        _count_free_occurrences(c, counts, seen)
++
++
++def _is_nonneg_guard(assertion):
++    """True for assertions of the exact shape (>= c 0) with c a declared
++    constant -- the exporter's nonnegativity guards on star coordinates."""
++    if assertion.getKind() != Kind.GEQ:
++        return False
++    lhs, rhs = list(assertion)
++    return (lhs.getKind() == Kind.CONSTANT
++            and rhs.isIntegerValue() and rhs.getIntegerValue() == 0)
++
++
++def select_set_vars(assertions, stars):
++    """Choose which star coordinates the SLS membership test constrains.
++
++    lia_star_solver.py natively constrains membership only on the
++    cardinality OUTPUT coordinates of the star and leaves the per-summand
++    element-multiplicity coordinates existentially projected. The exported
++    smt2 format cannot express that distinction: the lambda must bind
++    every coordinate, so the element variables surface as top-level
++    constants occurring nowhere except as star points and in (>= c 0)
++    guards. Treating those coordinates as membership-constrained inflates
++    the dimension of the interpolation problems (interpolant.py builds its
++    spacer queries over len(set_vars) variables), which was measured to
++    turn sub-second sets benchmarks into timeouts (spacer diverges inside
++    a single check).
++
++    A coordinate is therefore kept in set_vars iff its point term is not a
++    bare constant, or that constant occurs elsewhere in the assertions --
++    outside star applications and nonnegativity guards. Projecting the
++    remaining coordinates out of the membership test is equisatisfiable
++    precisely because their constants are otherwise unconstrained."""
++    counts = {}
++    seen = set()
++    for a in assertions:
++        if _is_nonneg_guard(a):
++            continue
++        _count_free_occurrences(a, counts, seen)
++
++    set_vars = []
++    for atom in stars.atoms:
++        for q, p in zip(atom['qs'], atom['points']):
++            if p.getKind() != Kind.CONSTANT or counts.get(str(p), 0) > 0:
++                set_vars.append(q)
++
++    # degenerate fallback: constrain everything rather than nothing
++    if not set_vars:
++        set_vars = [q for atom in stars.atoms for q in atom['qs']]
++    return set_vars
++
++
+ if __name__ == "__main__":
+     p = argparse.ArgumentParser(
+         description='Solves an smt2 file with int.star-contains atoms by '
+@@ -238,6 +309,10 @@ if __name__ == "__main__":
+     p.add_argument('--unfold', metavar='N', type=int, default=0,
+                    help='number of unfoldings to use when interpolating '
+                         '(default: 0)')
++    p.add_argument('--full-membership', action='store_true',
++                   help='constrain star membership on ALL lambda '
++                        'coordinates instead of projecting away the '
++                        'existential ones (see select_set_vars)')
+     args = p.parse_args()
+     filename = args.file
+     interpolation_on = not args.no_interp
+@@ -285,8 +360,9 @@ if __name__ == "__main__":
+     # translate all assertions, collecting star atoms along the way
+     stars = StarCollector()
+     memo = {}
++    assertions = slv.getAssertions()
+     phi_assertions = [cvc5_to_z3(assertion, symbols, stars, memo)
+-                      for assertion in slv.getAssertions()]
++                      for assertion in assertions]
+ 
+     # star-free formulas need no SLS machinery
+     if not stars.atoms:
+@@ -308,4 +384,12 @@ if __name__ == "__main__":
+         combined = Or(disjuncts)
+     combined = And([combined] + [q >= 0 for q in all_q])
+ 
+-    result = sls_solver(phi_assertions, combined, all_q)
++    # by default membership is projected onto the output coordinates only;
++    # the element-multiplicity coordinates stay existential (see
++    # select_set_vars). --full-membership restores constraining every
++    # coordinate, which occasionally wins on individual instances.
++    if args.full_membership:
++        set_vars = all_q
++    else:
++        set_vars = select_set_vars(assertions, stars)
++    result = sls_solver(phi_assertions, combined, set_vars)
