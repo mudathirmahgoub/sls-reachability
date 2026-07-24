@@ -82,15 +82,13 @@ def main():
                     try:
 
                         # Attempt to run command
-                        res = subprocess.run(cmd, capture_output=True, timeout=timeout)
-                        output_lines = res.stdout.strip().decode("utf-8").split("\n")
-                        output_lines.insert(0, '')
-                        print(output_lines)
-                        output = output_lines[3]
+                        res = subprocess.check_output(cmd, stderr=subprocess.STDOUT, timeout=timeout)
+                        output_lines = res.decode("utf-8").split("\n")
+                        output = output_lines[2]
 
                         # Collect statistics
                         end = time.time()
-                        stats = ast.literal_eval(output_lines[2])
+                        stats = ast.literal_eval(output_lines[1])
                         stats['total_time'] = end - start
 
                     # Solver throws an exception
@@ -103,8 +101,7 @@ def main():
                     except subprocess.TimeoutExpired as exc:
                         end = time.time()
                         output_lines = exc.output.decode("utf-8").split('\n')
-                        print(output_lines)
-                        stats = {'sat': 2, 'problem_size': -1}
+                        stats = {'sat': 2, 'problem_size': int(output_lines[0])}
                         output = "timeout"
 
                     # Write sat or unsat and time taken to file
