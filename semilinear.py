@@ -5,7 +5,6 @@ import statistics
 import itertools
 import time
 from z3 import *
-import pdb
 
 # Check if V < U
 def vecLess(V, U):
