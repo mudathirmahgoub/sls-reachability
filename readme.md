@@ -70,7 +70,7 @@ Table 5 contains the averages, for each evaluation, of the time spent in each pa
 
 The commands were executed on a 2018 MacBook Pro running OS X Mojave 10.14.5 with a 2.9 GHz Intel Core i9 processor and 32GB of RAM. The numbers will be slightly different on the virtual machine.
 
-The version of Python used was 3.7.4. The version of z3 used was 4.8.6.0.
+Last tested with Python version 3.9.6 and z3 version 5.0.0.0.
 
 ### 6. 
 If you would like to run the program on your own BAPA or MAPA file, execute
