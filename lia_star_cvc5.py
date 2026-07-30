@@ -218,16 +218,25 @@ def main():
     for x in A.fmls:
         input += x.sexpr() + "\n"
     input += "))\n"    
-    input += """(assert 
-  (int.star-contains 
+    input += """(assert
+  (int.star-contains
     (lambda ("""
     for arg in B.args:
         input += f"({arg} Int)"
-    input += """) 
-      (and 
+    input += """)
+      (and
         """
-    for x in B.fmls:
-        conjunct = x.sexpr()         
+    conjuncts = [x.sexpr() for x in B.fmls]
+    # int.star-contains no longer assumes nonnegative summand vectors (the
+    # solver's ARITH_LIA_STAR_NONNEGATIVE lemma is gone): the lambda
+    # predicate itself must constrain every bound variable. The (>= v 0)
+    # conjuncts go FIRST so that the partial conjunctions built during the
+    # solver's DNF distribution carry them from the start -- listed last
+    # they are missing from most pruning subsolver queries, which was
+    # measured to slow the card benchmarks by an order of magnitude.
+    conjuncts = [f"(>= {arg} 0)" for arg in B.args
+                 if f"(>= {arg} 0)" not in conjuncts] + conjuncts
+    for conjunct in conjuncts:
         input += conjunct + """
         """
     input += """))
