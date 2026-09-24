@@ -1,0 +1,31 @@
+(set-logic ALL)
+
+
+; forall c_dn:C. nonempty(c_dn & ~f)
+
+(declare-fun n () Int)
+(declare-fun t () Int)
+
+(declare-fun f () (Bag Int))
+; set semantics: f has no repeated element
+(assert (= f (bag.setof f)))
+(declare-fun UNIVERALSET () (Bag Int))
+; set semantics: UNIVERALSET has no repeated element
+(assert (= UNIVERALSET (bag.setof UNIVERALSET)))
+(assert (bag.subbag f UNIVERALSET))
+(assert (= (bag.card UNIVERALSET) n))
+
+(assert (> n 0))
+(assert (> n (* 3 t)))
+(assert (<= (bag.card f) t))
+
+(declare-fun c_dn () (Bag Int))
+; set semantics: c_dn has no repeated element
+(assert (= c_dn (bag.setof c_dn)))
+(assert (bag.subbag c_dn UNIVERALSET))
+(assert (>= (* 2 (bag.card c_dn)) (+ (- n t) 1)))
+
+
+(assert (= (bag.card (bag.inter_min c_dn (bag.difference_subtract UNIVERALSET f))) 0))
+
+(check-sat)
